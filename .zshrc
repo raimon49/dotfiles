@@ -77,9 +77,11 @@ case "${OSTYPE}" in
     freebsd*|darwin*)
     alias ls="ls -G -w"
     ;;
-    linux*)
+    linux*|cygwin*)
     alias ls="ls --color=auto"
     ;;
 esac
 alias l="ls -CF"
 alias ll="ls -laF"
+alias sudo="sudo "
+alias view="vim -R"
