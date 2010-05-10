@@ -4,16 +4,13 @@
 export LANG=ja_JP.UTF-8 
 export EDITOR=vim
 export SVN_EDITOR=vim
-export PAGER=lv
 export LSCOLORS=ExFxCxdxBxegedabagacad
 export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-
-# 補完リストの色付け
-zstyle ':completion:*' list-colors 'di=;34;1' 'ln=;35;1' 'so=;32;1' 'ex=31;1' 'bd=46;34' 'cd=43;34'
-
-# 補完時に大文字小文字を区別しない
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-zstyle ':completion:*' menu select=1
+if [ `which lv 2> /dev/null` ]; then
+    export PAGER=lv
+elif [ `which less 2> /dev/null` ]; then
+    export PAGER=less
+fi
 
 # emacsキーバインド
 bindkey -e
@@ -33,6 +30,13 @@ bindkey "^N" history-beginning-search-forward-end
 # 補完
 autoload -U compinit
 compinit
+
+# 補完リストの色付け
+zstyle ':completion:*' list-colors 'di=;34;1' 'ln=;35;1' 'so=;32;1' 'ex=31;1' 'bd=46;34' 'cd=43;34'
+
+# 補完時に大文字小文字を区別しない
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' menu select=1
 
 # プロンプト
 autoload colors
@@ -72,6 +76,9 @@ setopt nolistbeep
 # bash風リダイレクト
 setopt no_multios
 
+# 拡張グロブ
+setopt extended_glob
+
 # エイリアス
 case "${OSTYPE}" in
     freebsd*|darwin*)
@@ -85,3 +92,4 @@ alias l="ls -CF"
 alias ll="ls -laF"
 alias sudo="sudo "
 alias view="vim -R"
+alias :q="exit"
