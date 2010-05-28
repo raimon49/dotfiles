@@ -51,9 +51,9 @@ if [[ $ZSH_VERSION == (<5->|4.<4->|4.3.<7->)* ]]; then
         LANG=en_US.UTF-8 vcs_info
         [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
     }
-    VCS_PROMPT="%1(v|%F{green}%1v%f|)"
+    VCS_PROMPT="%1(v|%F{blue}%1v%f|)"
 fi
-PROMPT="%{${fg[green]}%}[%n@%m]${VCS_PROMPT} %(!.#.$) %{${reset_color}%}"
+PROMPT="%{${fg[green]}%}[%n@%m]${VCS_PROMPT}%{${fg[green]}%}%(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
