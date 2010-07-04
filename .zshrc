@@ -2,6 +2,7 @@
 
 # 環境変数
 export LANG=ja_JP.UTF-8 
+export LC_CTYPE=ja_JP.UTF-8
 export EDITOR=vim
 export SVN_EDITOR=vim
 export LSCOLORS=ExFxCxdxBxegedabagacad
@@ -44,6 +45,7 @@ colors
 VCS_PROMPT=""
 if [[ $ZSH_VERSION == (<5->|4.<4->|4.3.<7->)* ]]; then
     autoload -Uz vcs_info
+    zstyle ':vcs_info:*' branchformat '%b:r%r'
     zstyle ':vcs_info:*' formats ':(%s)%b'
     zstyle ':vcs_info:*' actionformats ':(%s)%b|%a'
     precmd () {
