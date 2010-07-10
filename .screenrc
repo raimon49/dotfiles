@@ -1,0 +1,14 @@
+defutf8 on
+defkanji utf-8
+encoding utf-8 utf-8
+defencoding utf-8
+escape ^Z^Z
+autodetach on
+hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
+vbell off
+defbce "on"
+termcapinfo xterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+termcapinfo xterm* 'Co#256:pa#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm:'
+attrcolor b ".I"
+term xterm-256color
+bind 'K' kill
