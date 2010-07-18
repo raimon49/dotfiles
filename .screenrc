@@ -9,6 +9,7 @@ vbell off
 defbce on
 termcapinfo xterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 termcapinfo xterm* 'Co#256:pa#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm:'
+termcapinfo xterm* ti@:te=\E[2J
 attrcolor b ".I"
 term xterm-256color
 bind k

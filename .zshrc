@@ -23,6 +23,8 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt hist_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
 setopt share_history
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
@@ -40,6 +42,9 @@ zstyle ':completion:*' list-colors 'di=;34;1' 'ln=;35;1' 'so=;32;1' 'ex=31;1' 'b
 # 補完時に大文字小文字を区別しない
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' menu select=1
+
+# プロセスID補完
+zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
 # プロンプト
 autoload colors
@@ -60,13 +65,20 @@ fi
 PROMPT="%{${fg[green]}%}[%n@%m]${VCS_PROMPT}%{${fg[green]}%}%(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
-RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
+RPROMPT="%{${fg[green]}%}[%50<..<%~]%{${reset_color}%}"
 unset VCS_PROMPT
 
 # ディレクトリ移動
 setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
+function cdup() {
+echo
+cd ..
+zle reset-prompt
+}
+zle -N cdup
+bindkey '\^' cdup
 
 # コマンド自動修正
 setopt correct
