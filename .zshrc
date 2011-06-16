@@ -109,7 +109,7 @@ case "${OSTYPE}" in
 esac
 alias l="ls -CF"
 alias ll="ls -laF"
-alias sudo="sudo "
+alias sudo="sudo -E "
 alias view="vim -R"
 alias screen="screen -U"
 alias :q="exit"
