@@ -39,6 +39,12 @@ fi
 autoload -U compinit
 compinit
 
+# キャッシュ
+if [ -d ~/.zsh/cache ]; then
+    zstyle ':completion:*' use-cache yes
+    zstyle ':completion:*' cache-path ~/.zsh/cache
+fi
+
 # 補完リストの色付け
 zstyle ':completion:*' list-colors 'di=;34;1' 'ln=;35;1' 'so=;32;1' 'ex=31;1' 'bd=46;34' 'cd=43;34'
 
