@@ -4,6 +4,7 @@ encoding utf-8 utf-8
 defencoding utf-8
 escape ^Z^Z
 autodetach on
+altscreen on
 hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
 vbell off
 defbce on
