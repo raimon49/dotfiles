@@ -32,7 +32,7 @@ NeoBundle 'othree/html5.vim'
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
 NeoBundle 'sudo.vim'
-NeoBundle 'svn.vim'
+NeoBundle 'svn-diff.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'php-doc-upgrade'
 NeoBundle 'confluencewiki.vim'

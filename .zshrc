@@ -126,3 +126,6 @@ alias -g H=" | head"
 alias -g T=" | tail"
 alias -g L=" | ${PAGER}"
 alias -g V=" | vim -R -"
+
+# for VVM
+test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
