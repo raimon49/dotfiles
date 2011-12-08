@@ -28,6 +28,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'othree/html5.vim'
+NeoBundle 'vim-jp/vimdoc-ja'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
