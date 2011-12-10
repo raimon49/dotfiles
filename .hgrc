@@ -1,0 +1,11 @@
+[ui]
+username = raimon <raimon49@hotmail.com>
+editor = vim
+
+[extensions]
+color =
+rebase =
+
+[alias]
+slog = log --template '{rev}:{node|short} {desc|firstline}\n'
+clean = !$HG status --no-status --unknown -0 | xargs -0 rm

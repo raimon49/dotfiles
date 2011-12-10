@@ -1,0 +1,19 @@
+[user]
+    name = raimon
+    email = raimon49@hotmail.com
+[core]
+    pager = lv
+    editor = vim
+[color]
+    ui = auto
+[alias]
+    st = status
+    ci = commit
+    co = checkout --recursive
+    di = diff
+    up = pull --rebase
+    out = log origin..HEAD
+    l =  log --pretty=format:\"%h (%an): %s\" --date=short -20
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+    log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
