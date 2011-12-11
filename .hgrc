@@ -6,6 +6,10 @@ editor = vim
 color =
 rebase =
 graphlog =  
+pager =
+
+[pager]
+pager = lv
 
 [alias]
 slog = log --template '{rev}:{node|short} {desc|firstline}\n'
