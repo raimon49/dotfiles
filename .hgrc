@@ -5,6 +5,7 @@ editor = vim
 [extensions]
 color =
 rebase =
+graphlog =  
 
 [alias]
 slog = log --template '{rev}:{node|short} {desc|firstline}\n'
