@@ -92,6 +92,8 @@ nmap * *zz
 nmap # #zz
 nmap g* g*zz
 nmap g# g#zz
+nmap <silent> <Space>.  :<C-u>edit $MYVIMRC<CR>
+nmap <silent> <Space>s. :<C-u>source $MYVIMRC<CR>
 
 imap <C-A> <Home>
 imap <C-E> <End>
