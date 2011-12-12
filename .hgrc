@@ -5,7 +5,7 @@ editor = vim
 [extensions]
 color =
 rebase =
-graphlog =  
+graphlog =
 pager =
 
 [pager]
