@@ -29,6 +29,7 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
+NeoBundle 'Lokaltog/vim-powerline'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
@@ -100,8 +101,6 @@ imap <C-E> <End>
 imap <C-F> <Right>
 imap <C-B> <Left>
 
-set statusline=%t%m%r%h%w\ [%{&fileencoding}\ %{&fileformat}]\ [TYPE=%Y]\ [LINE=%04l/%04L(%p%%)]\ [POS=%l,%v]
-highlight StatusLine term=bold,reverse cterm=bold,reverse gui=bold,reverse ctermfg=white ctermbg=darkblue
 set laststatus=2
  
 set t_Co=256
