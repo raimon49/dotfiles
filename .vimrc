@@ -102,6 +102,7 @@ imap <C-F> <Right>
 imap <C-B> <Left>
 
 set laststatus=2
+let g:Powerline_cache_file = '/tmp/' . $USER . '.Powerline.cache'
  
 set t_Co=256
 colorscheme desert256
