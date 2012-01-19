@@ -100,9 +100,6 @@ imap <C-A> <Home>
 imap <C-E> <End>
 imap <C-F> <Right>
 imap <C-B> <Left>
-
-set laststatus=2
-let g:Powerline_cache_file = '/tmp/' . $USER . '.Powerline.cache'
  
 set t_Co=256
 colorscheme desert256
@@ -122,6 +119,10 @@ let g:neocomplcache_min_syntax_length = 3
 let g:user_zen_settings = {
   \'indentation': '  ',
   \}
+
+" vim-powerline
+set laststatus=2
+let g:Powerline_cache_file = '/tmp/' . $USER . '.Powerline.cache'
 
 set termencoding=utf-8
 " via http://www.kawaz.jp/pukiwiki/?vim
