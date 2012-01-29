@@ -31,6 +31,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'kana/vim-smartchr'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
@@ -124,6 +125,9 @@ let g:user_zen_settings = {
 " vim-powerline
 set laststatus=2
 let g:Powerline_cache_file = '/tmp/' . $USER . '.Powerline.cache'
+
+" kana/vim-smartchr
+inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ', '=')
 
 set termencoding=utf-8
 " via http://www.kawaz.jp/pukiwiki/?vim
