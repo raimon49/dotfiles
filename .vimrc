@@ -32,6 +32,7 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'kana/vim-smartchr'
+NeoBundle 'scrooloose/syntastic'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
@@ -126,10 +127,16 @@ let g:user_zen_settings = {
 set laststatus=2
 let g:Powerline_cache_file = '/tmp/' . $USER . '.Powerline.cache'
 
-" kana/vim-smartchr
+" vim-smartchr
 inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ', '=')
 inoremap <expr> , smartchr#one_of(', ', ',')
 inoremap <expr> : smartchr#one_of(': ', ':')
+
+" syntastic
+let g:syntastic_auto_jump=1
+let g:syntastic_mode_map = { 'mode': 'passive',
+                           \ 'active_filetypes': [],
+                           \ 'passive_filetypes': [] }
 
 set termencoding=utf-8
 " via http://www.kawaz.jp/pukiwiki/?vim
