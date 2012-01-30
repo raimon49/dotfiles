@@ -129,6 +129,7 @@ let g:Powerline_cache_file = '/tmp/' . $USER . '.Powerline.cache'
 " kana/vim-smartchr
 inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ', '=')
 inoremap <expr> , smartchr#one_of(', ', ',')
+inoremap <expr> : smartchr#one_of(': ', ':')
 
 set termencoding=utf-8
 " via http://www.kawaz.jp/pukiwiki/?vim
