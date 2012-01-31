@@ -32,6 +32,8 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'kana/vim-smartchr'
+NeoBundle 'kana/vim-gf-user'
+NeoBundle 'kana/vim-gf-diff'
 NeoBundle 'scrooloose/syntastic'
 
 " Plugins on vim-scripts
@@ -78,6 +80,8 @@ set scrolloff=5
 set virtualedit=block
 
 set pumheight=10
+
+map gf <C-W>gf
 
 nmap <C-J> <C-W>j
 nmap <C-K> <C-W>k
