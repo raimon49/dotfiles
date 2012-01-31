@@ -125,7 +125,6 @@ let g:user_zen_settings = {
 
 " vim-powerline
 set laststatus=2
-let g:Powerline_cache_file = '/tmp/' . $USER . '.Powerline.cache'
 
 " vim-smartchr
 inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ', '=')
