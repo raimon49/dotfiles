@@ -109,11 +109,11 @@ inoremap <C-E> <End>
 inoremap <C-F> <Right>
 inoremap <C-B> <Left>
 
-cnoremap <C-B> <Left>
-cnoremap <C-F> <Right>
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
- 
+cnoremap <C-F> <Right>
+cnoremap <C-B> <Left>
+
 set t_Co=256
 colorscheme desert256
 
