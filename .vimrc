@@ -104,10 +104,15 @@ nmap g# g#zz
 nmap <silent> <Space>.  :<C-u>edit $MYVIMRC<CR>
 nmap <silent> <Space>s. :<C-u>source $MYVIMRC<CR>
 
-imap <C-A> <Home>
-imap <C-E> <End>
-imap <C-F> <Right>
-imap <C-B> <Left>
+inoremap <C-A> <Home>
+inoremap <C-E> <End>
+inoremap <C-F> <Right>
+inoremap <C-B> <Left>
+
+cnoremap <C-B> <Left>
+cnoremap <C-F> <Right>
+cnoremap <C-A> <Home>
+cnoremap <C-E> <End>
  
 set t_Co=256
 colorscheme desert256
