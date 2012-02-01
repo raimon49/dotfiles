@@ -130,6 +130,10 @@ let g:user_zen_settings = {
 
 " vim-powerline
 set laststatus=2
+if has('unix') && !has('gui_running')
+    inoremap <silent> <Esc> <Esc>
+    inoremap <silent> <C-[> <Esc>
+endif
 
 " vim-smartchr
 inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ', '=')
