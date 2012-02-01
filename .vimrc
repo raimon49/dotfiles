@@ -65,7 +65,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smarttab
-set listchars=tab:^\ 
+set listchars=tab:^\ ,trail:_
 set list
 set wildmode=list:longest,full
 
