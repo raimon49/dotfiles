@@ -79,6 +79,9 @@ SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
 RPROMPT="%{${fg[green]}%}[%50<..<%~]%{${reset_color}%}"
 unset VCS_PROMPT
 
+# ファイルリネーム
+autoload zmv
+
 # ディレクトリ移動
 setopt auto_cd
 setopt auto_pushd
@@ -120,6 +123,7 @@ alias ll="ls -laF"
 alias sudo="sudo -E "
 alias view="vim -R"
 alias rawvim="vim -u NONE -U NONE --noplugin -c 'set nu' -c 'syntax enable'"
+alias zmv="noglob zmv"
 alias screen="screen -U"
 alias :q="exit"
 alias -g C=" | wc -l"
