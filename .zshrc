@@ -109,6 +109,9 @@ setopt no_multios
 # 拡張グロブ
 setopt extended_glob
 
+# zsh-completions
+fpath=(~/.zsh-completions $fpath)
+
 # エイリアス
 case "${OSTYPE}" in
     freebsd*|darwin*)
