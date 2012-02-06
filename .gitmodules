@@ -4,3 +4,6 @@
 [submodule ".zsh-completions"]
 	path = .zsh-completions
 	url = git://github.com/zsh-users/zsh-completions.git
+[submodule "paver"]
+	path = paver
+	url = git://github.com/paver/paver.git
