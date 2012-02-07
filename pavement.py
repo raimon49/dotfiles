@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from __future__ import with_statement # for 2.5
 import sys
 
 if __name__ == '__main__':
