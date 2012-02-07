@@ -7,3 +7,6 @@
 [submodule "paver"]
 	path = paver
 	url = git://github.com/paver/paver.git
+[submodule "git-info"]
+	path = git-info
+	url = git://github.com/knu/git-info.git
