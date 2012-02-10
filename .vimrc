@@ -222,3 +222,25 @@ augroup BinaryXXD
   autocmd BufWritePost * if &binary | silent %!xxd -g 1
   autocmd BufWritePost * set nomod | endif
 augroup END
+
+" via http://ttssh2.sourceforge.jp/manual/ja/usage/tips/vim.html
+" paste sequence
+if &term =~ "xterm"
+    " from .screenrc 'term xterm-256color'
+    if &term == "xterm-256color"
+        let &t_SI .= "\eP\e[?2004h\e\\"
+        let &t_EI .= "\eP\e[?2004l\e\\"
+        let &pastetoggle = "\eP\e[201~\e\\"
+    else
+        let &t_SI .= "\e[?2004h"
+        let &t_EI .= "\e[?2004l"
+        let &pastetoggle = "\e[201~"
+    endif
+
+    function XTermPasteBegin(ret)
+        set paste
+        return a:ret
+    endfunction
+
+    inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
+endif
