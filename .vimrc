@@ -94,6 +94,8 @@ nmap <Tab> <C-W>w
 nmap <S-Tab> <C-W>W
 nmap tn :tabn<CR>
 nmap tp :tabp<CR>
+nmap hn <C-]>
+nmap hp <C-O>
 nmap <Space> <C-D>
 nmap <S-Space> <C-U>
 nmap <CR> o<Esc>
