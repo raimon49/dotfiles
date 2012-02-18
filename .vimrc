@@ -230,13 +230,13 @@ augroup END
 " paste sequence
 if &term =~ "xterm"
     " from .screenrc 'term xterm-256color'
-    if &term == "xterm-256color"
-        let &t_SI .= "\eP\e[?2004h\e\\"
-        let &t_EI .= "\eP\e[?2004l\e\\"
-        let &pastetoggle = "\eP\e[201~\e\\"
+    if &term == "xterm-256color" && $SHLVL > 1
+        let &t_SI = &t_SI . "\eP\e[?2004h\e\\"
+        let &t_EI = "\eP\e[?2004l\e\\" . &t_EI
+        let &pastetoggle = "\e[201~"
     else
-        let &t_SI .= "\e[?2004h"
-        let &t_EI .= "\e[?2004l"
+        let &t_SI .= &t_SI . "\e[?2004h"
+        let &t_EI .= "\e[?2004l" . &t_EI
         let &pastetoggle = "\e[201~"
     endif
 
