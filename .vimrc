@@ -45,6 +45,7 @@ NeoBundle 'svn-diff.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'php-doc-upgrade'
 NeoBundle 'confluencewiki.vim'
+NeoBundle 'YankRing.vim'
 
 syntax enable
 filetype plugin indent on
@@ -155,6 +156,13 @@ let g:syntastic_auto_jump=1
 let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': [] }
+
+" YankRing.vim
+noremap <silent> YS :YRShow<CR>
+let g:yankring_history_dir = expand('$HOME')
+let g:yankring_history_file = '.yankring_history'
+let g:yankring_max_history = 20
+let g:yankring_window_height = 20
 
 set termencoding=utf-8
 " via http://www.kawaz.jp/pukiwiki/?vim
