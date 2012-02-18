@@ -131,6 +131,7 @@ let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_min_keyword_length = 3
 
 " zencoding-vim
 let g:user_zen_settings = {
