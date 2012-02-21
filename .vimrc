@@ -37,6 +37,7 @@ NeoBundle 'kana/vim-gf-user'
 NeoBundle 'kana/vim-gf-diff'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'taku-o/vim-vis'
+NeoBundle 'bronson/vim-trailing-whitespace'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
