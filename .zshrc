@@ -1,7 +1,7 @@
 ## .zshrc
 
 # 環境変数
-export LANG=ja_JP.UTF-8 
+export LANG=ja_JP.UTF-8
 export LC_CTYPE=ja_JP.UTF-8
 export PATH="${HOME}/local/bin:${PATH}"
 export EDITOR=vim
@@ -32,7 +32,7 @@ autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
-bindkey "^N" history-beginning-search-forward-end 
+bindkey "^N" history-beginning-search-forward-end
 if [[ $ZSH_VERSION == (<5->|4.<4->|4.3.<9->)* ]]; then
     bindkey "^R" history-incremental-pattern-search-backward
 fi
