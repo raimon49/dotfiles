@@ -74,7 +74,7 @@ if [[ $ZSH_VERSION == (<5->|4.<4->|4.3.<7->)* ]]; then
         # git stash count
         [[ -e $PWD/.git/refs/stash ]] && psvar[2]=" ($(git stash list 2>/dev/null | wc -l) stashed)"
     }
-    VCS_PROMPT="%1(v|%F{blue}%1v%2v%f|)"
+    VCS_PROMPT="%1(v|%F{magenta}%1v%2v%f|)"
 fi
 PROMPT="%{${fg[green]}%}[%n@%m]${VCS_PROMPT}%{${fg[green]}%}%(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
