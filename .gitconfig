@@ -12,9 +12,11 @@
     stat = status
     rawci = commit
     ci = commit -v
+    reci = commit --amend --date=now
     co = clone --recursive
     di = diff
     up = pull --rebase
+    rollback = reset --soft HEAD^
     out = log origin..HEAD
     l =  log --pretty=format:\"%h (%an): %s\" --date=short -20
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
