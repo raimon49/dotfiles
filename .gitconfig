@@ -11,7 +11,7 @@
     st = status
     rawci = commit
     ci = commit -v
-    co = checkout --recursive
+    co = clone --recursive
     di = diff
     up = pull --rebase
     out = log origin..HEAD
