@@ -18,6 +18,7 @@
     up = pull --rebase
     rollback = reset --soft HEAD^
     out = log origin..HEAD
+    subfetch = submodule foreach "git checkout master; git pull"
     l =  log --pretty=format:\"%h (%an): %s\" --date=short -20
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
