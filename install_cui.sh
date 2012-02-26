@@ -5,7 +5,6 @@
 mkdir -p ~/local/bin
 mkdir -p ~/.zsh/cache
 
-ln -s ~/works/git/dotfiles/.vimrc           ~
 ln -s ~/works/git/dotfiles/.gitconfig       ~
 ln -s ~/works/git/dotfiles/.hgrc            ~
 ln -s ~/works/git/dotfiles/.screenrc        ~
