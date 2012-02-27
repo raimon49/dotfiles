@@ -107,6 +107,7 @@ nmap g* g*zz
 nmap g# g#zz
 nmap <silent> <Space>.  :<C-u>edit $MYVIMRC<CR>
 nmap <silent> <Space>s. :<C-u>source $MYVIMRC<CR>
+nnoremap <S-H> :<C-u>help<Space>
 
 inoremap <C-A> <Home>
 inoremap <C-E> <End>
