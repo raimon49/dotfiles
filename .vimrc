@@ -88,10 +88,10 @@ set pumheight=10
 
 map gf <C-W>gf
 
-nmap <C-J> <C-W>j
-nmap <C-K> <C-W>k
-nmap <C-H> <C-W>h
-nmap <C-L> <C-W>l
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-H> <C-W>h
+nnoremap <C-L> <C-W>l
 nmap <Tab> <C-W>w
 nmap <S-Tab> <C-W>W
 nmap tn :tabn<CR>
