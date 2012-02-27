@@ -117,6 +117,9 @@ cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
 cnoremap <C-F> <Right>
 cnoremap <C-B> <Left>
+" default escape for search. naked input: <C-v>/, <C-v>?
+cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
+cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
 
 set t_Co=256
 colorscheme desert256
