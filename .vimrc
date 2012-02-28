@@ -77,7 +77,7 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
+nmap <Esc><Esc> :<C-u>nohlsearch<CR><Esc>
 
 set whichwrap=b,s,h,l,<,>,[,]
 set backspace=indent,eol,start
@@ -94,8 +94,8 @@ nnoremap <C-H> <C-W>h
 nnoremap <C-L> <C-W>l
 nnoremap <Tab> <C-W>w
 nnoremap <S-Tab> <C-W>W
-nnoremap tn :tabn<CR>
-nnoremap tp :tabp<CR>
+nnoremap tn :<C-u>tabn<CR>
+nnoremap tp :<C-u>tabp<CR>
 nnoremap <CR> o<Esc>
 nnoremap n nzz
 nnoremap N Nzz
@@ -103,9 +103,12 @@ nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
+" quick edit $MYVIMRC
 nnoremap <silent> <Space>.  :<C-u>edit $MYVIMRC<CR>
 nnoremap <silent> <Space>s. :<C-u>source $MYVIMRC<CR>
-nnoremap <S-H> :<C-u>help<Space>
+" quick help
+nnoremap H  :<C-u>help<Space>
+nnoremap th :<C-u>tab help<Space>
 
 inoremap <C-A> <Home>
 inoremap <C-E> <End>
