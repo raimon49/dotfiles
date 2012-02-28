@@ -97,12 +97,12 @@ nnoremap <S-Tab> <C-W>W
 nnoremap tn :tabn<CR>
 nnoremap tp :tabp<CR>
 nnoremap <CR> o<Esc>
-nmap n nzz
-nmap N Nzz
-nmap * *zz
-nmap # #zz
-nmap g* g*zz
-nmap g# g#zz
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
 nnoremap <silent> <Space>.  :<C-u>edit $MYVIMRC<CR>
 nnoremap <silent> <Space>s. :<C-u>source $MYVIMRC<CR>
 nnoremap <S-H> :<C-u>help<Space>
