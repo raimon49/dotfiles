@@ -26,6 +26,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'thinca/vim-visualstar'
+NeoBundle 'thinca/vim-unite-history'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'pangloss/vim-javascript'
@@ -167,6 +168,10 @@ let g:yankring_history_dir = expand('$HOME')
 let g:yankring_history_file = '.yankring_history'
 let g:yankring_max_history = 20
 let g:yankring_window_height = 20
+
+" unite.vim
+let g:unite_enable_start_insert = 1
+nnoremap <silent> ss :<C-u>UniteWithBufferDir -buffer-name=files buffer file_rec file file_mru<CR>
 
 set termencoding=utf-8
 " via http://www.kawaz.jp/pukiwiki/?vim
