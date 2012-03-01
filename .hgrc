@@ -10,6 +10,8 @@ pager =
 
 [pager]
 pager = lv
+quiet = True
+attend = annotate, cat, diff, export, glog, log, qdiff, help, slog
 
 [alias]
 slog = log --template '{rev}:{node|short} {desc|firstline}\n'
