@@ -76,10 +76,10 @@ if [[ $ZSH_VERSION == (<5->|4.<4->|4.3.<7->)* ]]; then
     }
     VCS_PROMPT="%1(v|%F{magenta}%1v%2v%f|)"
 fi
-PROMPT="%{${fg[green]}%}[%n@%m]${VCS_PROMPT}%{${fg[green]}%}%(!.#.$) %{${reset_color}%}"
+PROMPT="%{${fg[green]}%}[%n@%m]${VCS_PROMPT}%{${fg[green]}%}%{${reset_color}%} %{${fg[yellow]}%}%100<..<%~%{${reset_color}%}
+%(!.#.$) "
 PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
-RPROMPT="%{${fg[green]}%}[%50<..<%~]%{${reset_color}%}"
 unset VCS_PROMPT
 
 # ファイルリネーム
