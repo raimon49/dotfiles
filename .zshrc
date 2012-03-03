@@ -90,10 +90,34 @@ setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
 function cdup() {
-echo
-cd ..
-zle reset-prompt
+    echo
+    cd ..
+    zle reset-prompt
 }
+function wg {
+    cd ~/works/git/$1
+}
+function _wg {
+    _files -W ~/works/git/ && return 0;
+    return 1;
+}
+function wh {
+    cd ~/works/hg/$1
+}
+function _wh {
+    _files -W ~/works/hg/ && return 0;
+    return 1;
+}
+function ws {
+    cd ~/works/svn/$1
+}
+function _ws {
+    _files -W ~/works/svn/ && return 0;
+    return 1;
+}
+compdef _wg wg
+compdef _wh wh
+compdef _ws ws
 zle -N cdup
 bindkey '\^' cdup
 
