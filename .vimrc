@@ -98,6 +98,10 @@ nnoremap <S-Tab> <C-W>W
 nnoremap tn :<C-u>tabn<CR>
 nnoremap tp :<C-u>tabp<CR>
 nnoremap <CR> o<Esc>
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
