@@ -15,4 +15,5 @@ attend = annotate, cat, diff, export, glog, log, qdiff, help, slog
 
 [alias]
 slog = log --template '{rev}:{node|short} {desc|firstline}\n'
+l = slog
 clean = !$HG status --no-status --unknown -0 | xargs -0 rm
