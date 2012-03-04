@@ -115,6 +115,9 @@ nnoremap <silent> <Space>s. :<C-u>source $MYVIMRC<CR>
 nnoremap H  :<C-u>help<Space>
 nnoremap th :<C-u>tab help<Space>
 
+inoremap <expr> ,df strftime('%Y-%m-%dT%H:%M:%S')
+inoremap <expr> ,dd strftime('%Y-%m-%d')
+inoremap <expr> ,dt strftime('%H:%M:%S')
 inoremap <C-A> <Home>
 inoremap <C-E> <End>
 inoremap <C-F> <Right>
