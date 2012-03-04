@@ -96,6 +96,8 @@ function cdup() {
     cd ..
     zle reset-prompt
 }
+zle -N cdup
+bindkey '\^' cdup
 function wg {
     cd ~/works/git/$1
 }
@@ -120,8 +122,6 @@ function _ws {
 compdef _wg wg
 compdef _wh wh
 compdef _ws ws
-zle -N cdup
-bindkey '\^' cdup
 
 # コマンド自動修正
 setopt correct
