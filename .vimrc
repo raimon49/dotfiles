@@ -136,6 +136,13 @@ nnoremap gc `[v`]
 vnoremap gc :<C-u>normal gc<CR>
 onoremap gc :<C-u>normal gc<CR>
 
+command! Cp932     edit ++enc=cp932<CR>
+command! Eucjp     edit ++enc=euc-jp<CR>
+command! Iso2022jp edit ++enc=iso2022jp<CR>
+command! Utf8      edit ++enc=utf-8<CR>
+command! Jis       Iso2022jp
+command! Sjis      Cp932
+
 set t_Co=256
 colorscheme desert256
 
