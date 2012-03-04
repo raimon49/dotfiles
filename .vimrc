@@ -89,6 +89,11 @@ set pumheight=10
 
 map gf <C-W>gf
 
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
+
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
@@ -98,10 +103,6 @@ nnoremap <S-Tab> <C-W>W
 nnoremap tn :<C-u>tabn<CR>
 nnoremap tp :<C-u>tabp<CR>
 nnoremap <CR> o<Esc>
-noremap j gj
-noremap k gk
-noremap gj j
-noremap gk k
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
