@@ -2,8 +2,8 @@
     name = raimon
     email = raimon49@hotmail.com
 [core]
-    pager = lv
-    editor = vim
+    pager = $PAGER
+    editor = $EDITOR
 [color]
     ui = auto
 [alias]

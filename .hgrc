@@ -1,6 +1,6 @@
 [ui]
 username = raimon <raimon49@hotmail.com>
-editor = vim
+editor = $EDITOR
 
 [extensions]
 color =
@@ -9,7 +9,7 @@ graphlog =
 pager =
 
 [pager]
-pager = lv
+pager = $PAGER
 quiet = True
 attend = annotate, cat, diff, export, glog, log, qdiff, help, slog
 
