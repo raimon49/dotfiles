@@ -40,6 +40,9 @@ if [[ $ZSH_VERSION == (<5->|4.<4->|4.3.<9->)* ]]; then
 fi
 
 # 補完
+if [ -d ~/.zsh-completions ]; then
+    fpath=(~/.zsh-completions $fpath)
+fi
 autoload -U compinit
 compinit
 
@@ -137,9 +140,6 @@ setopt no_multios
 
 # 拡張グロブ
 setopt extended_glob
-
-# zsh-completions
-fpath=(~/.zsh-completions $fpath)
 
 # エイリアス
 case "${OSTYPE}" in
