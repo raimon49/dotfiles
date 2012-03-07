@@ -38,6 +38,9 @@ bindkey "^N" history-beginning-search-forward-end
 if [[ $ZSH_VERSION == (<5->|4.<4->|4.3.<9->)* ]]; then
     bindkey "^R" history-incremental-pattern-search-backward
 fi
+function history-all {
+    history -E 1
+}
 
 # 補完
 if [ -d ~/.zsh-completions ]; then
