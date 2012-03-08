@@ -30,6 +30,7 @@ setopt hist_ignore_dups
 setopt hist_ignore_all_dups
 setopt hist_reduce_blanks
 setopt share_history
+setopt interactive_comments
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
