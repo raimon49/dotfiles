@@ -176,6 +176,9 @@ endif
 inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ', '=')
 inoremap <expr> , smartchr#one_of(', ', ',')
 inoremap <expr> : smartchr#one_of(': ', ':')
+inoremap <expr> & smartchr#one_of(' & ', ' && ', '&')
+inoremap <expr> <Bar> smartchr#one_of(' <Bar> ', ' <Bar><Bar> ', '<Bar>')
+inoremap <expr> / smartchr#one_of(' / ', '// ', '/')
 
 " syntastic
 let g:syntastic_auto_jump=1
