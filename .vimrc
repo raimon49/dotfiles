@@ -174,7 +174,7 @@ if has('unix') && !has('gui_running')
 endif
 
 " vim-smartchr
-inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ', '=')
+inoremap <expr> = smartchr#one_of(' = ', ' == ', '=')
 inoremap <expr> , smartchr#one_of(', ', ',')
 inoremap <expr> : smartchr#one_of(': ', ':')
 inoremap <expr> & smartchr#one_of(' & ', ' && ', '&')
@@ -185,6 +185,7 @@ inoremap <expr> + smartchr#one_of(' + ', ' ++ ', '+')
 inoremap <expr> += smartchr#one_of(' += ')
 inoremap <expr> - smartchr#one_of(' - ', ' -- ', '-')
 inoremap <expr> -= smartchr#one_of(' -= ')
+inoremap <expr> -> smartchr#one_of('->')
 
 " syntastic
 let g:syntastic_auto_jump = 1
@@ -214,6 +215,7 @@ hi IndentGuidesEven ctermbg=233
 
 augroup MyAutoCmd
     autocmd!
+    autocmd FileType php,javascript :inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ', '=')
     " from :help smartindent
     autocmd FileType python :inoremap # X#
 augroup END
