@@ -198,6 +198,7 @@ let g:yankring_history_dir = expand('$HOME')
 let g:yankring_history_file = '.yankring_history'
 let g:yankring_max_history = 20
 let g:yankring_window_height = 20
+let g:yankring_manual_clipboard_check = 0
 
 " unite.vim
 let g:unite_enable_start_insert = 1
