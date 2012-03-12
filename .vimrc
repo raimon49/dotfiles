@@ -212,6 +212,12 @@ let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  ctermbg=234
 hi IndentGuidesEven ctermbg=233
 
+augroup MyAutoCmd
+    autocmd!
+    " from :help smartindent
+    autocmd FileType python :inoremap # X#
+augroup END
+
 set termencoding=utf-8
 " via http://www.kawaz.jp/pukiwiki/?vim
 " 文字コードの自動認識
