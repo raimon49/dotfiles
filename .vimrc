@@ -139,6 +139,9 @@ nnoremap gc `[v`]
 vnoremap gc :<C-u>normal gc<CR>
 onoremap gc :<C-u>normal gc<CR>
 
+vnoremap < <gv
+vnoremap > >gv
+
 command! Cp932     edit ++enc=cp932<CR>
 command! Eucjp     edit ++enc=euc-jp<CR>
 command! Iso2022jp edit ++enc=iso2022jp<CR>
