@@ -69,6 +69,9 @@ zstyle ':completion:*' menu select=1
 # プロセスID補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
+# グロブ展開せずに選ぶ
+setopt glob_complete
+
 # プロンプト
 autoload colors
 colors
