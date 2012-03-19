@@ -72,6 +72,9 @@ zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 # グロブ展開せずに選ぶ
 setopt glob_complete
 
+# =の後も展開
+setopt magic_equal_subst
+
 # プロンプト
 autoload colors
 colors
