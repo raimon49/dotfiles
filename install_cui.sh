@@ -12,6 +12,9 @@ ln -s ~/works/git/dotfiles/.vim             ~
 ln -s ~/works/git/dotfiles/.vimrc           ~
 ln -s ~/works/git/dotfiles/.vimshrc         ~
 ln -s ~/works/git/dotfiles/.zsh-completions ~
+ln -s ~/works/git/dotfiles/.env.sh          ~
+ln -s ~/works/git/dotfiles/.alias.sh        ~
+ln -s ~/works/git/dotfiles/.bashrc          ~
 ln -s ~/works/git/dotfiles/.zshenv          ~
 ln -s ~/works/git/dotfiles/.zshrc           ~
 
