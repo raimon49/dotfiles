@@ -103,6 +103,10 @@ unset VCS_PROMPT
 # ファイルリネーム
 autoload zmv
 
+# 自動エスケープ
+autoload -Uz url-quote-magic
+zle -N self-insert url-quote-magic
+
 # ディレクトリ移動
 setopt auto_cd
 setopt auto_pushd
