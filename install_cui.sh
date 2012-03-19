@@ -12,6 +12,7 @@ ln -s ~/works/git/dotfiles/.vim             ~
 ln -s ~/works/git/dotfiles/.vimrc           ~
 ln -s ~/works/git/dotfiles/.vimshrc         ~
 ln -s ~/works/git/dotfiles/.zsh-completions ~
+ln -s ~/works/git/dotfiles/.zshenv          ~
 ln -s ~/works/git/dotfiles/.zshrc           ~
 
 ln -s ~/works/git/dotfiles/git-info/git-pager ~/local/bin
