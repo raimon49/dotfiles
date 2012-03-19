@@ -81,9 +81,14 @@ colors
 VCS_PROMPT=""
 if is-at-least 4.3.7; then
     autoload -Uz vcs_info
+    if is-at-least 4.3.10; then
+        zstyle ':vcs_info:git:*' check-for-changes true
+        zstyle ':vcs_info:git:*' stagedstr "+"
+        zstyle ':vcs_info:git:*' unstagedstr "-"
+    fi
     zstyle ':vcs_info:*' branchformat '%b:r%r'
-    zstyle ':vcs_info:*' formats ':(%s)%b'
-    zstyle ':vcs_info:*' actionformats ':(%s)%b|%a'
+    zstyle ':vcs_info:*' formats ':(%s)%b %c%u'
+    zstyle ':vcs_info:*' actionformats ':(%s)%b|%a %c%u'
     precmd () {
         psvar=()
         LANG=en_US.UTF-8 vcs_info
