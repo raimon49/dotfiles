@@ -54,7 +54,7 @@ readonly    HIGHLIGHT_BLUE="${ESC}[34;1m"
 readonly    HIGHLIGHT_CYAN="${ESC}[35;1m"
 readonly HIGHLIGHT_MAGENTA="${ESC}[36;1m"
 readonly   HIGHLIGHT_WHITE="${ESC}[37;1m"
-readonly  RESET_COLOR="\[\e[0m\]"
+readonly       RESET_COLOR="\[\e[0m\]"
 
 hg_branch() {
     hg branch 2> /dev/null | awk '{print "(hg:" $1 ")"}'
