@@ -19,6 +19,9 @@ elif [ -x "`which less 2> /dev/null`" ]; then
     alias lv="less"
 fi
 
+# バージョン情報
+autoload -Uz is-at-least
+
 # emacsキーバインド
 bindkey -e
 
@@ -36,7 +39,7 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
-if [[ $ZSH_VERSION == (<5->|4.<4->|4.3.<9->)* ]]; then
+if is-at-least 4.3.9; then
     bindkey "^R" history-incremental-pattern-search-backward
 fi
 function history-all {
@@ -70,7 +73,7 @@ zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 autoload colors
 colors
 VCS_PROMPT=""
-if [[ $ZSH_VERSION == (<5->|4.<4->|4.3.<7->)* ]]; then
+if is-at-least 4.3.7; then
     autoload -Uz vcs_info
     zstyle ':vcs_info:*' branchformat '%b:r%r'
     zstyle ':vcs_info:*' formats ':(%s)%b'
@@ -167,6 +170,7 @@ alias -g H=" | head"
 alias -g T=" | tail"
 alias -g L=" | ${PAGER}"
 alias -g V=" | vim -R -"
+alias -g W=" | w3m -T text/html"
 
 # for VVM
 test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
