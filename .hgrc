@@ -1,6 +1,6 @@
 [ui]
 username = raimon <raimon49@hotmail.com>
-editor = $EDITOR
+editor = ~/.hgeditor
 
 [extensions]
 color =

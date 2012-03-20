@@ -7,6 +7,7 @@ mkdir -p ~/.zsh/cache
 
 ln -s ~/works/git/dotfiles/.gitconfig       ~
 ln -s ~/works/git/dotfiles/.hgrc            ~
+ln -s ~/works/git/dotfiles/.hgeditor        ~
 ln -s ~/works/git/dotfiles/.screenrc        ~
 ln -s ~/works/git/dotfiles/.vim             ~
 ln -s ~/works/git/dotfiles/.vimrc           ~
