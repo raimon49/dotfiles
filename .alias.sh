@@ -22,5 +22,5 @@ if [ -n "${ZSH_VERSION}" ]; then
     alias -g T=" | tail"
     alias -g L=" | ${PAGER}"
     alias -g V=" | vim -R -"
-    alias -g W=" | w3m -T text/html"
+    alias -g W=" | w3m -no-cookie -T text/html"
 fi

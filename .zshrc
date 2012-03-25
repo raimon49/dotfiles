@@ -150,6 +150,15 @@ setopt no_multios
 # 拡張グロブ
 setopt extended_glob
 
+# ユーティリティ
+function alc() {
+    if [ -n "$1" ]; then
+        w3m -no-cookie "http://eow.alc.co.jp/${1}/UTF-8/?ref=sa" | sed '1,36d' | ${PAGER}
+    else
+        echo 'usage: alc word'
+    fi
+}
+
 # エイリアス
 if [ -e ~/.alias.sh ]; then
     source ~/.alias.sh
