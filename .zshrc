@@ -6,6 +6,12 @@ autoload -Uz is-at-least
 # emacsキーバインド
 bindkey -e
 
+# ENV
+# システム側(/etc/profile, /etc/zshrc)で上書きされないようにここで設定
+if [ -e ~/.env.sh ]; then
+    source ~/.env.sh
+fi
+
 # 履歴
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

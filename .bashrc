@@ -10,6 +10,11 @@ for zsh_command in "~/local/bin/zsh" "/usr/bin/zsh" "/bin/zsh"; do
     fi
 done
 
+# PATH
+if [ -e ~/.path.sh ]; then
+    source ~/.path.sh
+fi
+
 # ENV
 if [ -e ~/.env.sh ]; then
     source ~/.env.sh

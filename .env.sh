@@ -2,7 +2,6 @@
 
 export LANG=ja_JP.UTF-8
 export LC_CTYPE=ja_JP.UTF-8
-export PATH="${HOME}/local/bin:${PATH}"
 export EDITOR=vim
 export SVN_EDITOR=vim
 export SCREENDIR="${HOME}/.screen"
@@ -17,6 +16,3 @@ elif [ -x "`which less 2> /dev/null`" ]; then
     export LESSCHARSET=utf-8
     alias lv="less"
 fi
-
-# for VVM
-test -f ~/.vvm/etc/login && source ~/.vvm/etc/login

@@ -1,6 +1,6 @@
 ## .zshenv
 
-# 環境変数
-if [ -e ~/.env.sh ]; then
-    source ~/.env.sh
+# PATH
+if [ -e ~/.path.sh ]; then
+    source ~/.path.sh
 fi
