@@ -208,6 +208,10 @@ let g:yankring_manual_clipboard_check = 0
 let g:unite_enable_start_insert = 1
 nnoremap <silent> ss :<C-u>UniteWithBufferDir -buffer-name=files buffer file_rec file file_mru<CR>
 
+" vim-ref
+let g:ref_alc_start_linenumber = 41
+nnoremap ,alc :<C-u>Ref alc<Space>
+
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_color_change_percent = 30
