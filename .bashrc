@@ -3,7 +3,7 @@
 # zsh
 for zsh_command in ~/local/bin/zsh /usr/local/bin/zsh /usr/bin/zsh /bin/zsh; do
     if [ -x ${zsh_command} ]; then
-        if [ $PS1 ]; then
+        if [ ${PS1} ]; then
             SHELL=${zsh_command}
             exec ${zsh_command} -l
             return
