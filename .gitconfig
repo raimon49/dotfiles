@@ -19,6 +19,8 @@
     co = clone --recursive
     di = diff
     up = pull --rebase
+    premerge = merge --no-commit --no-ff
+    onemerge = merge --squash
     rollback = reset --soft HEAD^
     out = log origin..HEAD
     subfetch = submodule foreach "git checkout master; git pull"
