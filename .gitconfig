@@ -13,6 +13,9 @@
     rawci = commit
     ci = commit -v
     reci = commit --amend --date=now
+    br = branch
+    prebr = checkout -
+    unstage = reset
     co = clone --recursive
     di = diff
     up = pull --rebase
