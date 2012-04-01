@@ -14,6 +14,7 @@ quiet = True
 attend = annotate, cat, diff, export, glog, log, qdiff, help, slog
 
 [alias]
+br = branch
 slog = log --template '{rev} {node|short}: {date|isodate} ({author|user}): {desc|firstline}\n'
 l = slog
 clean = !$HG status --no-status --unknown -0 | xargs -0 rm
