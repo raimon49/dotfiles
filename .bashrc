@@ -17,6 +17,11 @@ if [ -e ~/.path.sh ]; then
     source ~/.path.sh
 fi
 
+# for SSH
+if [ -z ${PS1} ]; then
+    return
+fi
+
 # ENV
 if [ -e ~/.env.sh ]; then
     source ~/.env.sh
