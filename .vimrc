@@ -80,7 +80,7 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
-nmap <Esc><Esc> :<C-u>nohlsearch<CR><Esc>
+nnoremap <Esc><Esc> :<C-u>nohlsearch<CR><Esc>
 
 set whichwrap=b,s,h,l,<,>,[,]
 set backspace=indent,eol,start
