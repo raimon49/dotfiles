@@ -47,26 +47,30 @@ for bash_completion_path in "~/local/bin/bash_completion" "/etc/bash_completion"
         break
     fi
 done
+if [ -e ~/local/bin/git-completion.bash ]; then
+    source ~/local/bin/git-completion.bash
+    GIT_PS1_SHOWDIRTYSTATE="YES"
+fi
 
 # プロンプト
-readonly               ESC="$(echo -ne '\033')"
-readonly             BLACK="${ESC}[30m"
-readonly               RED="${ESC}[31m"
-readonly             GREEN="${ESC}[32m"
-readonly            YELLOW="${ESC}[33m"
-readonly              BLUE="${ESC}[34m"
-readonly              CYAN="${ESC}[35m"
-readonly           MAGENTA="${ESC}[36m"
-readonly             WHITE="${ESC}[37m"
-readonly   HIGHLIGHT_BLACK="${ESC}[30;1m"
-readonly     HIGHLIGHT_RED="${ESC}[31;1m"
-readonly   HIGHLIGHT_GREEN="${ESC}[32;1m"
-readonly  HIGHLIGHT_YELLOW="${ESC}[33;1m"
-readonly    HIGHLIGHT_BLUE="${ESC}[34;1m"
-readonly    HIGHLIGHT_CYAN="${ESC}[35;1m"
-readonly HIGHLIGHT_MAGENTA="${ESC}[36;1m"
-readonly   HIGHLIGHT_WHITE="${ESC}[37;1m"
-readonly       RESET_COLOR="\[\e[0m\]"
+              ESC="$(echo -ne '\033')"
+            BLACK="${ESC}[30m"
+              RED="${ESC}[31m"
+            GREEN="${ESC}[32m"
+           YELLOW="${ESC}[33m"
+             BLUE="${ESC}[34m"
+             CYAN="${ESC}[35m"
+          MAGENTA="${ESC}[36m"
+            WHITE="${ESC}[37m"
+  HIGHLIGHT_BLACK="${ESC}[30;1m"
+    HIGHLIGHT_RED="${ESC}[31;1m"
+  HIGHLIGHT_GREEN="${ESC}[32;1m"
+ HIGHLIGHT_YELLOW="${ESC}[33;1m"
+   HIGHLIGHT_BLUE="${ESC}[34;1m"
+   HIGHLIGHT_CYAN="${ESC}[35;1m"
+HIGHLIGHT_MAGENTA="${ESC}[36;1m"
+  HIGHLIGHT_WHITE="${ESC}[37;1m"
+      RESET_COLOR="\[\e[0m\]"
 
 hg_branch() {
     hg branch 2> /dev/null | awk '{print "(hg:" $1 ")"}'
@@ -76,8 +80,16 @@ git_branch() {
     __git_ps1 '(git:%s)'
 }
 
+VCS_GIT_BR=""
+if [ -n "${GIT_PS1_SHOWDIRTYSTATE-}" ]; then
+    VCS_GIT_BR="\$(git_branch)"
+fi
+VCS_HG_BR=""
+if [ -x "`which hg 2> /dev/null`" ]; then
+    VCS_HG_BR="\$(hg_branch)"
+fi
 
-VCS_PROMPT="${CYAN}\$(git_branch)\$(hg_branch)${RESET_COLOR}"
+VCS_PROMPT="${CYAN}${VCS_GIT_BR}${HG_BR}${RESET_COLOR}"
 PS1="${GREEN}[\u@\H]${RESET_COLOR}${VCS_PROMPT} ${YELLOW}\w${RESET_COLOR}\n$ "
 
 # エイリアス
