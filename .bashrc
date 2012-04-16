@@ -81,7 +81,7 @@ git_branch() {
 }
 
 VCS_GIT_BR=""
-if [ -n "${GIT_PS1_SHOWDIRTYSTATE-}" ]; then
+if [ -n "${GIT_PS1_SHOWDIRTYSTATE}" ]; then
     VCS_GIT_BR="\$(git_branch)"
 fi
 VCS_HG_BR=""
