@@ -1,0 +1,12 @@
+set completion-ignore-case on
+set convert-meta off
+set meta-flag on
+set output-meta on
+$if mysql
+    “\C-xd”: “SHOW DATABASES;\n”
+    “\C-xt”: “SHOW TABLES;\n”
+    “\C-xu”: “SELECT User,Host,Password,t.* FROM mysql.user AS t ORDER BY User,Host; SELECT Db,User,Host,t.* FROM mysql.db AS t ORDER BY Db,User,Host;\n”
+    “\C-xc”: “SHOW VARIABLES LIKE ‘char%’; SELECT * FROM information_schema.SCHEMATA; SHOW TABLE STATUS;\n”
+    “\C-xi”: “SHOW INNODB STATUS;\n”
+    “\C-xs”: “SET SQL_SAFE_UPDATES=0;\n”
+$endif
