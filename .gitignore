@@ -1,3 +1,5 @@
 .vim/neobundle/
 .DS_Store
 *.swp
+.hg
+.svn
