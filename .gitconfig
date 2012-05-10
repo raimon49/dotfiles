@@ -9,6 +9,7 @@
 [alias]
     ss = status -s
     st = status -s
+    ls = ls-files
     stat = status
     rawci = commit
     ci = commit -v
