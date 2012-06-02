@@ -177,22 +177,24 @@ if has('unix') && !has('gui_running')
 endif
 
 " vim-smartchr
-inoremap <expr> = smartchr#one_of(' = ', ' == ', '=')
-inoremap <expr> , smartchr#one_of(', ', ',')
-inoremap <expr> : smartchr#one_of(': ', ':')
-inoremap <expr> & smartchr#one_of(' & ', ' && ', '&')
-inoremap <expr> <Bar> smartchr#one_of(' <Bar> ', ' <Bar><Bar> ', '<Bar>')
-inoremap <expr> / smartchr#one_of(' / ', '// ', '/')
-inoremap <expr> /* smartchr#one_of('/*')
-inoremap <expr> */ smartchr#one_of('*/')
-inoremap <expr> % smartchr#one_of(' % ', '%')
-inoremap <expr> + smartchr#one_of(' + ', ' ++ ', '+')
-inoremap <expr> += smartchr#one_of(' += ')
-inoremap <expr> - smartchr#one_of(' - ', ' -- ', '-')
-inoremap <expr> -= smartchr#one_of(' -= ')
-inoremap <expr> -> smartchr#one_of('->')
-inoremap <expr> <!-- smartchr#one_of('<!--')
-inoremap <expr> --> smartchr#one_of('-->')
+function! EnableSmartchrBasic()
+    inoremap <buffer> ( ()<Esc>i
+    inoremap <buffer> [ []<Esc>i
+    inoremap <buffer> { {}<Esc>i
+    inoremap <buffer><expr> + smartchr#one_of(' + ', '+', '++')
+    inoremap <buffer><expr> - smartchr#one_of(' - ', ' -- ', '-')
+    inoremap <buffer><expr> & smartchr#one_of(' & ', ' && ', '&')
+    inoremap <buffer><expr> / smartchr#one_of('/', '// ', '/')
+    inoremap <buffer><expr> , smartchr#one_of(', ', ',')
+    inoremap <buffer><expr> : smartchr#one_of(': ', ':')
+    inoremap <buffer><expr> % smartchr#one_of(' % ', '%')
+    inoremap <buffer><expr> <Bar> smartchr#one_of('<Bar>', ' <Bar><Bar> ', '<Bar>')
+    inoremap <buffer><expr> = search('\(&\<bar><bar>\<bar>+\<bar>-\<bar>/\<bar>>\<bar><\) \%#', 'bcn')? '<bs>= ' : search('\(\*\<bar>!\)\%#')? '= ' : smartchr#one_of(' = ', ' == ', '=')
+endfunction
+
+function! EnableSmartchrExtendComparison()
+    inoremap <buffer><expr> = search('\(&\<bar><bar>\<bar>+\<bar>-\<bar>/\<bar>>\<bar><\) \%#', 'bcn')? '<bs>= ' : search('\(\*\<bar>!\)\%#')? '= ' : smartchr#one_of(' = ', ' == ', ' === ', '=')
+endfunction
 
 " syntastic
 let g:syntastic_auto_jump = 1
@@ -226,7 +228,8 @@ hi IndentGuidesEven ctermbg=233
 
 augroup MyAutoCmd
     autocmd!
-    autocmd FileType php,javascript :inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ', '=')
+    autocmd FileType c,cpp,cs,objc,java,javascript,php,python,ruby,coffee,vim call EnableSmartchrBasic()
+    autocmd FileType php,javascript call EnableSmartchrExtendComparison()
     " from :help smartindent
     autocmd FileType python :inoremap # X#
 augroup END
