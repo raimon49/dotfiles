@@ -196,6 +196,21 @@ function! EnableSmartchrExtendComparison()
     inoremap <buffer><expr> = search('\(&\<bar><bar>\<bar>+\<bar>-\<bar>/\<bar>>\<bar><\) \%#', 'bcn')? '<bs>= ' : search('\(\*\<bar>!\)\%#')? '= ' : smartchr#one_of(' = ', ' == ', ' === ', '=')
 endfunction
 
+function! DisableSmartchr()
+    inoremap <buffer> ( (
+    inoremap <buffer> [ [
+    inoremap <buffer> { {
+    inoremap <buffer> + +
+    inoremap <buffer> - -
+    inoremap <buffer> & &
+    inoremap <buffer> / /
+    inoremap <buffer> , ,
+    inoremap <buffer> : :
+    inoremap <buffer> % %
+    inoremap <buffer> <Bar> <Bar>
+    inoremap <buffer> = =
+endfunction
+
 " syntastic
 let g:syntastic_auto_jump = 1
 let g:syntastic_mode_map = { 'mode': 'passive',
@@ -230,6 +245,7 @@ augroup MyAutoCmd
     autocmd!
     autocmd FileType c,cpp,cs,objc,java,javascript,php,python,ruby,coffee,vim call EnableSmartchrBasic()
     autocmd FileType php,javascript call EnableSmartchrExtendComparison()
+    autocmd FileType text,markdown,html,xml call DisableSmartchr()
     " from :help smartindent
     autocmd FileType python :inoremap # X#
 augroup END
