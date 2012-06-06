@@ -125,7 +125,7 @@ inoremap <C-A> <Home>
 inoremap <C-E> <End>
 inoremap <C-F> <Right>
 inoremap <C-B> <Left>
-inoremap <C-D> <Esc>lxi
+inoremap <C-D> <Del>
 
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
