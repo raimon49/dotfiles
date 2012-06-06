@@ -131,6 +131,7 @@ cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
 cnoremap <C-F> <Right>
 cnoremap <C-B> <Left>
+cnoremap <C-D> <Del>
 " default escape for search. naked input: <C-v>/, <C-v>?
 cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
