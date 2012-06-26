@@ -96,8 +96,7 @@ unset VCS_PROMPT
 autoload zmv
 
 # 自動エスケープ
-autoload -Uz url-quote-magic
-zle -N self-insert url-quote-magic
+echo ${^fpath}/url-quote-magic(N) | grep -q url-quote-magic && autoload -Uz url-quote-magic && zle -N self-insert url-quote-magic
 
 # ディレクトリ移動
 setopt auto_cd
