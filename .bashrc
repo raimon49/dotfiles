@@ -49,6 +49,9 @@ for bash_completion_path in "~/local/bin/bash_completion" "/etc/bash_completion"
 done
 if [ -e ~/local/bin/git-completion.bash ]; then
     source ~/local/bin/git-completion.bash
+fi
+if [ -e ~/local/bin/git-prompt.sh ]; then
+    source ~/local/bin/git-prompt.sh
     GIT_PS1_SHOWDIRTYSTATE="YES"
 fi
 
