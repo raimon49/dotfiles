@@ -28,6 +28,8 @@ ln -s ~/works/git/dotfiles/.alias.sh        ~
 ln -s ~/works/git/dotfiles/.bashrc          ~
 ln -s ~/works/git/dotfiles/.zshenv          ~
 ln -s ~/works/git/dotfiles/.zshrc           ~
+ln -s ~/works/git/dotfiles/.inputrc         ~
+ln -s ~/works/git/dotfiles/.my.cnf          ~
 
 ln -s ~/works/git/dotfiles/git-info/git-pager ~/local/bin
 ln -s ~/works/git/dotfiles/git-info/git-info ~/local/bin
