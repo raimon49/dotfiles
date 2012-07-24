@@ -1,4 +1,4 @@
-## .alia.sh
+## .alias.sh
 
 case "${OSTYPE}" in
     freebsd*|darwin*)
