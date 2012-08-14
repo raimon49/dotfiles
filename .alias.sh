@@ -12,6 +12,7 @@ case "${OSTYPE}" in
 esac
 alias l="ls -CF"
 alias ll="ls -laF"
+alias cls="clear;ls"
 alias sudo="sudo -E "
 alias view="vim -R"
 alias rawvim="vim -u NONE -U NONE --noplugin -c 'set nu' -c 'syntax enable'"
