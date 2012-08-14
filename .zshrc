@@ -158,6 +158,9 @@ function alc() {
     fi
 }
 
+# プロセスの実行時間が指定秒以上だった時にレポート表示
+REPORTTIME=3
+
 # エイリアス
 if [ -e ~/.alias.sh ]; then
     source ~/.alias.sh
