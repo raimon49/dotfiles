@@ -41,6 +41,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'taku-o/vim-vis'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'pasela/unite-webcolorname'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
