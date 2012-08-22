@@ -118,6 +118,8 @@ nnoremap <silent> <Space>s. :<C-u>source $MYVIMRC<CR>
 " quick help
 nnoremap H  :<C-u>help<Space>
 nnoremap th :<C-u>tab help<Space>
+" toggle <sp>ell
+nnoremap <silent> <Space>sp :<C-u>setlocal spell! spelllang=en_us<CR>:setlocal spell?<CR>
 
 inoremap <expr> ,df strftime('%Y-%m-%dT%H:%M:%S')
 inoremap <expr> ,dd strftime('%Y-%m-%d')
@@ -251,6 +253,8 @@ augroup MyAutoCmd
     autocmd FileType text,markdown,html,xml call DisableSmartchr()
     " from :help smartindent
     autocmd FileType python :inoremap # X#
+    " for commit log
+    autocmd FileType svn,gitcommit setlocal spell spelllang=en_us
 augroup END
 
 set termencoding=utf-8
