@@ -16,7 +16,7 @@ esac
 
 vim() {
     if [ "$2" ]; then
-        "$(which vim)" "+e $2" "+set buftype=help" "+split $1"
+        "$(which vim)" "+e $2" "+set buftype=help" "+split $1" "+setl ft=svn"
     else
         "$(which vim)" -f -o "$1"
     fi
