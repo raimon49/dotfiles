@@ -15,6 +15,7 @@ elif [ -x "`which curl 2> /dev/null`" ]; then
 fi
 
 ln -s ~/works/git/dotfiles/.gitconfig       ~
+ln -s ~/works/git/dotfiles/.gitignore       ~
 ln -s ~/works/git/dotfiles/.hgrc            ~
 ln -s ~/works/git/dotfiles/.hgeditor        ~
 ln -s ~/works/git/dotfiles/.screenrc        ~
