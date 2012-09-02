@@ -35,6 +35,7 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'kana/vim-smartchr'
+NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-gf-user'
 NeoBundle 'kana/vim-gf-diff'
 NeoBundle 'scrooloose/syntastic'
@@ -183,9 +184,6 @@ endif
 
 " vim-smartchr
 function! EnableSmartchrBasic()
-    inoremap <buffer> ( ()<Esc>i
-    inoremap <buffer> [ []<Esc>i
-    inoremap <buffer> { {}<Esc>i
     inoremap <buffer><expr> + smartchr#one_of(' + ', '+', '++')
     inoremap <buffer><expr> - smartchr#one_of(' - ', ' -- ', '-')
     inoremap <buffer><expr> & smartchr#one_of(' & ', ' && ', '&')
@@ -202,9 +200,6 @@ function! EnableSmartchrExtendComparison()
 endfunction
 
 function! DisableSmartchr()
-    inoremap <buffer> ( (
-    inoremap <buffer> [ [
-    inoremap <buffer> { {
     inoremap <buffer> + +
     inoremap <buffer> - -
     inoremap <buffer> & &
