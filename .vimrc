@@ -147,6 +147,8 @@ onoremap gc :<C-u>normal gc<CR>
 
 vnoremap < <gv
 vnoremap > >gv
+" require Python 2.6+
+vnoremap _json !python -m json.tool<CR>
 
 command! Cp932     edit ++enc=cp932<CR>
 command! Eucjp     edit ++enc=euc-jp<CR>
