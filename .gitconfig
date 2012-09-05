@@ -8,7 +8,8 @@
 [color]
     ui = auto
 [alias]
-    ss = status -s
+    ss = stash save
+    sp = stash pop
     st = status -s
     ls = ls-files
     stat = status
