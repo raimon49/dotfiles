@@ -245,6 +245,10 @@ let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  ctermbg=234
 hi IndentGuidesEven ctermbg=233
 
+" vim-alignta
+xnoremap <silent> L :Alignta << =<CR>
+xnoremap <silent> R :Alignta >> =<CR>
+
 augroup MyAutoCmd
     autocmd!
     autocmd FileType c,cpp,cs,objc,java,javascript,php,python,ruby,coffee,vim call EnableSmartchrBasic()
