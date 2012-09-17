@@ -4,6 +4,7 @@ set nocompatible
 filetype off
 if has('vim_starting')
   if has('win32') || has('win64')
+      set shellslash
       let $DOTVIM = expand('~/vimfiles')
   else
       let $DOTVIM = expand('~/.vim')
