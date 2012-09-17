@@ -102,7 +102,11 @@ noremap j gj
 noremap k gk
 noremap gj j
 noremap gk k
-
+" quick resize
+nnoremap + <C-W>+
+nnoremap - <C-W>-
+nnoremap ) <C-W>>
+nnoremap ( <C-W><
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-H> <C-W>h
@@ -126,11 +130,6 @@ nnoremap H  :<C-u>help<Space>
 nnoremap th :<C-u>tab help<Space>
 " toggle <sp>ell
 nnoremap <silent> <Space>sp :<C-u>setlocal spell! spelllang=en_us<CR>:setlocal spell?<CR>
-" quick resize
-nnoremap + <C-W>+
-nnoremap - <C-W>-
-nnoremap ) <C-W>>
-nnoremap ( <C-W><
 
 inoremap <expr> ,df strftime('%Y-%m-%dT%H:%M:%S')
 inoremap <expr> ,dd strftime('%Y-%m-%d')
