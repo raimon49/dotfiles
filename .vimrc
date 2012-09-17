@@ -94,6 +94,8 @@ set virtualedit=block
 
 set pumheight=10
 
+set nrformats=alpha,octal,hex
+
 map gf <C-W>gf
 
 noremap j gj
@@ -124,6 +126,11 @@ nnoremap H  :<C-u>help<Space>
 nnoremap th :<C-u>tab help<Space>
 " toggle <sp>ell
 nnoremap <silent> <Space>sp :<C-u>setlocal spell! spelllang=en_us<CR>:setlocal spell?<CR>
+" quick resize
+nnoremap + <C-W>+
+nnoremap - <C-W>-
+nnoremap ) <C-W>>
+nnoremap ( <C-W><
 
 inoremap <expr> ,df strftime('%Y-%m-%dT%H:%M:%S')
 inoremap <expr> ,dd strftime('%Y-%m-%d')
@@ -332,7 +339,7 @@ augroup BinaryXXD
 augroup END
 
 " via http://ttssh2.sourceforge.jp/manual/ja/usage/tips/vim.html
-" paste sequence
+" paste sequence　　　　
 if &term =~ "xterm"
     " from .screenrc 'term xterm-256color'
     if &term == "xterm-256color" && $SHLVL > 1
