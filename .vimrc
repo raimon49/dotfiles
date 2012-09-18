@@ -338,7 +338,7 @@ augroup BinaryXXD
 augroup END
 
 " via http://ttssh2.sourceforge.jp/manual/ja/usage/tips/vim.html
-" paste sequence　　　　
+" paste sequence
 if &term =~ "xterm"
     " from .screenrc 'term xterm-256color'
     if &term == "xterm-256color" && $SHLVL > 1
