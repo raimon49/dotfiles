@@ -29,9 +29,8 @@
     subfetch = submodule foreach "git checkout master; git pull"
     l =  log --pretty=format:\"%h %ad (%an): %s\" --date=short -20
     slog = log --pretty=format:\"%h %ad (%an): %s\" --date=short -20
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-    log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
-    log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
-    log-diff = log -p
+    mlog = log --oneline --abbrev-commit --merge
+    glog = log --graph --date=short --pretty='%C(yellow)%h%Creset %C(cyan bold)%d%Creset %s %Cgreen[%cd]%Creset' --decorate
+    dlog = log -p
     pager = '!$HOME/local/bin/git-pager'
     info = '!$HOME/local/bin/git-info'
