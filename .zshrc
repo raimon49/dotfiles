@@ -35,7 +35,7 @@ function history-all {
 
 # 補完
 if [ -d ~/.zsh-completions ]; then
-    fpath=(~/.zsh-completions $fpath)
+    fpath=(~/.zsh-completions/src $fpath)
 fi
 autoload -U compinit
 compinit
