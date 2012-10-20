@@ -54,6 +54,28 @@ if [ -e ~/local/bin/git-prompt.sh ]; then
     GIT_PS1_SHOWDIRTYSTATE="YES"
 fi
 
+# XXX not use complete -F _fn fn...
+function wg() {
+    [ -d ~/works/git ] && cd ~/works/git && return 0
+
+    echo "git workspace not found"
+    return 1
+}
+
+function wh() {
+    [ -d ~/works/hg ] && cd ~/works/hg && return 0
+
+    echo "hg workspace not found"
+    return 1
+}
+
+function ws() {
+    [ -d ~/works/svn ] && cd ~/works/svn && return 0
+
+    echo "svn workspace not found"
+    return 1
+}
+
 # プロンプト
               ESC="$(echo -ne '\033')"
             BLACK="${ESC}[30m"
