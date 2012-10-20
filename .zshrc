@@ -63,6 +63,7 @@ setopt glob_complete
 setopt magic_equal_subst
 
 # プロンプト
+setopt transient_rprompt
 autoload colors
 colors
 VCS_PROMPT=""
@@ -90,6 +91,7 @@ PROMPT="%{${fg[green]}%}[%n@%m]${VCS_PROMPT}%{${fg[green]}%}%{${reset_color}%} %
 %(!.#.$) "
 PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
 SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
+RPROMPT="%{${fg[green]}%}[zsh ${ZSH_VERSION}]%{${reset_color}%}"
 unset VCS_PROMPT
 
 # ファイルリネーム
