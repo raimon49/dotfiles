@@ -42,8 +42,7 @@ shopt -u histappend
 # 補完
 for bash_completion_path in "~/local/bin/bash_completion" "/etc/bash_completion"; do
     if [ -e ${bash_completion_path} ]; then
-        export BASH_COMPLETION=${bash_completion_path}
-        source ${BASH_COMPLETION}
+        source ${bash_completion_path}
         break
     fi
 done
