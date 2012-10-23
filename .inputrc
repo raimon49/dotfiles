@@ -1,7 +1,26 @@
+# 大文字小文字を無視
 set completion-ignore-case on
+
+# 日本語関連
 set convert-meta off
 set meta-flag on
 set output-meta on
+
+# ls -Fライクな補完
+set visible-stats on
+
+# 通常はドットファイルを隠す
+set match-hidden-files off
+
+# 履歴検索
+"\C-p": history-search-backward
+"\C-n": history-search-forward
+
+$if Bash
+    # ~から始まるパスを展開しない
+    set expand-tilde off
+$endif
+
 $if mysql
     “\C-xd”: “SHOW DATABASES;\n”
     “\C-xt”: “SHOW TABLES;\n”

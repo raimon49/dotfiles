@@ -43,6 +43,12 @@ shopt -u histappend
 for bash_completion_path in "~/local/bin/bash_completion" "/etc/bash_completion"; do
     if [ -e ${bash_completion_path} ]; then
         source ${bash_completion_path}
+
+        # expand-tilde off
+        function _expand() {
+            return 0;
+        }
+
         break
     fi
 done
@@ -53,6 +59,8 @@ if [ -e ~/local/bin/git-prompt.sh ]; then
     source ~/local/bin/git-prompt.sh
     GIT_PS1_SHOWDIRTYSTATE="YES"
 fi
+
+shopt -s cdspell
 
 # XXX not use complete -F _fn fn...
 function wg() {
