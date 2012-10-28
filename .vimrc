@@ -273,6 +273,8 @@ augroup MyAutoCmd
     autocmd FileType python :inoremap # X#
     " for commit log
     autocmd FileType svn,gitcommit setlocal spell spelllang=en_us
+    " for Makefile
+    autocmd FileType make setlocal noexpandtab
 augroup END
 
 set termencoding=utf-8
