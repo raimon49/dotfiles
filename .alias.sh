@@ -10,6 +10,15 @@ case "${OSTYPE}" in
     alias llc="ls -laF --color=always"
     ;;
 esac
+
+case "`uname`" in
+    FreeBSD | OpenBSD | NetBSD | SunOS)
+    if [ -x "`which gmake 2> /dev/null`" ]; then
+        alias make="gmake"
+    fi
+    ;;
+esac
+
 alias l="ls -CF"
 alias ll="ls -laF"
 alias cls="clear;ls"
