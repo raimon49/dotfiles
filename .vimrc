@@ -19,7 +19,6 @@ endif
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimproc', {
     \'build' : {
     \   'windows': 'echo "Sorry, cannot update vimproc binary file in Windows."',
