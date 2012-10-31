@@ -39,6 +39,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'Lokaltog/vim-powerline'
@@ -262,6 +263,9 @@ hi IndentGuidesEven ctermbg=233
 " vim-alignta
 xnoremap <silent> L :Alignta << =<CR>
 xnoremap <silent> R :Alignta >> =<CR>
+
+" jscomplete-vim
+let g:jscomplete_use = ['dom', 'moz', 'es6th']
 
 augroup MyAutoCmd
     autocmd!
