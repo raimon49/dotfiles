@@ -17,7 +17,6 @@ endif
 
 " Plugins on GitHub
 NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc', {
     \'build' : {
