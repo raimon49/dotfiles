@@ -51,7 +51,7 @@ NeoBundle 'taku-o/vim-vis'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'pasela/unite-webcolorname'
-NeoBundle 'msanders/cocoa.vim'
+NeoBundleLazy 'msanders/cocoa.vim'
 NeoBundle 'h1mesuke/vim-alignta'
 
 " Plugins on vim-scripts
@@ -268,9 +268,12 @@ let g:jscomplete_use = ['dom', 'moz', 'es6th']
 
 augroup MyAutoCmd
     autocmd!
+    " switch smartchr
     autocmd FileType c,cpp,cs,objc,java,javascript,php,python,ruby,coffee,vim call EnableSmartchrBasic()
     autocmd FileType php,javascript call EnableSmartchrExtendComparison()
     autocmd FileType text,markdown,html,xml call DisableSmartchr()
+    " lazy load plugin
+    autocmd FileType objc NeoBundleSource cocoa.vim
     " from :help smartindent
     autocmd FileType python :inoremap # X#
     " for commit log
