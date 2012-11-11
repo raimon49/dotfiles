@@ -1,0 +1,14 @@
+@charset "utf-8";
+/*
+ * profile-directory/chrome/userContent.css
+ * (for Windows)
+ */
+@font-face {
+    font-family: "ＭＳ Ｐゴシック";
+    src: local("メイリオ"), local("Meiryo"), local("ＭＳ Ｐゴシック");
+}
+
+@font-face {
+    font-family: "MS PGothic";
+    src: local("メイリオ"), local("Meiryo"), local("ＭＳ Ｐゴシック");
+}
