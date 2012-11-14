@@ -12,3 +12,13 @@
     font-family: "MS PGothic";
     src: local("メイリオ"), local("Meiryo"), local("ＭＳ Ｐゴシック");
 }
+
+@font-face {
+    font-family: "ＭＳ Ｐ明朝";
+    src: local("メイリオ"), local("Meiryo"), local("ＭＳ Ｐゴシック");
+}
+
+@font-face {
+    font-family: "MS PMincho";
+    src: local("メイリオ"), local("Meiryo"), local("ＭＳ Ｐゴシック");
+}
