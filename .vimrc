@@ -268,6 +268,8 @@ let g:jscomplete_use = ['dom', 'moz', 'es6th']
 
 augroup MyAutoCmd
     autocmd!
+    " detect markdown
+    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal filetype=markdown
     " switch smartchr
     autocmd FileType c,cpp,cs,objc,java,javascript,php,python,ruby,coffee,vim call EnableSmartchrBasic()
     autocmd FileType php,javascript call EnableSmartchrExtendComparison()
