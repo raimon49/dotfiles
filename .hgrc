@@ -19,3 +19,4 @@ ls = manifest
 slog = log --template '{rev} {node|short}: {date|isodate} ({author|user}): {desc|firstline}\n'
 l = slog
 clean = !$HG status --no-status --unknown -0 | xargs -0 rm
+nudge = push --rev .
