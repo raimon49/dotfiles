@@ -29,6 +29,8 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'mattn/sonictemplate-vim'
 NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
