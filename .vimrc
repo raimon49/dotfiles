@@ -273,7 +273,7 @@ let g:jscomplete_use = ['dom', 'moz', 'es6th']
 augroup MyAutoCmd
     autocmd!
     " restore cursor
-    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\""
+    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
     " detect markdown
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal filetype=markdown
     " switch smartchr
