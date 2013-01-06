@@ -80,6 +80,8 @@ set writebackup
 
 set expandtab
 set autoindent
+set copyindent
+set preserveindent
 set smartindent
 set showmatch
 set tabstop=4
