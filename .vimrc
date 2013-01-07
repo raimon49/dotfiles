@@ -16,6 +16,7 @@ if has('vim_starting')
 endif
 
 " Plugins on GitHub
+NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc', {
