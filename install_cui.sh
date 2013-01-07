@@ -3,9 +3,7 @@ cd $(dirname $0)
 
 [ ! -d ~/local/bin ] && mkdir -p ~/local/bin
 [ ! -d ~/.zsh/cache ] && mkdir -p ~/.zsh/cache
-[ ! -d ~/.vim ] && mkdir -p ~/.vim
-[ ! -d ~/.vim/neobundle ] && mkdir -p ~/.vim/neobundle
-git clone git://github.com/Shougo/neobundle.vim ~/.vim/neobundle/neobundle.vim
+git clone git://github.com/Shougo/neobundle.vim .vim/bundle/neobundle.vim
 
 # for Git on Bash
 if [ -x "$(which wget 2> /dev/null)" ]; then
