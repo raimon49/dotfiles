@@ -60,6 +60,7 @@ NeoBundleLazy 'msanders/cocoa.vim', {
     \   'autoload': { 'filetypes': [ 'objc' ] },
 \ }
 NeoBundle 'h1mesuke/vim-alignta'
+NeoBundle 'h1mesuke/unite-outline'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
