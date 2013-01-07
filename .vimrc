@@ -10,7 +10,7 @@ if has('vim_starting')
       let $DOTVIM = expand('~/.vim')
   endif
 
-  set rtp+=$DOTVIM/neobundle.vim.git
+  set rtp+=$DOTVIM/neobundle/neobundle.vim
 
   call neobundle#rc(expand('$DOTVIM/neobundle'))
 endif
