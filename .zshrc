@@ -136,6 +136,12 @@ compdef _wg wg
 compdef _wh wh
 compdef _ws ws
 
+_Z_CMD=j
+source ~/.z.sh/z.sh
+precmd() {
+    _z --add "$(pwd -P)"
+}
+
 # コマンド自動修正
 setopt correct
 

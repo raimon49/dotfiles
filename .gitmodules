@@ -7,3 +7,6 @@
 [submodule "git-info"]
 	path = git-info
 	url = git://github.com/knu/git-info.git
+[submodule ".z.sh"]
+	path = .z.sh
+	url = git://github.com/rupa/z.git
