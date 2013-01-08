@@ -135,7 +135,6 @@ function _ws {
 compdef _wg wg
 compdef _wh wh
 compdef _ws ws
-
 _Z_CMD=j
 source ~/.z.sh/z.sh
 precmd() {
