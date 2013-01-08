@@ -173,6 +173,8 @@ onoremap gc :<C-u>normal gc<CR>
 
 vnoremap < <gv
 vnoremap > >gv
+" quick continuous paste
+vnoremap <silent> <C-P> "0p<CR>
 " require Python 2.6+
 vnoremap _json !python -m json.tool<CR>
 
