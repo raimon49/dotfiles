@@ -86,9 +86,6 @@ function ws() {
 
 _Z_CMD=j
 source ~/.z.sh/z.sh
-precmd() {
-    _z --add "$(pwd -P)"
-}
 
 # プロンプト
               ESC="$(echo -ne '\033')"

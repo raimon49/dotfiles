@@ -77,7 +77,7 @@ if is-at-least 4.3.7; then
     zstyle ':vcs_info:*' branchformat '%b:r%r'
     zstyle ':vcs_info:*' formats ':(%s)%b %c%u'
     zstyle ':vcs_info:*' actionformats ':(%s)%b|%a %c%u'
-    precmd () {
+    function precmd_vcs() {
         psvar=()
         LANG=en_US.UTF-8 vcs_info
         [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
@@ -86,6 +86,7 @@ if is-at-least 4.3.7; then
         [[ -e $PWD/.git/refs/stash ]] && psvar[2]=" ($(git stash list 2>/dev/null | wc -l) stashed)"
     }
     VCS_PROMPT="%1(v|%F{magenta}%1v%2v%f|)"
+    precmd_functions+=precmd_vcs
 fi
 PROMPT="%{${fg[green]}%}[%n@%m]${VCS_PROMPT}%{${fg[green]}%}%{${reset_color}%} %{${fg[yellow]}%}%100<..<%~%{${reset_color}%}
 %(!.#.$) "
@@ -137,9 +138,10 @@ compdef _wh wh
 compdef _ws ws
 _Z_CMD=j
 source ~/.z.sh/z.sh
-precmd() {
+function precmd_z() {
     _z --add "$(pwd -P)"
 }
+precmd_functions+=precmd_z
 
 # コマンド自動修正
 setopt correct
