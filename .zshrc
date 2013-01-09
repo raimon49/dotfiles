@@ -108,13 +108,6 @@ echo ${^fpath}/url-quote-magic(N) | grep -q url-quote-magic && autoload -Uz url-
 setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
-function cdup() {
-    echo
-    cd ..
-    zle reset-prompt
-}
-zle -N cdup
-bindkey '\^' cdup
 function wg {
     cd ~/works/git/$1
 }
