@@ -56,6 +56,9 @@ zstyle ':completion:*' menu select=1
 # プロセスID補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
+# 上位のディレクトリへ移動する際に現在のディレクトリを補完候補から外す
+zstyle ':completion:*' ignore-parents parent pwd ..
+
 # グロブ展開せずに選ぶ
 setopt glob_complete
 
