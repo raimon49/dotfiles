@@ -154,6 +154,9 @@ setopt no_multios
 # 拡張グロブ
 setopt extended_glob
 
+# rで最後に実行したコマンドの実行を無効化
+disable r
+
 # ユーティリティ
 function alc() {
     if [ -n "$1" ]; then
