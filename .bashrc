@@ -84,8 +84,10 @@ function ws() {
     return 1
 }
 
-_Z_CMD=j
-source ~/.z.sh/z.sh
+if [ -e ~/.z.sh/z.sh ]; then
+    _Z_CMD=j
+    source ~/.z.sh/z.sh
+fi
 
 # プロンプト
               ESC="$(echo -ne '\033')"
