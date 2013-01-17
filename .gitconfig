@@ -15,7 +15,7 @@
     stat = status
     rawci = commit
     ci = commit -v
-    reci = commit --amend --date=now
+    reci = commit --amend
     br = branch
     prebr = checkout -
     unstage = reset
