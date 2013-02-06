@@ -4,9 +4,6 @@
 [submodule "paver"]
 	path = paver
 	url = git://github.com/paver/paver.git
-[submodule "git-info"]
-	path = git-info
-	url = git://github.com/gitbits/git-info.git
 [submodule "git-ls-branches"]
 	path = git-ls-branches
 	url = git://github.com/gitbits/git-ls-branches.git
