@@ -16,6 +16,7 @@ fi
 
 ln -Fis ~/works/git/dotfiles/git-info/git-pager ~/local/bin
 ln -Fis ~/works/git/dotfiles/git-info/git-info ~/local/bin
+ln -Fis ~/works/git/dotfiles/git-ls-branches/git-ls-branches ~/local/bin
 
 for dotfile in .?*; do
     case $dotfile in
