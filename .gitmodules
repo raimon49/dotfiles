@@ -10,3 +10,6 @@
 [submodule ".z.sh"]
 	path = .z.sh
 	url = git://github.com/rupa/z.git
+[submodule "git-info"]
+	path = git-info
+	url = git://github.com/gitbits/git-info.git
