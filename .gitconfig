@@ -17,6 +17,7 @@
     ci = commit -v
     reci = commit --amend
     br = branch
+    lsbr = ls-branches --no-pager --color
     prebr = checkout -
     unstage = reset
     co = clone --recursive
