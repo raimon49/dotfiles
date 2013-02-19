@@ -61,6 +61,7 @@ NeoBundleLazy 'msanders/cocoa.vim', {
 \ }
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'mbbill/undotree'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
