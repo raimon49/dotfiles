@@ -71,6 +71,7 @@ NeoBundle 'surround.vim'
 NeoBundle 'php-doc-upgrade'
 NeoBundle 'confluencewiki.vim'
 NeoBundle 'YankRing.vim'
+NeoBundle 'tikhomirov/vim-glsl'
 
 syntax enable
 filetype plugin indent on
@@ -286,7 +287,7 @@ augroup MyAutoCmd
     " detect markdown
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal filetype=markdown
     " switch smartchr
-    autocmd FileType c,cpp,cs,objc,java,javascript,php,python,ruby,coffee,vim call EnableSmartchrBasic()
+    autocmd FileType c,cpp,objcpp,glsl,cs,objc,java,javascript,php,python,ruby,coffee,vim call EnableSmartchrBasic()
     autocmd FileType php,javascript call EnableSmartchrExtendComparison()
     autocmd FileType text,markdown,html,xml call DisableSmartchr()
     " from :help smartindent
