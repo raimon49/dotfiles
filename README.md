@@ -9,7 +9,7 @@ Installation
 ### Use curl
 
 ```bash
-$ curl -k https://raw.github.com/raimon49/dotfiles/master/bootstrap.sh | sh
+$ curl -s -k https://raw.github.com/raimon49/dotfiles/master/bootstrap.sh | sh
 ```
 
 ### Use wget
