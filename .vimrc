@@ -293,7 +293,7 @@ augroup MyAutoCmd
     " from :help smartindent
     autocmd FileType python :inoremap # X#
     " for commit log
-    autocmd FileType svn,gitcommit setlocal spell spelllang=en_us
+    autocmd FileType svn,gitcommit,gitrebase setlocal spell spelllang=en_us
     " for Makefile
     autocmd FileType make setlocal noexpandtab
 augroup END
