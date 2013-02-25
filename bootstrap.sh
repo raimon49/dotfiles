@@ -7,5 +7,5 @@ fi
 [ ! -d ~/works/git ] && mkdir -p ~/works/git
 cd ~/works/git && git clone --recursive git://github.com/raimon49/dotfiles.git && cd dotfiles && yes | ./install_cui.sh
 
-echo "bootstraped."
+echo "\nbootstrapped."
 exit 0
