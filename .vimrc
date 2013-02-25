@@ -62,6 +62,7 @@ NeoBundleLazy 'msanders/cocoa.vim', {
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'mbbill/undotree'
+NeoBundle 'tikhomirov/vim-glsl'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
@@ -71,7 +72,6 @@ NeoBundle 'surround.vim'
 NeoBundle 'php-doc-upgrade'
 NeoBundle 'confluencewiki.vim'
 NeoBundle 'YankRing.vim'
-NeoBundle 'tikhomirov/vim-glsl'
 
 syntax enable
 filetype plugin indent on
