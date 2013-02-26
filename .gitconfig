@@ -5,6 +5,7 @@
     pager = $PAGER
     editor = $EDITOR
     autocrlf = false
+    quotepath = false
 [color]
     ui = auto
 [alias]
