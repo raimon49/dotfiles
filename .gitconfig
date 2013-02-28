@@ -21,7 +21,7 @@
     lsbr = ls-branches --no-pager --color
     prebr = checkout -
     unstage = reset
-    co = clone --recursive
+    co = checkout
     di = diff
     up = pull --rebase
     premerge = merge --no-commit --no-ff
