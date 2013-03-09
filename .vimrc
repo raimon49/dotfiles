@@ -63,6 +63,7 @@ NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'tikhomirov/vim-glsl'
+NeoBundle 'rainux/vim-desert-warm-256'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
@@ -187,14 +188,6 @@ command! Utf8      edit ++enc=utf-8<CR>
 command! Jis       Iso2022jp
 command! Sjis      Cp932
 
-set t_Co=256
-colorscheme desert256
-
-hi CursorColumn gui=NONE guifg=NONE guibg=Grey40 cterm=NONE ctermfg=NONE ctermbg=241
-hi CursorLine gui=NONE guifg=NONE guibg=Grey40 cterm=NONE ctermfg=NONE ctermbg=241
-hi Cursor guifg=Black guibg=Lavender cterm=reverse ctermfg=NONE ctermbg=NONE
-hi lCursor guifg=Black guibg=Lavender cterm=reverse ctermfg=NONE ctermbg=NONE
-
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
@@ -280,8 +273,18 @@ xnoremap <silent> R :Alignta >> =<CR>
 " jscomplete-vim
 let g:jscomplete_use = ['dom', 'moz', 'es6th']
 
+" cursor style
+function! HighlightCursor()
+    hi CursorColumn gui=NONE guifg=NONE guibg=Grey40 cterm=NONE ctermfg=NONE ctermbg=241
+    hi CursorLine gui=NONE guifg=NONE guibg=Grey40 cterm=NONE ctermfg=NONE ctermbg=241
+    hi Cursor guifg=Black guibg=Lavender cterm=reverse ctermfg=NONE ctermbg=NONE
+    hi lCursor guifg=Black guibg=Lavender cterm=reverse ctermfg=NONE ctermbg=NONE
+endfunction
+
 augroup MyAutoCmd
     autocmd!
+    " highlight cursor
+    autocmd ColorScheme * call HighlightCursor()
     " restore cursor
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
     " detect markdown
@@ -297,6 +300,14 @@ augroup MyAutoCmd
     " for Makefile
     autocmd FileType make setlocal noexpandtab
 augroup END
+
+" colorscheme setting
+set t_Co=256
+try
+    colorscheme desert-warm-256
+catch  /E185:/
+    colorscheme desert
+endtry
 
 set termencoding=utf-8
 " via http://www.kawaz.jp/pukiwiki/?vim
