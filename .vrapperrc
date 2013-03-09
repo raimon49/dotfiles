@@ -20,3 +20,4 @@ inoremap <C-F> <Esc><Right>a
 inoremap <C-B> <Esc>i
 inoremap <C-D> <Esc><Right>xi
 
+" vim:set ft=vim:
