@@ -263,8 +263,6 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_color_change_percent = 30
 let g:indent_guides_guide_size = 1
 let g:indent_guides_auto_colors = 0
-hi IndentGuidesOdd  ctermbg=234
-hi IndentGuidesEven ctermbg=233
 
 " vim-alignta
 xnoremap <silent> L :Alignta << =<CR>
@@ -285,6 +283,9 @@ augroup MyAutoCmd
     autocmd!
     " highlight cursor
     autocmd ColorScheme * call HighlightCursor()
+    " vim-indent-guides color
+    autocmd ColorScheme * hi IndentGuidesOdd  ctermbg=237
+    autocmd ColorScheme * hi IndentGuidesEven ctermbg=236
     " restore cursor
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
     " detect markdown
