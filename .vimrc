@@ -64,6 +64,7 @@ NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'tikhomirov/vim-glsl'
 NeoBundle 'rainux/vim-desert-warm-256'
+NeoBundle 'heavenshell/vim-jsdoc'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
