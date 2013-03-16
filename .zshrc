@@ -168,6 +168,14 @@ function alc() {
     fi
 }
 
+function corpus() {
+    if [ -n "$1" ]; then
+        w3m -no-cookie "http://suin.asia/xoops/modules/lingua/?keyword=${1}&search=%E6%A4%9C%E7%B4%A2&source=en&targets[en]=1&targets[ja]=1" | sed '1,14d' | ${PAGER}
+    else
+        echo 'usage: corpus word'
+    fi
+}
+
 # プロセスの実行時間が指定秒以上だった時にレポート表示
 REPORTTIME=3
 
