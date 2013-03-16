@@ -40,9 +40,10 @@ PROMPT_COMMAND='share_history'
 shopt -u histappend
 
 # 補完
-for bash_completion_path in "~/local/bin/bash_completion" "/etc/bash_completion"; do
-    if [ -e ${bash_completion_path} ]; then
-        source ${bash_completion_path}
+for bash_completion_path in "~/local/bin/bash_completion" "~/local/etc/bash_completion" "/etc/bash_completion"; do
+    if [ -e "${bash_completion_path}" ]; then
+        export BASH_COMPLETION="${bash_completion_path}"
+        source "${bash_completion_path}"
 
         # expand-tilde off
         function _expand() {
