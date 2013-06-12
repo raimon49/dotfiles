@@ -291,6 +291,8 @@ augroup MyAutoCmd
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
     " detect markdown
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal filetype=markdown
+    " detect gradle
+    autocmd BufNewFile,BufRead *.gradle setlocal filetype=groovy
     " switch smartchr
     autocmd FileType c,cpp,cs,objc,objcpp,glsl,java,javascript,php,python,ruby,coffee,vim call EnableSmartchrBasic()
     autocmd FileType php,javascript call EnableSmartchrExtendComparison()
