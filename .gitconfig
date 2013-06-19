@@ -23,6 +23,7 @@
     unstage = reset
     co = checkout
     di = diff
+    dic = diff --cached
     pf = pull --ff
     up = pull --rebase
     premerge = merge --no-commit --no-ff
