@@ -117,23 +117,23 @@ set pumheight=10
 
 set nrformats=alpha,octal,hex
 
-map gf <C-W>gf
+map gf <C-w>gf
 
 noremap j gj
 noremap k gk
 noremap gj j
 noremap gk k
 " quick resize
-nnoremap + <C-W>+
-nnoremap - <C-W>-
-nnoremap ) <C-W>>
-nnoremap ( <C-W><
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-H> <C-W>h
-nnoremap <C-L> <C-W>l
-nnoremap <Tab> <C-W>w
-nnoremap <S-Tab> <C-W>W
+nnoremap + <C-w>+
+nnoremap - <C-w>-
+nnoremap ) <C-w>>
+nnoremap ( <C-w><
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <Tab> <C-w>w
+nnoremap <S-Tab> <C-w>W
 nnoremap tn :<C-u>tabn<CR>
 nnoremap tp :<C-u>tabp<CR>
 nnoremap <CR> o<Esc>
@@ -155,17 +155,17 @@ nnoremap <silent> <Space>sp :<C-u>setlocal spell! spelllang=en_us<CR>:setlocal s
 inoremap <expr> ,df strftime('%Y-%m-%dT%H:%M:%S')
 inoremap <expr> ,dd strftime('%Y-%m-%d')
 inoremap <expr> ,dt strftime('%H:%M:%S')
-inoremap <C-A> <Home>
-inoremap <C-E> <End>
-inoremap <C-F> <Right>
-inoremap <C-B> <Left>
-inoremap <C-D> <Del>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+inoremap <C-d> <Del>
 
-cnoremap <C-A> <Home>
-cnoremap <C-E> <End>
-cnoremap <C-F> <Right>
-cnoremap <C-B> <Left>
-cnoremap <C-D> <Del>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-f> <Right>
+cnoremap <C-b> <Left>
+cnoremap <C-d> <Del>
 " default escape for search. naked input: <C-v>/, <C-v>?
 cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
@@ -178,7 +178,7 @@ onoremap gc :<C-u>normal gc<CR>
 vnoremap < <gv
 vnoremap > >gv
 " quick continuous paste
-vnoremap <silent> <C-P> "0p<CR>
+vnoremap <silent> <C-p> "0p<CR>
 " require Python 2.6+
 vnoremap _json !python -m json.tool<CR>
 
