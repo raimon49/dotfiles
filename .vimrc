@@ -284,6 +284,8 @@ augroup MyAutoCmd
     autocmd!
     " highlight cursor
     autocmd ColorScheme * call HighlightCursor()
+    autocmd WinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
     " vim-indent-guides color
     autocmd ColorScheme * hi IndentGuidesOdd  ctermbg=237
     autocmd ColorScheme * hi IndentGuidesEven ctermbg=236
