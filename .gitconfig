@@ -38,3 +38,6 @@
     dlog = log -p
     pager = '!$HOME/local/bin/git-pager'
     info = '!$HOME/local/bin/git-info'
+    ignore = !"f() { local s=$1; shift; \
+               while [ $# -gt 0 ]; do s="$s,$1"; shift; done;\
+               curl "http://gitignore.io/api/$s"; }; f"
