@@ -13,6 +13,7 @@
     sp = stash pop
     st = status -s
     ls = ls-files
+    lsc = ls-files --unmerged
     stat = status
     rawci = commit
     ci = commit -v
