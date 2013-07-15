@@ -30,6 +30,8 @@
     premerge = merge --no-commit --no-ff
     onemerge = merge --squash
     rollback = reset --soft HEAD^
+    sq = "!point=${1:-HEAD} sh -c 'files=`git diff --name-only ${point}`; git reset ${point}; git add $files; git commit -a'; git rept"
+    rept = "!sh -c 'git tag -d pt; git tag pt'"
     out = log origin..HEAD
     subfetch = submodule foreach "git checkout master; git pull"
     l =  log --pretty=format:\"%h %ad (%an): %s\" --date=short -20
