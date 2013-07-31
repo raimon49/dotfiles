@@ -12,6 +12,7 @@ if has('vim_starting')
 
   set rtp+=$DOTVIM/bundle/neobundle.vim
 
+  let g:neobundle#types#git#default_protocol='git'
   call neobundle#rc(expand('$DOTVIM/bundle'))
 endif
 
