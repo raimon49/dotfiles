@@ -47,7 +47,7 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
-NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'kana/vim-smartchr'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-gf-user'
@@ -202,7 +202,7 @@ let g:user_zen_settings = {
   \'indentation': '  ',
   \}
 
-" vim-powerline
+" lightline
 set laststatus=2
 if has('unix') && !has('gui_running')
     inoremap <silent> <Esc> <Esc>
