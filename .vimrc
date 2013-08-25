@@ -30,7 +30,7 @@ NeoBundle 'Shougo/vimproc', {
 \ }
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'mattn/sonictemplate-vim'
-NeoBundleLazy 'mattn/zencoding-vim', {
+NeoBundleLazy 'mattn/emmet-vim', {
     \   'autoload': { 'filetypes': [ 'html' ] },
 \ }
 NeoBundle 'mattn/webapi-vim'
@@ -197,8 +197,8 @@ let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_min_keyword_length = 3
 
-" zencoding-vim
-let g:user_zen_settings = {
+" emmet-vim
+let g:user_emmet_settings = {
   \'indentation': '  ',
   \}
 
