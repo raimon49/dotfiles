@@ -209,8 +209,31 @@ if has('unix') && !has('gui_running')
     inoremap <silent> <C-[> <Esc>
 endif
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
+  \ 'colorscheme': 'wombat',
+  \   'active': {
+  \     'left': [
+  \       [ 'mode', 'paste', ],
+  \       [ 'fugitive', 'readonly', 'filename', ],
+  \     ]
+  \   },
+  \   'component_function': {
+  \     'fugitive': 'MyFugitive',
+  \     'filename': 'MyFilename',
+  \   },
+  \ }
+
+function! MyFugitive()
+    return exists('*fugitive#head') && strlen(fugitive#head()) ? fugitive#head() : ''
+endfunction
+
+function! MyFilename()
+    return ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+                \ ('' != MyModified() ? ' ' . MyModified() : '')
+endfunction
+
+function! MyModified()
+    return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+endfunction
 
 " vim-smartchr
 function! EnableSmartchrBasic()
