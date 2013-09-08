@@ -35,6 +35,9 @@
     out = log origin..HEAD
     subfetch = submodule foreach "git checkout master; git pull"
     fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
+    pr = "!f() { git fetch -fu origin refs/pull/$1/head:pr/$1; } ; f"
+    pru = "!f() { git fetch -fu upstream refs/pull/$1/head:pr/$1; } ; f"
+    pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
     l =  log --pretty=format:\"%h %ad (%an): %s\" --date=short -20
     slog = log --pretty=format:\"%h %ad (%an): %s\" --date=short -20
     mlog = log --oneline --abbrev-commit --merge
