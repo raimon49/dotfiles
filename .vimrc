@@ -157,7 +157,7 @@ nnoremap H  :<C-u>help<Space>
 nnoremap th :<C-u>tab help<Space>
 " toggle <sp>ell
 nnoremap <silent> <Space>sp :<C-u>setlocal spell! spelllang=en_us<CR>:setlocal spell?<CR>
-" tobble header (vim-altr)
+" toggle header file(vim-altr)
 nmap <Space>a <Plug>(altr-forward)
 
 inoremap <expr> ,df strftime('%Y-%m-%dT%H:%M:%S')
