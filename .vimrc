@@ -48,6 +48,7 @@ NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'kana/vim-altr'
 NeoBundle 'kana/vim-smartchr'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-gf-user'
@@ -57,8 +58,12 @@ NeoBundle 'taku-o/vim-vis'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'pasela/unite-webcolorname'
-NeoBundleLazy 'msanders/cocoa.vim', {
-    \   'autoload': { 'filetypes': [ 'objc' ] },
+NeoBundle 'tokorom/clang_complete'
+NeoBundleLazy 'tokorom/cocoa.vim', 'syntax-only', {
+    \   'autoload': { 'filetypes': [ 'objc', 'objcpp' ] },
+\ }
+NeoBundleLazy 'tokorom/clang_complete-getopts-ios', {
+    \   'autoload': { 'filetypes': [ 'objc', 'objcpp' ] },
 \ }
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'h1mesuke/unite-outline'
@@ -152,6 +157,8 @@ nnoremap H  :<C-u>help<Space>
 nnoremap th :<C-u>tab help<Space>
 " toggle <sp>ell
 nnoremap <silent> <Space>sp :<C-u>setlocal spell! spelllang=en_us<CR>:setlocal spell?<CR>
+" tobble header (vim-altr)
+nmap <Space>a <Plug>(altr-forward)
 
 inoremap <expr> ,df strftime('%Y-%m-%dT%H:%M:%S')
 inoremap <expr> ,dd strftime('%Y-%m-%d')
@@ -196,6 +203,24 @@ let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_min_keyword_length = 3
+
+" clang_complete
+if !exists('g:neocomplcache_force_omni_patterns')
+  let g:neocomplcache_force_omni_patterns = {}
+endif
+let g:neocomplcache_force_overwrite_completefunc = 1
+let g:neocomplcache_force_omni_patterns.c =
+  \ '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_force_omni_patterns.cpp =
+  \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:neocomplcache_force_omni_patterns.objc =
+  \ '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplcache_force_omni_patterns.objcpp =
+  \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:clang_complete_auto = 1
+let g:clang_auto_select = 1
+let g:clang_complete_getopts_ios_sdk_directory = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk'
+let g:clang_complete_getopts_ios_ignore_directories = ["^\.git", "\.xcodeproj"]
 
 " emmet-vim
 let g:user_emmet_settings = {
@@ -323,9 +348,9 @@ augroup MyAutoCmd
     " detect gradle
     autocmd BufNewFile,BufRead *.gradle setlocal filetype=groovy
     " switch smartchr
-    autocmd FileType c,cpp,cs,objc,objcpp,glsl,java,javascript,php,python,ruby,coffee,vim call EnableSmartchrBasic()
+    autocmd FileType c,cpp,cs,glsl,java,javascript,php,python,ruby,coffee,vim call EnableSmartchrBasic()
     autocmd FileType php,javascript call EnableSmartchrExtendComparison()
-    autocmd FileType text,markdown,html,xml call DisableSmartchr()
+    autocmd FileType objc,objcpp,text,markdown,html,xml call DisableSmartchr()
     " from :help smartindent
     autocmd FileType python :inoremap # X#
     " for commit log
