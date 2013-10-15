@@ -58,13 +58,17 @@ NeoBundle 'taku-o/vim-vis'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'pasela/unite-webcolorname'
-NeoBundle 'tokorom/clang_complete'
+if has('python')
+NeoBundleLazy 'tokorom/clang_complete' , {
+    \   'autoload': { 'filetypes': ['c', 'cpp', 'objc'] },
+\ }
 NeoBundleLazy 'tokorom/cocoa.vim', 'syntax-only', {
     \   'autoload': { 'filetypes': [ 'objc', 'objcpp' ] },
 \ }
 NeoBundleLazy 'tokorom/clang_complete-getopts-ios', {
     \   'autoload': { 'filetypes': [ 'objc', 'objcpp' ] },
 \ }
+endif
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'mbbill/undotree'
@@ -205,6 +209,9 @@ let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_min_keyword_length = 3
 
 " clang_complete
+let s:hooks = neobundle#get_hooks("clang_complete")
+function! s:hooks.on_source(bundle)
+
 if !exists('g:neocomplcache_force_omni_patterns')
   let g:neocomplcache_force_omni_patterns = {}
 endif
@@ -217,10 +224,19 @@ let g:neocomplcache_force_omni_patterns.objc =
   \ '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_force_omni_patterns.objcpp =
   \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-let g:clang_complete_auto = 1
-let g:clang_auto_select = 1
+let g:clang_complete_auto = 0
+let g:clang_auto_select = 0
+
+endfunction
+
+" clang_complete-getopts-ios
+let s:hooks = neobundle#get_hooks("clang_complete-getopts-ios")
+function! s:hooks.on_source(bundle)
+
 let g:clang_complete_getopts_ios_sdk_directory = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk'
 let g:clang_complete_getopts_ios_ignore_directories = ["^\.git", "\.xcodeproj"]
+
+endfunction
 
 " emmet-vim
 let g:user_emmet_settings = {
