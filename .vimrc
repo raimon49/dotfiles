@@ -60,14 +60,16 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'pasela/unite-webcolorname'
 if has('python')
 NeoBundleLazy 'tokorom/clang_complete' , {
-    \   'autoload': { 'filetypes': ['c', 'cpp', 'objc'] },
+    \   'autoload': { 'filetypes': [ 'c', 'cpp', 'objc', 'objcpp' ] },
 \ }
 NeoBundleLazy 'tokorom/cocoa.vim', 'syntax-only', {
     \   'autoload': { 'filetypes': [ 'objc', 'objcpp' ] },
 \ }
+if has('macunix') || has('gui_mac')
 NeoBundleLazy 'tokorom/clang_complete-getopts-ios', {
     \   'autoload': { 'filetypes': [ 'objc', 'objcpp' ] },
 \ }
+endif
 endif
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'h1mesuke/unite-outline'
