@@ -65,7 +65,7 @@ NeoBundleLazy 'tokorom/clang_complete' , {
 NeoBundleLazy 'tokorom/cocoa.vim', 'syntax-only', {
     \   'autoload': { 'filetypes': [ 'objc', 'objcpp' ] },
 \ }
-if has('macunix') || has('gui_mac')
+if has('macunix') || has('gui_macvim') || system('uname') =~? '^darwin'
 NeoBundleLazy 'tokorom/clang_complete-getopts-ios', {
     \   'autoload': { 'filetypes': [ 'objc', 'objcpp' ] },
 \ }
