@@ -194,6 +194,21 @@ function codic() {
     fi
 }
 
+function python_server() {
+    local port="5000"
+    if [ -n "$1" ]; then
+        port="${1}"
+    fi
+
+    if type python > /dev/null; then
+        if python -V 2>&1 | grep -qm1 'Python 3\.'; then
+            python -m http.server ${port}
+        else
+            python -m SimpleHTTPServer ${port}
+        fi
+    fi
+}
+
 function 256colortest() {
     local code
     for code in {0..255}; do
