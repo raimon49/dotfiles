@@ -186,6 +186,14 @@ function corpus() {
     fi
 }
 
+function codic() {
+    if [ -n "$1" ]; then
+        w3m -no-cookie "http://codic.jp/entries/${1}" | sed '1,16d' | ${PAGER}
+    else
+        echo 'usage: codic word'
+    fi
+}
+
 function 256colortest() {
     local code
     for code in {0..255}; do
