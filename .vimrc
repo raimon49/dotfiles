@@ -16,9 +16,17 @@ if has('vim_starting')
   call neobundle#rc(expand('$DOTVIM/bundle'))
 endif
 
+function! s:meet_neocomplete_requirements()
+    return has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
+endfunction
+
 " Plugins on GitHub
 NeoBundleFetch 'Shougo/neobundle.vim'
+if s:meet_neocomplete_requirements()
+NeoBundle 'Shougo/neocomplete'
+else
 NeoBundle 'Shougo/neocomplcache'
+endif
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc', {
     \'build' : {
@@ -204,11 +212,18 @@ command! Jis       Iso2022jp
 command! Sjis      Cp932
 
 " neocomplcache
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_min_keyword_length = 3
+if s:meet_neocomplete_requirements()
+    let g:neocomplete#enable_at_startup = 1
+    let g:neocomplete#enable_smart_case = 1
+    let g:neocomplete#sources#syntax#min_keyword_length = 3
+    let g:neocomplete#min_keyword_length = 3
+else
+    let g:neocomplcache_enable_at_startup = 1
+    let g:neocomplcache_enable_smart_case = 1
+    let g:neocomplcache_enable_underbar_completion = 1
+    let g:neocomplcache_min_syntax_length = 3
+    let g:neocomplcache_min_keyword_length = 3
+endif
 
 " clang_complete
 let s:hooks = neobundle#get_hooks("clang_complete")
@@ -217,15 +232,27 @@ function! s:hooks.on_source(bundle)
 if !exists('g:neocomplcache_force_omni_patterns')
   let g:neocomplcache_force_omni_patterns = {}
 endif
-let g:neocomplcache_force_overwrite_completefunc = 1
-let g:neocomplcache_force_omni_patterns.c =
-  \ '[^.[:digit:] *\t]\%(\.\|->\)'
-let g:neocomplcache_force_omni_patterns.cpp =
-  \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-let g:neocomplcache_force_omni_patterns.objc =
-  \ '[^.[:digit:] *\t]\%(\.\|->\)'
-let g:neocomplcache_force_omni_patterns.objcpp =
-  \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+if s:meet_neocomplete_requirements()
+    let g:neocomplete#force_overwrite_completefunc = 1
+    let g:neocomplete#force_omni_input_patterns.c =
+      \ '[^.[:digit:] *\t]\%(\.\|->\)'
+    let g:neocomplete#force_omni_input_patterns.cpp =
+      \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+    let g:neocomplete#force_omni_input_patterns.objc =
+      \ '[^.[:digit:] *\t]\%(\.\|->\)'
+    let g:neocomplete#force_omni_input_patterns.objcpp =
+      \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+else
+    let g:neocomplcache_force_overwrite_completefunc = 1
+    let g:neocomplcache_force_omni_patterns.c =
+      \ '[^.[:digit:] *\t]\%(\.\|->\)'
+    let g:neocomplcache_force_omni_patterns.cpp =
+      \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+    let g:neocomplcache_force_omni_patterns.objc =
+      \ '[^.[:digit:] *\t]\%(\.\|->\)'
+    let g:neocomplcache_force_omni_patterns.objcpp =
+      \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+endif
 let g:clang_complete_auto = 0
 let g:clang_auto_select = 0
 
