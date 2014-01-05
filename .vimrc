@@ -88,6 +88,7 @@ NeoBundle 'koron/codic-vim'
 NeoBundle 'rhysd/unite-codic.vim'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'LeafCage/yankround.vim'
+NeoBundle 'AndrewRadev/splitjoin.vim'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
