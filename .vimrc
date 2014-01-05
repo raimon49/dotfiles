@@ -87,6 +87,7 @@ NeoBundle 'heavenshell/vim-jsdoc'
 NeoBundle 'koron/codic-vim'
 NeoBundle 'rhysd/unite-codic.vim'
 NeoBundle 't9md/vim-quickhl'
+NeoBundle 'LeafCage/yankround.vim'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
@@ -95,7 +96,6 @@ NeoBundle 'svn-diff.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'php-doc-upgrade'
 NeoBundle 'confluencewiki.vim'
-NeoBundle 'YankRing.vim'
 
 syntax enable
 filetype plugin indent on
@@ -342,13 +342,11 @@ let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': [] }
 
-" YankRing.vim
-noremap <silent> YS :YRShow<CR>
-let g:yankring_history_dir = expand('$HOME')
-let g:yankring_history_file = '.yankring_history'
-let g:yankring_max_history = 20
-let g:yankring_window_height = 20
-let g:yankring_manual_clipboard_check = 0
+" yankround.vim
+nmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
 
 " unite.vim
 let g:unite_enable_start_insert = 1
@@ -362,7 +360,7 @@ let g:unite_source_menu_menus = {
 \           ["unite-file_mru", "Unite file_mru"],
 \           ["unite-history/command", "Unite history/command"],
 \           ["unite-history/search",  "Unite history/search"],
-\           ["unite-history/yank",    "Unite history/yank"],
+\           ["unite-yankround",    "Unite yankround"],
 \           ["edit vimrc", "edit $MYVIMRC"],
 \           ["unite-webcolorname", "Unite webcolorname"],
 \       ],
