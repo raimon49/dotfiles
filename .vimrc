@@ -84,6 +84,8 @@ NeoBundle 'mbbill/undotree'
 NeoBundle 'tikhomirov/vim-glsl'
 NeoBundle 'rainux/vim-desert-warm-256'
 NeoBundle 'heavenshell/vim-jsdoc'
+NeoBundle 'koron/codic-vim'
+NeoBundle 'rhysd/unite-codic.vim'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
