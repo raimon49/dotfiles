@@ -86,6 +86,7 @@ NeoBundle 'rainux/vim-desert-warm-256'
 NeoBundle 'heavenshell/vim-jsdoc'
 NeoBundle 'koron/codic-vim'
 NeoBundle 'rhysd/unite-codic.vim'
+NeoBundle 't9md/vim-quickhl'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
@@ -366,6 +367,12 @@ let g:indent_guides_auto_colors = 0
 " vim-alignta
 xnoremap <silent> L :Alignta << =<CR>
 xnoremap <silent> R :Alignta >> =<CR>
+
+" vim-quickhl
+nmap <Space>m <Plug>(quickhl-manual-this)
+xmap <Space>m <Plug>(quickhl-manual-this)
+nmap <Space>M <Plug>(quickhl-manual-reset)
+xmap <Space>M <Plug>(quickhl-manual-reset)
 
 " cursor style
 function! HighlightCursor()
