@@ -237,6 +237,9 @@ if !exists('g:neocomplcache_force_omni_patterns')
 endif
 if s:meet_neocomplete_requirements()
     let g:neocomplete#force_overwrite_completefunc = 1
+    if !exists('g:neocomplete#force_omni_input_patterns')
+        let g:neocomplete#force_omni_input_patterns = {}
+    endif
     let g:neocomplete#force_omni_input_patterns.c =
       \ '[^.[:digit:] *\t]\%(\.\|->\)'
     let g:neocomplete#force_omni_input_patterns.cpp =
