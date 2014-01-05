@@ -28,6 +28,7 @@ else
 NeoBundle 'Shougo/neocomplcache'
 endif
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Shougo/vimproc', {
     \'build' : {
     \   'windows': 'echo "Sorry, cannot update vimproc binary file in Windows."',
@@ -79,7 +80,6 @@ NeoBundleLazy 'tokorom/clang_complete-getopts-ios', {
 endif
 endif
 NeoBundle 'h1mesuke/vim-alignta'
-NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'tikhomirov/vim-glsl'
 NeoBundle 'rainux/vim-desert-warm-256'
