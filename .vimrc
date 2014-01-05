@@ -367,9 +367,6 @@ let g:indent_guides_auto_colors = 0
 xnoremap <silent> L :Alignta << =<CR>
 xnoremap <silent> R :Alignta >> =<CR>
 
-" jscomplete-vim
-let g:jscomplete_use = ['dom', 'moz', 'es6th']
-
 " cursor style
 function! HighlightCursor()
     hi CursorColumn gui=NONE guifg=NONE guibg=Grey40 cterm=NONE ctermfg=NONE ctermbg=241
