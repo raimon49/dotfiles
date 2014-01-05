@@ -353,6 +353,21 @@ let g:yankring_manual_clipboard_check = 0
 " unite.vim
 let g:unite_enable_start_insert = 1
 nnoremap <silent> ss :<C-u>UniteWithBufferDir -buffer-name=files buffer file_rec file file_mru<CR>
+let g:unite_source_menu_menus = {
+\   "shortcut" : {
+\       "description" : "shortcuts",
+\       "command_candidates" : [
+\           ["unite-outline", "Unite outline"],
+\           ["unite-codic", "Unite codic"],
+\           ["unite-file_mru", "Unite file_mru"],
+\           ["unite-history/command", "Unite history/command"],
+\           ["unite-history/search",  "Unite history/search"],
+\           ["unite-history/yank",    "Unite history/yank"],
+\           ["edit vimrc", "edit $MYVIMRC"],
+\           ["unite-webcolorname", "Unite webcolorname"],
+\       ],
+\   },
+\}
 
 " vim-ref
 let g:ref_alc_start_linenumber = 41
