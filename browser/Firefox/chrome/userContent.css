@@ -24,6 +24,11 @@
 }
 
 @font-face {
+    font-family: "Georgia";
+    src: local("メイリオ"), local("Meiryo"), local("ＭＳ Ｐゴシック");
+}
+
+@font-face {
   font-family: "MS UI Gothic";
   src: local("Meiryo UI"), local("MS UI Gothic");
 }
