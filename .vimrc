@@ -340,6 +340,13 @@ function! DisableSmartchr()
     inoremap <buffer> = =
 endfunction
 
+" vim-smartinput
+call smartinput#define_rule({
+\   'at': '\s\+\%#',
+\   'char': '<CR>',
+\   'input': "<C-o>:call setline('.', substitute(getline('.'), '\\s\\+$', '', ''))<CR><CR>",
+\   })
+
 " syntastic
 let g:syntastic_auto_jump = 1
 let g:syntastic_mode_map = { 'mode': 'passive',
