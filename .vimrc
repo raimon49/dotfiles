@@ -273,6 +273,9 @@ let g:clang_complete_getopts_ios_ignore_directories = ["^\.git", "\.xcodeproj"]
 
 endfunction
 
+" sonictemplate-vim
+let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
+
 " emmet-vim
 let g:user_emmet_settings = {
   \'indentation': '  ',
