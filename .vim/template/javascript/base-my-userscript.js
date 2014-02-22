@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name        {{_name_}}
 // @description
-// @namespace
+// @namespace   http://sangoukan.xrea.jp/
 // @include
 // @exclude
-// @author
 // @grant       none
+// @author      raimon
 // @version     1.0.0
 // ==/UserScript==
 (function (){
