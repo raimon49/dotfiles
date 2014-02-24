@@ -101,6 +101,8 @@ NeoBundle 'confluencewiki.vim'
 syntax enable
 filetype plugin indent on
 
+NeoBundleCheck
+
 set number
 set ruler
 set cursorline
