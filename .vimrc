@@ -101,7 +101,9 @@ NeoBundle 'confluencewiki.vim'
 syntax enable
 filetype plugin indent on
 
+if !has('gui_running')
 NeoBundleCheck
+endif
 
 set number
 set ruler
