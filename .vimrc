@@ -428,6 +428,9 @@ augroup MyAutoCmd
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal filetype=markdown
     " detect gradle
     autocmd BufNewFile,BufRead *.gradle setlocal filetype=groovy
+    " detect DSL with Ruby
+    autocmd BufNewFile,BufRead Gemfile setlocal filetype=ruby
+    autocmd BufNewFile,BufRead Vagrantfile setlocal filetype=ruby
     " switch smartchr
     autocmd FileType c,cpp,cs,glsl,java,javascript,php,python,ruby,coffee,vim call EnableSmartchrBasic()
     autocmd FileType php,javascript call EnableSmartchrExtendComparison()
