@@ -89,6 +89,9 @@ NeoBundle 'rhysd/unite-codic.vim'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'AndrewRadev/splitjoin.vim'
+NeoBundleLazy 'hynek/vim-python-pep8-indent', {
+    \ "autoload": {"insert": 1, "filetypes": ["python", "python3", "djangohtml"]}
+\ }
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
