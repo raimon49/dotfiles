@@ -99,7 +99,7 @@ if is-at-least 4.3.7; then
         [[ -e $PWD/.git/refs/stash ]] && psvar[2]=" ($(git stash list 2>/dev/null | wc -l) stashed)"
     }
     VCS_PROMPT="%1(v|%F{magenta}%1v%2v%f|)"
-    precmd_functions+=precmd_vcs
+    precmd_functions=($precmd_functions precmd_vcs)
 fi
 PROMPT="%{${fg[green]}%}[%n@%m]${VCS_PROMPT}%{${fg[green]}%}%{${reset_color}%} %{${fg[yellow]}%}%100<..<%~%{${reset_color}%}
 %(!.#.$) "
@@ -148,7 +148,7 @@ if [ -e ~/.z.sh/z.sh ]; then
     function precmd_z() {
         _z --add "$(pwd -P)"
     }
-    precmd_functions+=precmd_z
+    precmd_functions=($precmd_functions precmd_z)
 fi
 
 # コマンド自動修正
