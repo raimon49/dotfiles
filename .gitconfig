@@ -33,6 +33,8 @@
     sq = "!point=${1:-HEAD} sh -c 'files=`git diff --name-only ${point}`; git reset ${point}; git add $files; git commit -a'; git rept"
     rept = "!sh -c 'git tag -d pt; git tag pt'"
     out = log origin..HEAD
+    su = submodule update
+    sui = submodule update --init
     subfetch = submodule foreach "git checkout master; git pull"
     fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
     pr = "!f() { git fetch -fu origin refs/pull/$1/head:pr/$1; } ; f"
