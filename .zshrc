@@ -48,7 +48,7 @@ if [ -d ~/.zsh-completions ]; then
     fpath=(~/.zsh-completions/src $fpath)
 fi
 autoload -U compinit
-compinit
+compinit -u
 
 # キャッシュ
 if [ -d ~/.zsh/cache ]; then
