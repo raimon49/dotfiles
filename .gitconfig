@@ -33,6 +33,7 @@
     sq = "!point=${1:-HEAD} sh -c 'files=`git diff --name-only ${point}`; git reset ${point}; git add $files; git commit -a'; git rept"
     rept = "!sh -c 'git tag -d pt; git tag pt'"
     out = log origin..HEAD
+    rmv = remote -v
     su = submodule update
     sui = submodule update --init
     subfetch = submodule foreach "git checkout master; git pull"
@@ -45,6 +46,7 @@
     mlog = log --oneline --abbrev-commit --merge
     glog = log --graph --date=short --pretty='%C(yellow)%h%Creset %C(cyan bold)%d%Creset %s %Cgreen[%cd]%Creset' --decorate
     dlog = log -p
+    logst = log --name-status
     pager = '!$HOME/local/bin/git-pager'
     info = '!$HOME/local/bin/git-info'
     ignore = !"f() { local s=$1; shift; \
