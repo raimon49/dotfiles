@@ -1,0 +1,12 @@
+# Print UIView recursiveDescription
+command regex pv 's/^[[:space:]]*$/po [[[UIApplication sharedApplication] keyWindow] recursiveDescription]/' 's/^(.+)$/po [%1 recursiveDescription]/'
+# Print environment
+command regex pe 's/^[[:space:]]*$/po [[NSProcessInfo processInfo] environment]/'
+# Print stack trace
+command regex ps 's/^[[:space:]]*$/po [NSThread callStackSymbols]/'
+# Print NSData
+command regex pd 's/^(.+)$/po [[NSString alloc] initWithData:%1 encoding:4]/'
+# Print JSON formatted NSDictionary
+command regex pj 's/^(.+)$/po [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:%1 options:1 error:nil] encoding:4]/'
+
+command source ~/.lldbinit
