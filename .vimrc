@@ -61,6 +61,7 @@ NeoBundle 'kana/vim-smartchr'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-gf-user'
 NeoBundle 'kana/vim-gf-diff'
+NeoBundle 'cohama/vim-smartinput-endwise'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'taku-o/vim-vis'
 NeoBundle 'bronson/vim-trailing-whitespace'
@@ -356,6 +357,9 @@ call smartinput#define_rule({
 \   'char': '<CR>',
 \   'input': "<C-o>:call setline('.', substitute(getline('.'), '\\s\\+$', '', ''))<CR><CR>",
 \   })
+
+" vim-smartinput-endwise
+call smartinput_endwise#define_default_rules()
 
 " syntastic
 let g:syntastic_auto_jump = 1
