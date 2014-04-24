@@ -9,6 +9,7 @@
 [color]
     ui = auto
 [alias]
+    rclone = clone --recursive
     ss = stash save
     sp = stash pop
     st = status -s
