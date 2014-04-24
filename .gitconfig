@@ -10,6 +10,7 @@
     ui = auto
 [alias]
     rclone = clone --recursive
+    sclone = clone --depth 5
     ss = stash save
     sp = stash pop
     st = status -s
