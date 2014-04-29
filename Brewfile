@@ -8,6 +8,7 @@ upgrade
 install autoconf  || true
 install automake  || true
 install bdw-gc  || true
+install chisel || true
 install fish  || true
 install gdbm  || true
 install git  || true
