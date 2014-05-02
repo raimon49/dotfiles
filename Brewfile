@@ -17,6 +17,7 @@ install lv  || true
 install nkf  || true
 install openssl  || true
 install pcre  || true
+install tig  || true
 install tree  || true
 install w3m  || true
 install wget  || true
