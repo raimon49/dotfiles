@@ -9,6 +9,7 @@ set main-view = line-number:yes,interval=5 \
                 author:full \
                 commit-title:yes,graph,refs,overflow=no
 set diff-options = -m --first-parent
+set line-graphics = ascii
 
 # desert color
 # general
