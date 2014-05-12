@@ -40,6 +40,7 @@
     sui = submodule update --init
     subfetch = submodule foreach "git checkout master; git pull"
     fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
+    pull-dry-run = !"git fetch origin; B=$(git rev-parse --abbrev-ref HEAD); git diff --stat --summary ${B}..origin/${B}"
     pr = "!f() { git fetch -fu origin refs/pull/$1/head:pr/$1; } ; f"
     pru = "!f() { git fetch -fu upstream refs/pull/$1/head:pr/$1; } ; f"
     pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
