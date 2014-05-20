@@ -20,6 +20,7 @@
     rawci = commit
     ci = commit -v
     reci = commit --amend
+    readdci = commit --amend --no-edit -a
     br = branch
     lsbr = ls-branches --no-pager --color
     prebr = checkout -
