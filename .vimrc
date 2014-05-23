@@ -455,6 +455,28 @@ augroup MyAutoCmd
     autocmd FileType make setlocal noexpandtab
 augroup END
 
+" markdown highlighting
+let g:markdown_fenced_languages = [
+    \   'c',
+    \   'coffee',
+    \   'cpp',
+    \   'cs',
+    \   'css',
+    \   'html',
+    \   'java',
+    \   'javascript',
+    \   'json=javascript',
+    \   'make',
+    \   'objc',
+    \   'python',
+    \   'ruby',
+    \   'sass',
+    \   'sh',
+    \   'vim',
+    \   'xml',
+    \   'zsh',
+    \ ]
+
 " colorscheme setting
 set t_Co=256
 try
