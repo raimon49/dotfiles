@@ -28,6 +28,7 @@ else
 NeoBundle 'Shougo/neocomplcache'
 endif
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'Shougo/vimproc', {
     \'build' : {
