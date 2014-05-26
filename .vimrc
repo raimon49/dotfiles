@@ -458,6 +458,7 @@ augroup END
 
 " markdown highlighting
 let g:markdown_fenced_languages = [
+    \   'bash=sh',
     \   'c',
     \   'coffee',
     \   'cpp',
