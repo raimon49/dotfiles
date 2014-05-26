@@ -65,7 +65,7 @@ NeoBundle 'kana/vim-gf-diff'
 NeoBundle 'cohama/vim-smartinput-endwise'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'taku-o/vim-vis'
-NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'csexton/trailertrash.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'pasela/unite-webcolorname'
 if has('python')
