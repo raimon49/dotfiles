@@ -464,6 +464,7 @@ let g:markdown_fenced_languages = [
     \   'cpp',
     \   'cs',
     \   'css',
+    \   'diff',
     \   'html',
     \   'java',
     \   'javascript',
