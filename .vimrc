@@ -438,7 +438,7 @@ augroup MyAutoCmd
     " restore cursor
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
     " detect markdown
-    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} setlocal filetype=markdown
+    autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
     " detect gradle
     autocmd BufNewFile,BufRead *.gradle setlocal filetype=groovy
     " detect DSL with Ruby
