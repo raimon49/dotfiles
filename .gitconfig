@@ -6,6 +6,8 @@
     editor = $EDITOR
     autocrlf = false
     quotepath = false
+[push]
+    default = nothing
 [color]
     ui = auto
 [alias]
