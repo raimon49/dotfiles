@@ -7,11 +7,11 @@ git clone git://github.com/Shougo/neobundle.vim .vim/bundle/neobundle.vim
 
 # for Git on Bash
 if [ -x "$(which wget 2> /dev/null)" ]; then
-    wget 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash' --no-check-certificate -O ~/local/bin/git-completion.bash
-    wget 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh' --no-check-certificate -O ~/local/bin/git-prompt.sh
+    wget 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash' --no-check-certificate -q -O ~/local/bin/git-completion.bash
+    wget 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh' --no-check-certificate -q -O ~/local/bin/git-prompt.sh
 elif [ -x "$(which curl 2> /dev/null)" ]; then
-    curl 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash' -L -o ~/local/bin/git-completion.bash
-    curl 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh' -L -o ~/local/bin/git-prompt.sh
+    curl 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash' -L -s -o ~/local/bin/git-completion.bash
+    curl 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh' -L -s -o ~/local/bin/git-prompt.sh
 fi
 
 ln -Fis ~/works/git/dotfiles/git-info/git-pager ~/local/bin
