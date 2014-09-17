@@ -9,13 +9,13 @@ Installation
 ### Use curl
 
 ```bash
-$ curl -s -k https://raw.github.com/raimon49/dotfiles/master/bootstrap.sh | sh
+$ curl -k -s https://raw.githubusercontent.com/raimon49/dotfiles/master/bootstrap.sh | sh
 ```
 
 ### Use wget
 
 ```bash
-$ wget --no-check-certificate -q -O - https://raw.github.com/raimon49/dotfiles/master/bootstrap.sh | sh
+$ wget --no-check-certificate -q -O - https://raw.githubusercontent.com/raimon49/dotfiles/master/bootstrap.sh | sh
 ```
 
 ### Manually
