@@ -14,8 +14,8 @@ brew install fish
 brew install gdbm
 brew install git
 brew install libtool
-brew install lv
 brew install lua
+brew install lv
 brew install mercurial
 brew install nkf
 brew install openssl
