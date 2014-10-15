@@ -15,11 +15,14 @@ brew install gdbm
 brew install git
 brew install libtool
 brew install lv
+brew install lua
+brew install mercurial
 brew install nkf
 brew install openssl
 brew install pcre
 brew install tig
 brew install tree
+brew install vim --with-lua --HEAD
 brew install w3m
 brew install wget
 brew install zsh
