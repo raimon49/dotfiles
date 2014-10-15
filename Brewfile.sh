@@ -6,23 +6,23 @@ brew update
 brew upgrade
 
 # Packages
-brew install autoconf  || true
-brew install automake  || true
-brew install bdw-gc  || true
-brew install chisel || true
-brew install fish  || true
-brew install gdbm  || true
-brew install git  || true
-brew install libtool  || true
-brew install lv  || true
-brew install nkf  || true
-brew install openssl  || true
-brew install pcre  || true
-brew install tig  || true
-brew install tree  || true
-brew install w3m  || true
-brew install wget  || true
-brew install zsh  || true
+brew install autoconf
+brew install automake
+brew install bdw-gc
+brew install chisel
+brew install fish
+brew install gdbm
+brew install git
+brew install libtool
+brew install lv
+brew install nkf
+brew install openssl
+brew install pcre
+brew install tig
+brew install tree
+brew install w3m
+brew install wget
+brew install zsh
 
 # Remove outdated versions
 brew cleanup
