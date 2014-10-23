@@ -172,7 +172,7 @@ disable r
 # ユーティリティ
 function alc() {
     if [ -n "$1" ]; then
-        w3m -no-cookie "http://eow.alc.co.jp/${1}/UTF-8/?ref=sa" | sed '1,38d' | ${PAGER}
+        w3m -no-cookie "http://eow.alc.co.jp/${1}/UTF-8/?ref=sa" | sed '1,20d' | ${PAGER}
     else
         echo 'usage: alc word'
     fi
