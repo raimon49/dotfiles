@@ -1,24 +1,24 @@
-set nocompatible
-
 " Setup NeoBundle
 filetype off
 if has('vim_starting')
-  if has('win32') || has('win64')
-      set shellslash
-      let $DOTVIM = expand('~/vimfiles')
-  else
-      let $DOTVIM = expand('~/.vim')
-  endif
+    set nocompatible
+    if has('win32') || has('win64')
+        set shellslash
+        let $DOTVIM = expand('~/vimfiles')
+    else
+        let $DOTVIM = expand('~/.vim')
+    endif
 
-  set rtp+=$DOTVIM/bundle/neobundle.vim
+    set rtp+=$DOTVIM/bundle/neobundle.vim
 
-  let g:neobundle#types#git#default_protocol='git'
-  call neobundle#rc(expand('$DOTVIM/bundle'))
+    let g:neobundle#types#git#default_protocol='git'
 endif
 
 function! s:meet_neocomplete_requirements()
     return has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
 endfunction
+
+call neobundle#begin(expand('$DOTVIM/bundle'))
 
 " Plugins on GitHub
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -104,6 +104,8 @@ NeoBundle 'svn-diff.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'php-doc-upgrade'
 NeoBundle 'confluencewiki.vim'
+
+call neobundle#end()
 
 syntax enable
 filetype plugin indent on
