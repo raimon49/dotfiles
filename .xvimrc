@@ -1,9 +1,11 @@
 set incsearch
 set ignorecase
 set smartcase
+set blinkcursor
 
-nmap tn :<C-u>tabn<CR>
-nmap tp :<C-u>tabp<CR>
+nmap <Space>a :xccmd jumpToNextCounterpart<CR>
+nmap tn :xccmd selectNextTab<CR>
+nmap tp :xccmd selectPreviousTab<CR>
 nmap <CR> o<Esc>
 nmap n nzz
 nmap N Nzz
