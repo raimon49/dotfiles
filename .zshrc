@@ -216,6 +216,10 @@ function 256colortest() {
     done
 }
 
+function zman() {
+    PAGER="less -g -s '+/^ {7}"$1"'" man zshall
+}
+
 # プロセスの実行時間が指定秒以上だった時にレポート表示
 REPORTTIME=3
 
