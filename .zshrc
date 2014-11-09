@@ -47,7 +47,7 @@ bindkey "^Q" show_buffer_stack
 if [ -d ~/.zsh-completions ]; then
     fpath=(~/.zsh-completions/src $fpath)
 fi
-autoload -U compinit
+autoload -Uz compinit
 compinit -u
 
 # キャッシュ
