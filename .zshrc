@@ -21,7 +21,7 @@ setopt hist_ignore_all_dups
 setopt hist_reduce_blanks
 setopt share_history
 setopt interactive_comments
-autoload history-search-end
+autoload -Uz history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
@@ -79,7 +79,7 @@ setopt magic_equal_subst
 
 # プロンプト
 setopt transient_rprompt
-autoload colors
+autoload -Uz colors
 colors
 VCS_PROMPT=""
 if is-at-least 4.3.7; then
@@ -111,7 +111,7 @@ RPROMPT="%{${fg[green]}%}[zsh ${ZSH_VERSION}]%{${reset_color}%}"
 unset VCS_PROMPT
 
 # ファイルリネーム
-autoload zmv
+autoload -Uz zmv
 
 # 自動エスケープ
 echo ${^fpath}/url-quote-magic(N) | grep -q url-quote-magic && autoload -Uz url-quote-magic && zle -N self-insert url-quote-magic
