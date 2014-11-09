@@ -25,6 +25,7 @@ alias cls="clear;ls"
 alias sudo="sudo -E "
 alias view="vim -R"
 alias rawvim="vim -u NONE -U NONE --noplugin -c 'set nu' -c 'syntax enable'"
+alias vi="rawvim"
 alias ggrep="git grep --no-index --break --heading -I -i -n"
 alias zmv="noglob zmv"
 alias screen="screen -U"
@@ -42,4 +43,16 @@ if [ -n "${ZSH_VERSION}" ]; then
     alias -g L=" | ${PAGER}"
     alias -g V=" | vim -R -"
     alias -g W=" | w3m -no-cookie -T text/html"
+
+    # Copy stdin to clipboad
+    if which pbcopy >/dev/null 2>&1 ; then
+        # Mac
+        alias -g C=' | pbcopy'
+    elif which xsel >/dev/null 2>&1 ; then
+        # Linux
+        alias -g C=' | xsel --input --clipboard'
+    elif which putclip >/dev/null 2>&1 ; then
+        # Cygwin
+        alias -g C=' | putclip'
+    fi
 fi
