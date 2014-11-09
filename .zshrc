@@ -164,6 +164,7 @@ setopt correct
 setopt list_packed
 
 # ビープ音抑止
+setopt no_beep
 setopt nolistbeep
 
 # bash風リダイレクト
@@ -171,6 +172,12 @@ setopt no_multios
 
 # 拡張グロブ
 setopt extended_glob
+
+# カーソル下に何も無い時の^Dでzshを終了しない
+setopt ignore_eof
+
+# ^Q/^Sのフロー制御を無効にする
+setopt no_flow_control
 
 # rで最後に実行したコマンドの実行を無効化
 disable r
