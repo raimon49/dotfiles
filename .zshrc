@@ -61,7 +61,9 @@ zstyle ':completion:*' list-colors 'di=;36;1' 'ln=;35;1' 'so=;32;1' 'ex=31;1' 'b
 
 # 補完時に大文字小文字を区別しない
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-zstyle ':completion:*' menu select=1
+
+# 補完候補が2つ以上あった時はメニュー補完モード
+zstyle ':completion:*' menu select=2
 
 # プロセスID補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
