@@ -151,6 +151,12 @@ if [ -e ~/.z.sh/z.sh ]; then
     precmd_functions=($precmd_functions precmd_z)
 fi
 
+# 単語区切り設定
+autoload -Uz select-word-style
+select-word-style default
+zstyle ':zle:*' word-chars ' /=;@:{}[]()<>,|"'\'
+zstyle ':zle:*' word-style unspecified
+
 # コマンド自動修正
 setopt correct
 
