@@ -29,8 +29,8 @@ fi
 
 # 履歴
 HISTFILE=~/.bash_history
-HISTSIZE=50000
-HISTFILESIZE=50000
+HISTSIZE=1000000
+HISTFILESIZE=1000000
 function share_history {
     history -a
     history -c
