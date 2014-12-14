@@ -13,6 +13,7 @@ brew install chisel
 brew install fish
 brew install gdbm
 brew install git
+brew install jq
 brew install libtool
 brew install lua
 brew install lv
