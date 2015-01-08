@@ -471,6 +471,7 @@ let g:markdown_fenced_languages = [
     \   'ruby',
     \   'sass',
     \   'sh',
+    \   'swift',
     \   'vim',
     \   'xml',
     \   'zsh',
