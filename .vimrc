@@ -96,6 +96,7 @@ NeoBundleLazy 'hynek/vim-python-pep8-indent', {
 \ }
 NeoBundle 'gnperdue/vim-asciidoc'
 NeoBundle 'toyamarinyon/vim-swift'
+NeoBundle 'mrk21/yaml-vim'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
