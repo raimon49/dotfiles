@@ -97,6 +97,7 @@ NeoBundleLazy 'hynek/vim-python-pep8-indent', {
 NeoBundle 'gnperdue/vim-asciidoc'
 NeoBundle 'toyamarinyon/vim-swift'
 NeoBundle 'mrk21/yaml-vim'
+NeoBundle 'elzr/vim-json'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
@@ -422,6 +423,9 @@ xmap <Space>m <Plug>(quickhl-manual-this)
 nmap <Space>M <Plug>(quickhl-manual-reset)
 xmap <Space>M <Plug>(quickhl-manual-reset)
 
+" vim-json
+let g:vim_json_syntax_conceal = 0
+
 " cursor style
 function! HighlightCursor()
     hi CursorColumn gui=NONE guifg=NONE guibg=Grey40 cterm=NONE ctermfg=NONE ctermbg=241
@@ -465,7 +469,7 @@ let g:markdown_fenced_languages = [
     \   'html',
     \   'java',
     \   'javascript',
-    \   'json=javascript',
+    \   'json',
     \   'make',
     \   'objc',
     \   'python',
