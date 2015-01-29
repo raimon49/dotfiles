@@ -363,14 +363,18 @@ function! DisableSmartchr()
 endfunction
 
 " vim-smartinput
-call smartinput#define_rule({
-\   'at': '\s\+\%#',
-\   'char': '<CR>',
-\   'input': "<C-o>:call setline('.', substitute(getline('.'), '\\s\\+$', '', ''))<CR><CR>",
-\   })
+if exists('smartinput#define_rule')
+    call smartinput#define_rule({
+    \   'at': '\s\+\%#',
+    \   'char': '<CR>',
+    \   'input': "<C-o>:call setline('.', substitute(getline('.'), '\\s\\+$', '', ''))<CR><CR>",
+    \   })
+endif
 
 " vim-smartinput-endwise
-call smartinput_endwise#define_default_rules()
+if exists('smartinput_endwise')
+    call smartinput_endwise#define_default_rules()
+endif
 
 " syntastic
 let g:syntastic_auto_jump = 1
