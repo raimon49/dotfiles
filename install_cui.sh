@@ -3,6 +3,7 @@ cd $(dirname $0)
 
 [ ! -d ~/local/bin ] && mkdir -p ~/local/bin
 [ ! -d ~/.zsh/cache ] && mkdir -p ~/.zsh/cache
+[ ! -f ~/.z ] && touch ~/.z
 git clone git://github.com/Shougo/neobundle.vim .vim/bundle/neobundle.vim
 
 # for Git on Bash
