@@ -48,12 +48,12 @@ if [ -n "${ZSH_VERSION}" ]; then
     # Copy stdin to clipboad
     if which pbcopy >/dev/null 2>&1 ; then
         # Mac
-        alias -g C=' | pbcopy'
+        alias -g P=' | pbcopy'
     elif which xsel >/dev/null 2>&1 ; then
         # Linux
-        alias -g C=' | xsel --input --clipboard'
+        alias -g P=' | xsel --input --clipboard'
     elif which putclip >/dev/null 2>&1 ; then
         # Cygwin
-        alias -g C=' | putclip'
+        alias -g P=' | putclip'
     fi
 fi
