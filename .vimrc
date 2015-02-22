@@ -99,6 +99,7 @@ NeoBundle 'toyamarinyon/vim-swift'
 NeoBundle 'mrk21/yaml-vim'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'ekalinin/Dockerfile.vim'
+NeoBundle 'rust-lang/rust.vim'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
