@@ -12,7 +12,7 @@
     ui = auto
 [alias]
     rclone = clone --recursive
-    sclone = clone --depth 5
+    sclone = clone --recursive --depth 5
     ss = stash save
     sp = stash pop
     st = status -s
@@ -40,8 +40,8 @@
     rept = "!sh -c 'git tag -d pt; git tag pt'"
     out = log origin..HEAD
     rmv = remote -v
-    su = submodule update
-    sui = submodule update --init
+    su = submodule update --recursive
+    sui = submodule update --init --recursive
     subfetch = submodule foreach "git checkout master; git pull"
     fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
     pull-dry-run = !"git fetch origin; B=$(git rev-parse --abbrev-ref HEAD); git diff --stat --summary ${B}..origin/${B}"
