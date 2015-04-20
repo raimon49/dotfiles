@@ -446,6 +446,9 @@ augroup MyAutoCmd
     autocmd ColorScheme * call HighlightCursor()
     autocmd WinEnter * setlocal cursorline
     autocmd WinLeave * setlocal nocursorline
+    " highlight two-byte spaces
+    autocmd ColorScheme * hi link TwoByteSpace Error
+    autocmd VimEnter,WinEnter * let w:m_tbs = matchadd("TwoByteSpace", '　')
     " vim-indent-guides color
     autocmd ColorScheme * hi IndentGuidesOdd  ctermbg=237
     autocmd ColorScheme * hi IndentGuidesEven ctermbg=236
