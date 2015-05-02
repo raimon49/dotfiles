@@ -127,6 +127,7 @@ set viminfo+=h
 
 set nobackup
 set writebackup
+set noundofile
 
 set visualbell t_vb=
 set noerrorbells
