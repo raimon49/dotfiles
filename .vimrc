@@ -128,6 +128,9 @@ set viminfo+=h
 set nobackup
 set writebackup
 
+set visualbell t_vb=
+set noerrorbells
+
 set expandtab
 set autoindent
 set copyindent
