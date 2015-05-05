@@ -120,6 +120,13 @@ echo ${^fpath}/url-quote-magic(N) | grep -q url-quote-magic && autoload -Uz url-
 setopt auto_cd
 setopt auto_pushd
 setopt pushd_ignore_dups
+if is-at-least 4.3.11; then
+    autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+    add-zsh-hook chpwd chpwd_recent_dirs
+    zstyle ':chpwd:*' recent-dirs-max 10000
+    zstyle ':chpwd:*' recent-dirs-default yes
+    zstyle ':completion:*' recent-dirs-insert both
+fi
 function wg {
     cd ~/works/git/$1
 }
