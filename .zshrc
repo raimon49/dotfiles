@@ -178,6 +178,9 @@ setopt extended_glob
 # カーソル下に何も無い時の^Dでzshを終了しない
 setopt ignore_eof
 
+# 日本語ファイル名を表示可能にする
+setopt print_eight_bit
+
 # ^Q/^Sのフロー制御を無効にする
 setopt no_flow_control
 
