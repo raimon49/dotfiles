@@ -1,5 +1,6 @@
 .vim/bundle
 .vim/.netrwhist
+.antigen
 .DS_Store
 *.swp
 *.pyc

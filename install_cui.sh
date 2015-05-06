@@ -5,6 +5,7 @@ cd $(dirname $0)
 [ ! -d ~/.zsh/cache ] && mkdir -p ~/.zsh/cache
 [ ! -f ~/.z ] && touch ~/.z
 git clone git://github.com/Shougo/neobundle.vim .vim/bundle/neobundle.vim
+git clone git://github.com/zsh-users/antigen .antigen
 
 # for Git on Bash
 if [ -x "$(which wget 2> /dev/null)" ]; then

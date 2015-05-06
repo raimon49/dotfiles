@@ -43,10 +43,14 @@ zle -N show_buffer_stack
 setopt noflowcontrol
 bindkey "^Q" show_buffer_stack
 
-# 補完
-if [ -d ~/.zsh-completions ]; then
-    fpath=(~/.zsh-completions/src $fpath)
+# Plugins
+if [[ -f ~/.antigen/antigen.zsh ]]; then
+    source ~/.antigen/antigen.zsh
+    antigen bundle git://github.com/zsh-users/zsh-completions src
+    antigen apply
 fi
+
+# 補完
 autoload -Uz compinit
 compinit -u
 
