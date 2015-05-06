@@ -47,6 +47,7 @@ bindkey "^Q" show_buffer_stack
 if [[ -f ~/.antigen/antigen.zsh ]]; then
     source ~/.antigen/antigen.zsh
     antigen bundle git://github.com/zsh-users/zsh-completions src
+    antigen bundle git://github.com/mollifier/cd-gitroot
     antigen apply
 fi
 
