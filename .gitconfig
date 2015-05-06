@@ -8,6 +8,8 @@
     quotepath = false
     preloadindex = true
     fscache = true
+[fetch]
+    prune = true
 [push]
     default = nothing
 [color]
