@@ -4,6 +4,7 @@
 [core]
     pager = $PAGER
     editor = $EDITOR
+    excludesfile = ~/.gitignore
     autocrlf = false
     quotepath = false
     preloadindex = true
