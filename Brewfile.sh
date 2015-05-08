@@ -21,6 +21,7 @@ brew install lv
 brew install mercurial
 brew install nkf
 brew install openssl
+brew install peco
 brew install pcre
 brew install tig
 brew install tree

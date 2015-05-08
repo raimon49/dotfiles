@@ -48,8 +48,36 @@ if [[ -f ~/.antigen/antigen.zsh ]]; then
     source ~/.antigen/antigen.zsh
     antigen bundle git://github.com/zsh-users/zsh-completions src
     antigen bundle git://github.com/mollifier/cd-gitroot
+    antigen bundle git://github.com/mollifier/anyframe
     antigen apply
 fi
+
+# peco
+for peco_command in ~/local/bin/peco /usr/local/bin/peco; do
+    if [[ -x ${peco_command} ]]; then
+        # ディレクトリ履歴移動
+        bindkey '^xb' anyframe-widget-cdr
+
+        # コマンド履歴からの実行
+        bindkey '^xr' anyframe-widget-execute-history
+        bindkey '^x^r' anyframe-widget-execute-history
+
+        # コマンド履歴からの挿入
+        bindkey '^xi' anyframe-widget-put-history
+        bindkey '^x^i' anyframe-widget-put-history
+
+        # プロセスkill
+        bindkey '^xk' anyframe-widget-kill
+        bindkey '^x^k' anyframe-widget-kill
+
+        # Gitブランチ切り替え
+        bindkey '^x^b' anyframe-widget-checkout-git-branch
+
+        # Gitブランチ名の挿入
+        bindkey '^xe' anyframe-widget-insert-git-branch
+        bindkey '^x^e' anyframe-widget-insert-git-branch
+    fi
+done
 
 # 補完
 autoload -Uz compinit
