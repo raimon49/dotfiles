@@ -3,7 +3,7 @@
 brew update
 
 # Update already-installed formula
-brew upgrade
+brew upgrade --all
 
 # Packages
 brew install autoconf
