@@ -24,10 +24,10 @@ setopt interactive_comments
 autoload -Uz history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
-bindkey "^P" history-beginning-search-backward-end
-bindkey "^N" history-beginning-search-forward-end
+bindkey "^p" history-beginning-search-backward-end
+bindkey "^n" history-beginning-search-forward-end
 if is-at-least 4.3.9; then
-    bindkey "^R" history-incremental-pattern-search-backward
+    bindkey "^r" history-incremental-pattern-search-backward
 fi
 function history-all {
     history -E 1
@@ -41,7 +41,7 @@ stack: $LBUFFER"
 }
 zle -N show_buffer_stack
 setopt noflowcontrol
-bindkey "^Q" show_buffer_stack
+bindkey "^q" show_buffer_stack
 
 # Plugins
 if [[ -f ~/.antigen/antigen.zsh ]]; then
