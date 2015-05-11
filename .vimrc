@@ -18,6 +18,10 @@ function! s:meet_neocomplete_requirements()
     return has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
 endfunction
 
+function! s:is_ignore_undofile()
+    return (v:version > 704 || (v:version == 704 && has('patch227')))
+endfunction
+
 call neobundle#begin(expand('$DOTVIM/bundle'))
 
 " Plugins on GitHub
@@ -127,7 +131,9 @@ set viminfo+=h
 
 set nobackup
 set writebackup
+if s:is_ignore_undofile()
 set noundofile
+endif
 
 set visualbell t_vb=
 set noerrorbells
