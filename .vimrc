@@ -108,6 +108,7 @@ NeoBundle 'svn-diff.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'php-doc-upgrade'
 NeoBundle 'confluencewiki.vim'
+NeoBundle 'digitaltoad/vim-jade'
 
 call neobundle#end()
 
