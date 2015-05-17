@@ -53,7 +53,11 @@ NeoBundle 'thinca/vim-unite-history'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'moll/vim-node'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundleLazy 'jelera/vim-javascript-syntax', {
+    \   'autoload': { 'filetypes': [ 'javascript' ] },
+\ }
 NeoBundle 'othree/html5.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'itchyny/lightline.vim'
@@ -98,6 +102,8 @@ NeoBundle 'gnperdue/vim-asciidoc'
 NeoBundle 'toyamarinyon/vim-swift'
 NeoBundle 'mrk21/yaml-vim'
 NeoBundle 'elzr/vim-json'
+NeoBundle 'mattn/jscomplete-vim'
+NeoBundle 'myhere/vim-nodejs-complete'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'rust-lang/rust.vim'
 
@@ -240,6 +246,7 @@ command! Sjis      Cp932
 if s:meet_neocomplete_requirements()
     let g:neocomplete#enable_at_startup = 1
     let g:neocomplete#enable_smart_case = 1
+    let g:neocomplete#enable_underbar_completion = 1
     let g:neocomplete#sources#syntax#min_keyword_length = 3
     let g:neocomplete#min_keyword_length = 3
 else
@@ -254,9 +261,6 @@ endif
 let s:hooks = neobundle#get_hooks("clang_complete")
 function! s:hooks.on_source(bundle)
 
-if !exists('g:neocomplcache_force_omni_patterns')
-  let g:neocomplcache_force_omni_patterns = {}
-endif
 if s:meet_neocomplete_requirements()
     let g:neocomplete#force_overwrite_completefunc = 1
     if !exists('g:neocomplete#force_omni_input_patterns')
@@ -270,8 +274,13 @@ if s:meet_neocomplete_requirements()
       \ '[^.[:digit:] *\t]\%(\.\|->\)'
     let g:neocomplete#force_omni_input_patterns.objcpp =
       \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+    let g:neocomplete#force_omni_input_patterns.javascript =
+      \ '[^. \t]\.\w*'
 else
     let g:neocomplcache_force_overwrite_completefunc = 1
+    if !exists('g:neocomplcache_force_omni_patterns')
+        let g:neocomplcache_force_omni_patterns = {}
+    endif
     let g:neocomplcache_force_omni_patterns.c =
       \ '[^.[:digit:] *\t]\%(\.\|->\)'
     let g:neocomplcache_force_omni_patterns.cpp =
@@ -280,6 +289,8 @@ else
       \ '[^.[:digit:] *\t]\%(\.\|->\)'
     let g:neocomplcache_force_omni_patterns.objcpp =
       \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+    let g:neocomplcache_force_omni_patterns.javascript =
+      \ '[^. \t]\.\w*'
 endif
 let g:clang_complete_auto = 0
 let g:clang_auto_select = 0
@@ -469,6 +480,8 @@ augroup MyAutoCmd
     autocmd FileType svn,gitcommit,gitrebase setlocal spell spelllang=en_us fileencoding=utf-8
     " for Makefile
     autocmd FileType make setlocal noexpandtab
+    " for javascript completion
+    autocmd FileType javascript setlocal omnifunc=nodejscomplete#CompleteJS
 augroup END
 
 " markdown highlighting
