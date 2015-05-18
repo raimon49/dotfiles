@@ -73,7 +73,7 @@ NeoBundle 'csexton/trailertrash.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'pasela/unite-webcolorname'
 if has('python')
-NeoBundleLazy 'tokorom/clang_complete' , {
+NeoBundleLazy 'tokorom/clang_complete', {
     \   'autoload': { 'filetypes': [ 'c', 'cpp', 'objc', 'objcpp' ] },
 \ }
 NeoBundleLazy 'tokorom/cocoa.vim', 'syntax-only', {
@@ -89,7 +89,9 @@ NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'tikhomirov/vim-glsl'
 NeoBundle 'rainux/vim-desert-warm-256'
-NeoBundle 'heavenshell/vim-jsdoc'
+NeoBundleLazy 'heavenshell/vim-jsdoc', {
+    \   'autoload': { 'filetypes': [ 'javascript' ] },
+\ }
 NeoBundle 'koron/codic-vim'
 NeoBundle 'rhysd/unite-codic.vim'
 NeoBundle 't9md/vim-quickhl'
@@ -100,7 +102,9 @@ NeoBundleLazy 'hynek/vim-python-pep8-indent', {
 \ }
 NeoBundle 'gnperdue/vim-asciidoc'
 NeoBundle 'toyamarinyon/vim-swift'
-NeoBundle 'mrk21/yaml-vim'
+NeoBundle 'mrk21/yaml-vim', {
+    \   'autoload': { 'filetypes': [ 'yaml' ] },
+\ }
 NeoBundle 'elzr/vim-json'
 NeoBundle 'mattn/jscomplete-vim'
 NeoBundle 'myhere/vim-nodejs-complete'
