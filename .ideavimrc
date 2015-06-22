@@ -1,0 +1,23 @@
+set number
+set ignorecase
+set smartcase
+set hlsearch
+set scrolloff=5
+nnoremap <Esc><Esc> :<C-u>nohlsearch<CR><Esc>
+
+noremap <C-]> <Esc>
+inoremap <C-]> <Esc>
+
+nnoremap tn gt
+nnoremap tp gT
+
+nnoremap <Space>r :action RunClass<CR>
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+nnoremap J :action EditorJoinLines<CR>
+
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+inoremap <C-d> <Del>
