@@ -3,7 +3,7 @@ set ignorecase
 set smartcase
 set hlsearch
 set scrolloff=5
-nnoremap <Esc><Esc> :<C-u>nohlsearch<CR><Esc>
+nnoremap <C-]><C-]> :<C-u>nohlsearch<CR><Esc>
 
 noremap <C-]> <Esc>
 inoremap <C-]> <Esc>
