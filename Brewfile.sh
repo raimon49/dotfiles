@@ -9,6 +9,7 @@ brew upgrade --all
 brew install autoconf
 brew install automake
 brew install bdw-gc
+brew install carthage
 brew install chisel
 brew install fish
 brew install gdbm
