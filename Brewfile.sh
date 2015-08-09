@@ -28,6 +28,7 @@ brew install tig
 brew install tree
 brew install vim --with-lua --HEAD
 brew install w3m
+brew install webp
 brew install wget
 brew install zsh
 
