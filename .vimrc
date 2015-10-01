@@ -55,8 +55,9 @@ NeoBundle 'tpope/vim-abolish'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'moll/vim-node'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {
-    \   'autoload': { 'filetypes': [ 'javascript' ] },
+    \   'autoload': { 'filename_patterns': [ '.*\.js' ] },
 \ }
 NeoBundle 'othree/html5.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
@@ -90,7 +91,7 @@ NeoBundle 'mbbill/undotree'
 NeoBundle 'tikhomirov/vim-glsl'
 NeoBundle 'rainux/vim-desert-warm-256'
 NeoBundleLazy 'heavenshell/vim-jsdoc', {
-    \   'autoload': { 'filetypes': [ 'javascript' ] },
+    \   'autoload': { 'filename_patterns': [ '.*\.js' ] },
 \ }
 NeoBundle 'koron/codic-vim'
 NeoBundle 'rhysd/unite-codic.vim'
