@@ -111,6 +111,11 @@ NeoBundle 'mattn/jscomplete-vim'
 NeoBundle 'myhere/vim-nodejs-complete'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'rust-lang/rust.vim'
+if executable('nginx')
+    NeoBundleLazy 'evanmiller/nginx-vim-syntax', {
+        \ 'autoload': {'filetypes': 'nginx'}
+    \ }
+endif
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
