@@ -4,5 +4,6 @@
 .DS_Store
 *.swp
 *.pyc
+.python-version
 .hg
 .svn
