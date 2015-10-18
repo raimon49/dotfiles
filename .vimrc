@@ -114,6 +114,7 @@ NeoBundle 'rust-lang/rust.vim'
 NeoBundleLazy 'evanmiller/nginx-vim-syntax', {
     \ 'autoload': {'filetypes': 'nginx'}
 \ }
+NeoBundle 'Glench/Vim-Jinja2-Syntax'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
