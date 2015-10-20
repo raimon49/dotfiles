@@ -252,6 +252,7 @@ command! Jis       Iso2022jp
 command! Sjis      Cp932
 
 " neocomplcache
+set completeopt=menuone
 if s:meet_neocomplete_requirements()
     let g:neocomplete#enable_at_startup = 1
     let g:neocomplete#enable_smart_case = 1
