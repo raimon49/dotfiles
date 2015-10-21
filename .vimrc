@@ -30,12 +30,17 @@ endif
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite-outline'
+let g:make = 'gmake'
+if system('uname -o') =~ '^GNU/'
+    let g:make = 'make'
+endif
 NeoBundle 'Shougo/vimproc', {
     \'build' : {
-    \   'windows': 'echo "Sorry, cannot update vimproc binary file in Windows."',
+    \   'windows': 'tools\\update-dll-mingw',
     \   'cygwin' : 'make -f make_cygwin.mak',
-    \   'mac'    : 'make -f make_mac.mak',
-    \   'unix'   : 'make -f make_unix.mak',
+    \   'mac'    : 'make',
+    \   'linux'  : g:make,
+    \   'unix'   : g:make,
     \ },
 \ }
 NeoBundle 'Shougo/vimshell'
