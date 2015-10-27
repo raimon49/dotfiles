@@ -405,9 +405,7 @@ if exists('smartinput#define_rule')
 endif
 
 " vim-smartinput-endwise
-if exists('smartinput_endwise')
-    call smartinput_endwise#define_default_rules()
-endif
+call smartinput_endwise#define_default_rules()
 
 " syntastic
 let g:syntastic_auto_jump = 1
