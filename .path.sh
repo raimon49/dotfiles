@@ -22,3 +22,10 @@ if [ -d "${PYENV_ROOT}" ]; then
     export PATH="${PYENV_ROOT}/bin:${PATH}"
     eval "$(pyenv init -)"
 fi
+
+# for Ruby
+export RBENV_ROOT="${HOME}/.rbenv"
+if [ -d ${RBENV_ROOT} ]; then
+    export PATH="${RBENV_ROOT}/bin:${PATH}"
+    eval "$(rbenv init -)"
+fi
