@@ -46,9 +46,9 @@ bindkey "^q" show_buffer_stack
 # Plugins
 if [[ -f ~/.antigen/antigen.zsh ]]; then
     source ~/.antigen/antigen.zsh
-    antigen bundle git://github.com/zsh-users/zsh-completions src
-    antigen bundle git://github.com/mollifier/cd-gitroot
-    antigen bundle git://github.com/mollifier/anyframe
+    antigen bundle zsh-users/zsh-completions src
+    antigen bundle mollifier/cd-gitroot
+    antigen bundle mollifier/anyframe
     antigen apply
 fi
 

@@ -10,8 +10,6 @@ if has('vim_starting')
     endif
 
     set rtp+=$DOTVIM/bundle/neobundle.vim
-
-    let g:neobundle#types#git#default_protocol='git'
 endif
 
 function! s:meet_neocomplete_requirements()
