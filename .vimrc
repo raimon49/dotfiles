@@ -99,6 +99,7 @@ NeoBundleLazy 'heavenshell/vim-jsdoc', {
 NeoBundle 'koron/codic-vim'
 NeoBundle 'rhysd/unite-codic.vim'
 NeoBundle 'rhysd/committia.vim'
+NeoBundle 'rhysd/clever-f.vim'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'AndrewRadev/splitjoin.vim'
@@ -458,6 +459,9 @@ function! g:committia_hooks.edit_open(info)
     imap <buffer><C-u> <Plug>(committia-scroll-diff-up-half)
 endfunction
 
+" clever-f.vim
+let g:clever_f_ignore_case = 1
+let g:clever_f_smart_case = 1
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
