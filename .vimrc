@@ -98,6 +98,7 @@ NeoBundleLazy 'heavenshell/vim-jsdoc', {
 \ }
 NeoBundle 'koron/codic-vim'
 NeoBundle 'rhysd/unite-codic.vim'
+NeoBundle 'rhysd/committia.vim'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'AndrewRadev/splitjoin.vim'
@@ -439,6 +440,24 @@ let g:unite_source_menu_menus = {
 " vim-ref
 let g:ref_alc_start_linenumber = 41
 nnoremap ,alc :<C-u>Ref alc<Space>
+
+" committia.vim
+let g:committia_hooks = {}
+function! g:committia_hooks.edit_open(info)
+    " Additional settings
+    setlocal spell spelllang=en_us fileencoding=utf-8
+
+    " If no commit message, start with insert mode
+    if a:info.vcs ==# 'git' && getline(1) ==# ''
+        startinsert
+    end
+
+    " Scroll the diff window from insert mode
+    " Map <C-d> and <C-u>
+    imap <buffer><C-d> <Plug>(committia-scroll-diff-down-half)
+    imap <buffer><C-u> <Plug>(committia-scroll-diff-up-half)
+endfunction
+
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
