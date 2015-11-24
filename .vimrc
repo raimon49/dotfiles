@@ -107,6 +107,7 @@ NeoBundle 'AndrewRadev/splitjoin.vim'
 NeoBundleLazy 'hynek/vim-python-pep8-indent', {
     \ "autoload": {"insert": 1, "filetypes": ["python", "python3", "djangohtml"]}
 \ }
+NeoBundle 'raimon49/requirements.txt.vim'
 NeoBundle 'gnperdue/vim-asciidoc'
 NeoBundle 'toyamarinyon/vim-swift'
 NeoBundle 'mrk21/yaml-vim', {
