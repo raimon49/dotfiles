@@ -216,6 +216,20 @@ nnoremap <silent> <Space>s. :<C-u>source $MYVIMRC<CR>
 " quick help
 nnoremap H  :<C-u>help<Space>
 nnoremap th :<C-u>tab help<Space>
+set keywordprg=:help " Open Vim internal help by K command
+nnoremap <silent> tm :<C-u>call <SID>MoveToNewTab()<CR>
+function! s:MoveToNewTab()
+    tab split
+    tabprevious
+
+    if winnr('$') > 1
+        close
+    elseif bufnr('$') > 1
+        buffer #
+    endif
+
+    tabnext
+endfunction
 " toggle <sp>ell
 nnoremap <silent> <Space>sp :<C-u>setlocal spell! spelllang=en_us<CR>:setlocal spell?<CR>
 " toggle header file(vim-altr)
