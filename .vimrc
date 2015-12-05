@@ -109,7 +109,7 @@ NeoBundleLazy 'hynek/vim-python-pep8-indent', {
 \ }
 NeoBundle 'raimon49/requirements.txt.vim'
 NeoBundle 'gnperdue/vim-asciidoc'
-NeoBundle 'toyamarinyon/vim-swift'
+NeoBundle 'keith/swift.vim'
 NeoBundle 'mrk21/yaml-vim', {
     \   'autoload': { 'filetypes': [ 'yaml' ] },
 \ }
