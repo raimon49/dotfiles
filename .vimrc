@@ -233,7 +233,7 @@ nnoremap H  :<C-u>help<Space>
 nnoremap th :<C-u>tab help<Space>
 set keywordprg=:help " Open Vim internal help by K command
 " toggle <sp>ell
-nnoremap <silent> <Space>sp :<C-u>setlocal spell! spelllang=en_us<CR>:setlocal spell?<CR>
+nnoremap <silent> <Space>sp :<C-u>setlocal spell! spelllang=en_us,cjk<CR>:setlocal spell?<CR>
 " toggle header file(vim-altr)
 nmap <Space>a <Plug>(altr-forward)
 
@@ -467,7 +467,7 @@ nnoremap ,alc :<C-u>Ref alc<Space>
 let g:committia_hooks = {}
 function! g:committia_hooks.edit_open(info)
     " Additional settings
-    setlocal spell spelllang=en_us fileencoding=utf-8
+    setlocal spell spelllang=en_us,cjk fileencoding=utf-8
 
     " If no commit message, start with insert mode
     if a:info.vcs ==# 'git' && getline(1) ==# ''
@@ -532,7 +532,7 @@ augroup MyAutoCmd
     " from :help smartindent
     autocmd FileType python :inoremap # X#
     " for commit log
-    autocmd FileType svn,gitcommit,gitrebase setlocal spell spelllang=en_us fileencoding=utf-8
+    autocmd FileType svn,gitcommit,gitrebase setlocal spell spelllang=en_us,cjk fileencoding=utf-8
     " for Makefile
     autocmd FileType make setlocal noexpandtab
     " for javascript completion
