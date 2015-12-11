@@ -101,6 +101,7 @@ NeoBundle 'koron/codic-vim'
 NeoBundle 'rhysd/unite-codic.vim'
 NeoBundle 'rhysd/committia.vim'
 NeoBundle 'rhysd/clever-f.vim'
+NeoBundle 'rhysd/github-complete.vim'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'AndrewRadev/splitjoin.vim'
@@ -429,6 +430,9 @@ let g:syntastic_auto_jump = 1
 let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': [] }
+
+" github-complete.vim
+let g:github_complete_emoji_japanese_workaround = 1
 
 " yankround.vim
 nmap p <Plug>(yankround-p)
