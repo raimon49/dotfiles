@@ -24,8 +24,6 @@ brew install nkf
 brew install openssl
 brew install peco
 brew install pcre
-brew install rbenv
-brew install ruby-build
 brew install tig
 brew install tree
 brew install vim --with-lua --HEAD
