@@ -10,5 +10,4 @@
 
 # rbenv
 [ ! -d ~/.rbenv ] && \
-    git clone https://github.com/rbenv/rbenv.git ~/.rbenv && \
-    git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+    curl https://raw.githubusercontent.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
