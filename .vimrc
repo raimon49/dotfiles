@@ -327,7 +327,7 @@ else
 endif
 let g:clang_complete_auto = 0
 let g:clang_auto_select = 0
-let s:clang_library_path='/Library/Developer/CommandLineTools/usr/lib'
+let s:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
 if isdirectory(s:clang_library_path)
     let g:clang_library_path=s:clang_library_path
 endif
@@ -338,8 +338,11 @@ endfunction
 let s:hooks = neobundle#get_hooks("clang_complete-getopts-ios")
 function! s:hooks.on_source(bundle)
 
-let g:clang_complete_getopts_ios_sdk_directory = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk'
-let g:clang_complete_getopts_ios_ignore_directories = ["^\.git", "\.xcodeproj"]
+let s:ios_sdk_path = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk'
+if isdirectory(s:ios_sdk_path)
+    let g:clang_complete_getopts_ios_sdk_directory = s:ios_sdk_path
+    let g:clang_complete_getopts_ios_ignore_directories = ["^\.git", "\.xcodeproj"]
+endif
 
 endfunction
 
