@@ -51,7 +51,6 @@ NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
-NeoBundle 'thinca/vim-visualstar'
 NeoBundle 'thinca/vim-unite-history'
 NeoBundle 'thinca/vim-prettyprint'
 NeoBundle 'tpope/vim-fugitive'
@@ -72,6 +71,8 @@ NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-gf-user'
 NeoBundle 'kana/vim-gf-diff'
 NeoBundle 'cohama/vim-smartinput-endwise'
+NeoBundle 'haya14busa/incsearch.vim'
+NeoBundle 'haya14busa/vim-asterisk'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'taku-o/vim-vis'
 NeoBundle 'csexton/trailertrash.vim'
@@ -219,12 +220,6 @@ nnoremap <silent> tm :<C-u>call <SID>MoveToNewTab()<CR>
 nnoremap tn :<C-u>tabn<CR>
 nnoremap tp :<C-u>tabp<CR>
 nnoremap <CR> o<Esc>
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap * *zz
-nnoremap # #zz
-nnoremap g* g*zz
-nnoremap g# g#zz
 " quick edit $MYVIMRC
 nnoremap <silent> <Space>.  :<C-u>edit $MYVIMRC<CR>
 nnoremap <silent> <Space>s. :<C-u>source $MYVIMRC<CR>
@@ -427,6 +422,19 @@ endif
 
 " vim-smartinput-endwise
 call smartinput_endwise#define_default_rules()
+
+" incsearch.vim
+let g:incsearch#auto_nohlsearch = 1
+let g:incsearch#magic = '\v'
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+map n  <Plug>(incsearch-nohl-n)zz
+map N  <Plug>(incsearch-nohl-N)zz
+map *  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
+map #  <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
+map g* <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
+map g# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
 
 " syntastic
 let g:syntastic_auto_jump = 1
