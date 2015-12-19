@@ -71,6 +71,7 @@ NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-gf-user'
 NeoBundle 'kana/vim-gf-diff'
 NeoBundle 'cohama/vim-smartinput-endwise'
+NeoBundle 'osyo-manga/vim-anzu'
 NeoBundle 'haya14busa/incsearch.vim'
 NeoBundle 'haya14busa/vim-asterisk'
 NeoBundle 'scrooloose/syntastic'
@@ -357,12 +358,13 @@ let g:lightline = {
   \   'active': {
   \     'left': [
   \       [ 'mode', 'paste', ],
-  \       [ 'fugitive', 'readonly', 'filename', ],
+  \       [ 'fugitive', 'readonly', 'filename', 'anzu', ],
   \     ]
   \   },
   \   'component_function': {
   \     'fugitive': 'MyFugitive',
   \     'filename': 'MyFilename',
+  \     'anzu': 'anzu#search_status',
   \   },
   \ }
 
@@ -425,8 +427,8 @@ let g:incsearch#auto_nohlsearch = 1
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
-map n  <Plug>(incsearch-nohl-n)zz
-map N  <Plug>(incsearch-nohl-N)zz
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
 map *  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
 map #  <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
 map g* <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
@@ -434,6 +436,15 @@ map g# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
 " default escape for search. naked input: <C-v>/, <C-v>?
 noremap <silent><expr> / incsearch#go({'command':'/','keymap':{'/':{'key':'\/','noremap':1}}})
 noremap <silent><expr> ? incsearch#go({'command':'?','keymap':{'?':{'key':'\?','noremap':1}}})
+
+" vim-anzu
+set updatetime=500
+nmap n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)zz
+nmap N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)zz
+augroup vim-anzu
+    autocmd!
+    autocmd CursorHold,CursorHoldI,WinLeave,TabLeave * call anzu#clear_search_status()
+augroup END
 
 " syntastic
 let g:syntastic_auto_jump = 1
