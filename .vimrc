@@ -246,9 +246,6 @@ cnoremap <C-e> <End>
 cnoremap <C-f> <Right>
 cnoremap <C-b> <Left>
 cnoremap <C-d> <Del>
-" default escape for search. naked input: <C-v>/, <C-v>?
-cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
-cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
 
 " quick select last modified
 nnoremap gc `[v`]
@@ -425,7 +422,6 @@ call smartinput_endwise#define_default_rules()
 
 " incsearch.vim
 let g:incsearch#auto_nohlsearch = 1
-let g:incsearch#magic = '\v'
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
@@ -435,6 +431,9 @@ map *  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
 map #  <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
 map g* <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
 map g# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
+" default escape for search. naked input: <C-v>/, <C-v>?
+noremap <silent><expr> / incsearch#go({'command':'/','keymap':{'/':{'key':'\/','noremap':1}}})
+noremap <silent><expr> ? incsearch#go({'command':'?','keymap':{'?':{'key':'\?','noremap':1}}})
 
 " syntastic
 let g:syntastic_auto_jump = 1
