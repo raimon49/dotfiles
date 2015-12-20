@@ -438,7 +438,7 @@ noremap <silent><expr> / incsearch#go({'command':'/','keymap':{'/':{'key':'\/','
 noremap <silent><expr> ? incsearch#go({'command':'?','keymap':{'?':{'key':'\?','noremap':1}}})
 
 " vim-anzu
-set updatetime=500
+set updatetime=800
 nmap n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)zz
 nmap N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)zz
 augroup vim-anzu
