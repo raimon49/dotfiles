@@ -242,12 +242,6 @@ inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-d> <Del>
 
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
-cnoremap <C-f> <Right>
-cnoremap <C-b> <Left>
-cnoremap <C-d> <Del>
-
 " quick select last modified
 nnoremap gc `[v`]
 vnoremap gc :<C-u>normal gc<CR>
@@ -424,6 +418,7 @@ call smartinput_endwise#define_default_rules()
 
 " incsearch.vim
 let g:incsearch#auto_nohlsearch = 1
+let g:incsearch#emacs_like_keymap = 1
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
