@@ -476,8 +476,15 @@ let g:unite_source_menu_menus = {
 \}
 
 " vim-ref
-let g:ref_alc_start_linenumber = 41
-nnoremap ,alc :<C-u>Ref alc<Space>
+let g:ref_source_webdict_sites = {
+    \ 'alc': {
+    \    'url': 'http://eow.alc.co.jp/%s/UTF-8/'
+    \   }
+    \ }
+function! g:ref_source_webdict_sites.alc.filter(output)
+    return join(split(a:output, "\n")[31 :], "\n")
+endfunction
+nnoremap ,alc :<C-u>Ref webdict alc<Space>
 
 " committia.vim
 let g:committia_hooks = {}
