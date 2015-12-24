@@ -6,6 +6,10 @@ brew update
 brew upgrade --all
 
 # Packages
+if [ -x /usr/local/bin/vim ]; then
+    brew uninstall vim
+fi
+
 brew install autoconf
 brew install automake
 brew install bdw-gc
