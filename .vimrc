@@ -12,6 +12,26 @@ if has('vim_starting')
     set rtp+=$DOTVIM/bundle/neobundle.vim
 endif
 
+function! s:has_cjk_spelllang()
+    return (v:version > 704 || (v:version == 704 && has('patch092')))
+endfunction
+
+function! s:setlocal_spelllang()
+    setlocal spelllang=en_us
+    if s:has_cjk_spelllang()
+        setlocal spelllang+=cjk
+    endif
+    setlocal spell fileencoding=utf-8
+endfunction
+
+function! s:toggle_setting_spell()
+    setlocal spelllang=en_us
+    if s:has_cjk_spelllang()
+        setlocal spelllang+=cjk
+    endif
+    setlocal spell!
+endfunction
+
 function! s:meet_neocomplete_requirements()
     return has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
 endfunction
@@ -229,7 +249,7 @@ nnoremap H  :<C-u>help<Space>
 nnoremap th :<C-u>tab help<Space>
 set keywordprg=:help " Open Vim internal help by K command
 " toggle <sp>ell
-nnoremap <silent> <Space>sp :<C-u>setlocal spell! spelllang=en_us,cjk<CR>:setlocal spell?<CR>
+noremap <silent> <Space>sp :<C-u>call <SID>toggle_setting_spell()<CR>
 " toggle header file(vim-altr)
 nmap <Space>a <Plug>(altr-forward)
 
@@ -496,7 +516,7 @@ nnoremap ,alc :<C-u>Ref webdict alc<Space>
 let g:committia_hooks = {}
 function! g:committia_hooks.edit_open(info)
     " Additional settings
-    setlocal spell spelllang=en_us,cjk fileencoding=utf-8
+    call s:setlocal_spelllang()
 
     " If no commit message, start with insert mode
     if a:info.vcs ==# 'git' && getline(1) ==# ''
@@ -561,7 +581,7 @@ augroup MyAutoCmd
     " from :help smartindent
     autocmd FileType python :inoremap # X#
     " for commit log
-    autocmd FileType svn,gitcommit,gitrebase setlocal spell spelllang=en_us,cjk fileencoding=utf-8
+    autocmd FileType svn,gitcommit,gitrebase call s:setlocal_spelllang()
     " for Makefile
     autocmd FileType make setlocal noexpandtab
     " for javascript completion
