@@ -242,6 +242,12 @@ inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-d> <Del>
 
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-f> <Right>
+cnoremap <C-b> <Left>
+cnoremap <C-d> <Del>
+
 " quick select last modified
 nnoremap gc `[v`]
 vnoremap gc :<C-u>normal gc<CR>
