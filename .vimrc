@@ -17,18 +17,28 @@ function! s:has_cjk_spelllang()
 endfunction
 
 function! s:setlocal_spelllang()
+    if !has('spell') || !has('syntax')
+        return
+    endif
+
     setlocal spelllang=en_us
     if s:has_cjk_spelllang()
         setlocal spelllang+=cjk
     endif
+
     setlocal spell fileencoding=utf-8
 endfunction
 
 function! s:toggle_setting_spell()
+    if !has('spell') || !has('syntax')
+        return
+    endif
+
     setlocal spelllang=en_us
     if s:has_cjk_spelllang()
         setlocal spelllang+=cjk
     endif
+
     setlocal spell!
 endfunction
 
