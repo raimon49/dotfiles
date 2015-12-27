@@ -235,7 +235,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <Tab> <C-w>w
 nnoremap <S-Tab> <C-w>W
-function! s:MoveToNewTab()
+function! s:move_to_new_tab()
     tab split
     tabprevious
 
@@ -247,7 +247,7 @@ function! s:MoveToNewTab()
 
     tabnext
 endfunction
-nnoremap <silent> tm :<C-u>call <SID>MoveToNewTab()<CR>
+nnoremap <silent> tm :<C-u>call <SID>move_to_new_tab()<CR>
 nnoremap tn :<C-u>tabn<CR>
 nnoremap tp :<C-u>tabp<CR>
 nnoremap <CR> o<Esc>
@@ -412,7 +412,7 @@ function! MyModified()
 endfunction
 
 " vim-smartchr
-function! EnableSmartchrBasic()
+function! s:enable_smartchr_basic()
     inoremap <buffer><expr> + smartchr#one_of(' + ', '+', '++')
     inoremap <buffer><expr> - smartchr#one_of(' - ', ' -- ', '-')
     inoremap <buffer><expr> & smartchr#one_of(' & ', ' && ', '&')
@@ -424,11 +424,11 @@ function! EnableSmartchrBasic()
     inoremap <buffer><expr> = search('\(&\<bar><bar>\<bar>+\<bar>-\<bar>/\<bar>>\<bar><\) \%#', 'bcn')? '<bs>= ' : search('\(\*\<bar>!\)\%#')? '= ' : smartchr#one_of(' = ', ' == ', '=')
 endfunction
 
-function! EnableSmartchrExtendComparison()
+function! s:enable_smartchr_extend_comparison()
     inoremap <buffer><expr> = search('\(&\<bar><bar>\<bar>+\<bar>-\<bar>/\<bar>>\<bar><\) \%#', 'bcn')? '<bs>= ' : search('\(\*\<bar>!\)\%#')? '= ' : smartchr#one_of(' = ', ' == ', ' === ', '=')
 endfunction
 
-function! DisableSmartchr()
+function! s:disable_smartchr()
     inoremap <buffer> + +
     inoremap <buffer> - -
     inoremap <buffer> & &
@@ -563,7 +563,7 @@ xmap <Space>M <Plug>(quickhl-manual-reset)
 let g:vim_json_syntax_conceal = 0
 
 " cursor style
-function! HighlightCursor()
+function! s:highlight_cursor()
     hi CursorColumn gui=NONE guifg=NONE guibg=Grey40 cterm=NONE ctermfg=NONE ctermbg=241
     hi CursorLine gui=NONE guifg=NONE guibg=Grey40 cterm=NONE ctermfg=NONE ctermbg=241
     hi Cursor guifg=Black guibg=Lavender cterm=reverse ctermfg=NONE ctermbg=NONE
@@ -573,7 +573,7 @@ endfunction
 augroup MyAutoCmd
     autocmd!
     " highlight cursor
-    autocmd ColorScheme * call HighlightCursor()
+    autocmd ColorScheme * call <SID>highlight_cursor()
     autocmd WinEnter * setlocal cursorline
     autocmd WinLeave * setlocal nocursorline
     " highlight two-byte spaces
@@ -585,9 +585,9 @@ augroup MyAutoCmd
     " restore cursor
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
     " switch smartchr
-    autocmd FileType c,cpp,cs,glsl,java,javascript,php,python,ruby,coffee,vim call EnableSmartchrBasic()
-    autocmd FileType php,javascript call EnableSmartchrExtendComparison()
-    autocmd FileType objc,objcpp,text,markdown,html,xml call DisableSmartchr()
+    autocmd FileType c,cpp,cs,glsl,java,javascript,php,python,ruby,coffee,vim call <SID>enable_smartchr_basic()
+    autocmd FileType php,javascript call <SID>enable_smartchr_extend_comparison()
+    autocmd FileType objc,objcpp,text,markdown,html,xml call <SID>disable_smartchr()
     " from :help smartindent
     autocmd FileType python :inoremap # X#
     " for commit log
