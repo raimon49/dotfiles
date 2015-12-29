@@ -80,6 +80,7 @@ for peco_command in ~/local/bin/peco /usr/local/bin/peco; do
 done
 
 # 補完
+autoload -Uz colors
 autoload -Uz compinit
 compinit -u
 
@@ -104,6 +105,18 @@ zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 # 上位のディレクトリへ移動する際に現在のディレクトリを補完候補から外す
 zstyle ':completion:*' ignore-parents parent pwd ..
 
+# 補完関数の表示を強化する
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _list _history
+zstyle ':completion:*:messages' format '%F{green}%d'$default
+zstyle ':completion:*:warnings' format '%F{red}No matches for:''%F{green} %d'$default
+zstyle ':completion:*:descriptions' format '%F{green}completing %B%d%b'$default
+zstyle ':completion:*:options' description 'yes'
+zstyle ':completion:*:descriptions' format '%F{green}Completing %B%d%b%f'$default
+
+# マッチ種別を別々に表示
+zstyle ':completion:*' group-name ''
+
 # グロブ展開せずに選ぶ
 setopt glob_complete
 
@@ -112,7 +125,6 @@ setopt magic_equal_subst
 
 # プロンプト
 setopt transient_rprompt
-autoload -Uz colors
 colors
 VCS_PROMPT=""
 if is-at-least 4.3.7; then
