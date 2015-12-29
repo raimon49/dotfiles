@@ -117,6 +117,9 @@ zstyle ':completion:*:descriptions' format '%F{green}Completing %B%d%b%f'$defaul
 # マッチ種別を別々に表示
 zstyle ':completion:*' group-name ''
 
+zstyle ':completion:*' list-separator '-->'
+zstyle ':completion:*:manuals' separate-sections true
+
 # グロブ展開せずに選ぶ
 setopt glob_complete
 
