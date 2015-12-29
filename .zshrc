@@ -117,6 +117,7 @@ zstyle ':completion:*:descriptions' format '%F{green}Completing %B%d%b%f'$defaul
 # マッチ種別を別々に表示
 zstyle ':completion:*' group-name ''
 
+# コマンドオプションのセパレータを変更
 zstyle ':completion:*' list-separator '-->'
 zstyle ':completion:*:manuals' separate-sections true
 
