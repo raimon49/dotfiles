@@ -120,6 +120,9 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' list-separator '-->'
 zstyle ':completion:*:manuals' separate-sections true
 
+# 単語の途中でもカーソル位置で補完
+setopt complete_in_word
+
 # グロブ展開せずに選ぶ
 setopt glob_complete
 
