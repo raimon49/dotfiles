@@ -584,6 +584,8 @@ augroup MyAutoCmd
     autocmd ColorScheme * hi IndentGuidesEven ctermbg=236
     " restore cursor
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+    " automated open quickfix-window
+    autocmd QuickFixCmdPost *grep* cwindow
     " switch smartchr
     autocmd FileType c,cpp,cs,glsl,java,javascript,php,python,ruby,coffee,vim call <SID>enable_smartchr_basic()
     autocmd FileType php,javascript call <SID>enable_smartchr_extend_comparison()
