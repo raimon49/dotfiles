@@ -594,8 +594,6 @@ augroup MyAutoCmd
     autocmd FileType python :inoremap # X#
     " for commit log
     autocmd FileType svn,gitcommit,gitrebase call s:setlocal_spelllang()
-    " for Makefile
-    autocmd FileType make setlocal noexpandtab
     " for javascript completion
     autocmd FileType javascript setlocal omnifunc=nodejscomplete#CompleteJS
 augroup END
