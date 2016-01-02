@@ -79,6 +79,9 @@ NeoBundleLazy 'mattn/emmet-vim', {
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/excitetranslate-vim'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundleLazy 'derekwyatt/vim-scala', {
+    \   'autoload': { 'filetypes': [ 'scala' ] },
+\ }
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'thinca/vim-unite-history'
