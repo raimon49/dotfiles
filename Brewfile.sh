@@ -17,7 +17,6 @@ brew install carthage
 brew install chisel
 brew install fish
 brew install gdbm
-brew install gibo
 brew install git
 brew install icdiff
 brew install jq
