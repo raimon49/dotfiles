@@ -11,6 +11,8 @@
     fscache = true
 [fetch]
     prune = true
+[rebase]
+    autostash = true
 [push]
     default = nothing
 [color]
