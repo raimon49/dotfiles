@@ -10,6 +10,9 @@ fi
 export PATH="${HOME}/local/bin:${PATH}"
 export MANPATH="${HOME}/local/share/man:${MANPATH}"
 
+# for Heroku Toolbelt
+test -d /usr/local/heroku && export PATH="/usr/local/heroku/bin:$PATH"
+
 # for VVM
 test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
 
