@@ -12,6 +12,7 @@ set diff-options = -m --first-parent
 set line-graphics = ascii
 set ignore-case = yes
 set tab-size = 4
+set vertical-split = false
 
 # desert color
 # general
