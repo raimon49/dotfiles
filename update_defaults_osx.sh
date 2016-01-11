@@ -9,10 +9,11 @@ defaults write -g InitialKeyRepeat -int 10
 defaults write -g KeyRepeat -int 1
 
 # Disable HotPlug
-defaults write -currentHost com.apple.ImageCapture disableHotPlug -bool YES
+defaults write com.apple.ImageCapture disableHotPlug -bool YES
 
 # Disable generate .DS_Store
-defaults write -currentHost com.apple.desktopservices DSDontWriteNetworkStores -bool YES
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool YES
 
-# Show all files at Finder.app
-defaults write -currentHost com.apple.finder AppleShowAllFiles -bool YES
+# Show all files and extensions at Finder.app
+defaults write com.apple.finder AppleShowAllFiles -bool YES
+defaults write -g AppleShowAllExtensions -bool YES
