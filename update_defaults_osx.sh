@@ -14,6 +14,6 @@ defaults write com.apple.ImageCapture disableHotPlug -bool YES
 # Disable generate .DS_Store
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool YES
 
-# Show all files and extensions at Finder.app
-defaults write com.apple.finder AppleShowAllFiles -bool YES
+# Show all extensions at Finder.app
+defaults write com.apple.finder AppleShowAllFiles -bool NO
 defaults write -g AppleShowAllExtensions -bool YES
