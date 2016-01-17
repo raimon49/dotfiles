@@ -444,13 +444,11 @@ function! s:disable_smartchr()
 endfunction
 
 " vim-smartinput
-if exists('smartinput#define_rule')
-    call smartinput#define_rule({
-    \   'at': '\s\+\%#',
-    \   'char': '<CR>',
-    \   'input': "<C-o>:call setline('.', substitute(getline('.'), '\\s\\+$', '', ''))<CR><CR>",
-    \   })
-endif
+call smartinput#define_rule({
+\   'at': '\s\+\%#',
+\   'char': '<CR>',
+\   'input': "<C-o>:call setline('.', substitute(getline('.'), '\\s\\+$', '', ''))<CR><CR>",
+\   })
 
 " vim-smartinput-endwise
 call smartinput_endwise#define_default_rules()
