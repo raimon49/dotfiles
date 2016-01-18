@@ -39,6 +39,9 @@ function share_history {
 PROMPT_COMMAND='share_history'
 shopt -u histappend
 
+# ^D logout抑止
+export IGNOREEOF=1
+
 # 補完
 for bash_completion_path in ~/local/bin/bash_completion ~/local/etc/bash_completion /etc/bash_completion; do
     if [ -e "${bash_completion_path}" ]; then
