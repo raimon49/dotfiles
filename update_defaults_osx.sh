@@ -17,3 +17,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool YES
 # Show all extensions at Finder.app
 defaults write com.apple.finder AppleShowAllFiles -bool NO
 defaults write -g AppleShowAllExtensions -bool YES
+
+# Disable shadow effect at screen capture
+defaults write com.apple.screencapture disable-shadow -boolean YES
