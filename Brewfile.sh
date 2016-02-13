@@ -25,10 +25,12 @@ brew install libtool
 brew install lua
 brew install lv
 brew install mercurial
+brew install mycli
 brew install nkf
 brew install openssl
 brew install peco
 brew install pcre
+brew install pgcli
 brew install tig
 brew install tree
 brew install vim --with-lua --HEAD
