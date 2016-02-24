@@ -31,6 +31,7 @@ brew install openssl
 brew install peco
 brew install pcre
 brew install pgcli
+brew install spark
 brew install tig
 brew install tree
 brew install vim --with-lua --HEAD
