@@ -1,65 +1,65 @@
 [user]
-    name = raimon
-    email = raimon49@hotmail.com
+	name = raimon
+	email = raimon49@hotmail.com
 [core]
-    pager = $PAGER
-    editor = $EDITOR
-    excludesfile = ~/.gitignore
-    autocrlf = false
-    quotepath = false
-    preloadindex = true
-    fscache = true
+	pager = $PAGER
+	editor = $EDITOR
+	excludesfile = ~/.gitignore
+	autocrlf = false
+	quotepath = false
+	preloadindex = true
+	fscache = true
 [fetch]
-    prune = true
+	prune = true
 [rebase]
-    autostash = true
+	autostash = true
 [push]
-    default = nothing
+	default = nothing
 [color]
-    ui = auto
+	ui = auto
 [alias]
-    rclone = clone --recursive
-    sclone = clone --recursive --depth 5
-    ss = stash save
-    sp = stash pop
-    st = status -s
-    ls = ls-files
-    lsc = ls-files --unmerged
-    stat = status
-    rawci = commit
-    ci = commit -v
-    eci = commit --allow-empty
-    reci = commit --amend
-    readdci = commit --amend --no-edit -a
-    br = branch
-    lsbr = ls-branches --no-pager --color
-    prebr = checkout -
-    unstage = reset
-    co = checkout
-    di = diff
-    dic = diff --cached
-    pf = pull --ff
-    up = pull --rebase
-    premerge = merge --no-commit --no-ff
-    onemerge = merge --squash
-    rollback = reset --soft HEAD^
-    sq = "!point=${1:-HEAD} sh -c 'files=`git diff --name-only ${point}`; git reset ${point}; git add $files; git commit -a'; git rept"
-    rept = "!sh -c 'git tag -d pt; git tag pt'"
-    out = log origin..HEAD
-    rmv = remote -v
-    su = submodule update --recursive
-    sui = submodule update --init --recursive
-    subfetch = submodule foreach "git checkout master; git pull"
-    fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
-    pull-dry-run = !"git fetch origin; B=$(git rev-parse --abbrev-ref HEAD); git diff --stat --summary ${B}..origin/${B}"
-    pr = "!f() { git fetch -fu origin refs/pull/$1/head:pr/$1; } ; f"
-    pru = "!f() { git fetch -fu upstream refs/pull/$1/head:pr/$1; } ; f"
-    pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
-    l =  log --pretty=format:\"%h %ad (%an): %s\" --date=short -20
-    slog = log --pretty=format:\"%h %ad (%an): %s\" --date=short -20
-    mlog = log --oneline --abbrev-commit --merge
-    glog = log --graph --date=short --pretty='%C(yellow)%h%Creset %C(cyan bold)%d%Creset %s %Cgreen[%cd]%Creset' --decorate
-    dlog = log -p
-    logst = log --name-status
-    pager = '!$HOME/local/bin/git-pager'
-    info = '!$HOME/local/bin/git-info'
+	rclone = clone --recursive
+	sclone = clone --recursive --depth 5
+	ss = stash save
+	sp = stash pop
+	st = status -s
+	ls = ls-files
+	lsc = ls-files --unmerged
+	stat = status
+	rawci = commit
+	ci = commit -v
+	eci = commit --allow-empty
+	reci = commit --amend
+	readdci = commit --amend --no-edit -a
+	br = branch
+	lsbr = ls-branches --no-pager --color
+	prebr = checkout -
+	unstage = reset
+	co = checkout
+	di = diff
+	dic = diff --cached
+	pf = pull --ff
+	up = pull --rebase
+	premerge = merge --no-commit --no-ff
+	onemerge = merge --squash
+	rollback = reset --soft HEAD^
+	sq = "!point=${1:-HEAD} sh -c 'files=`git diff --name-only ${point}`; git reset ${point}; git add $files; git commit -a'; git rept"
+	rept = "!sh -c 'git tag -d pt; git tag pt'"
+	out = log origin..HEAD
+	rmv = remote -v
+	su = submodule update --recursive
+	sui = submodule update --init --recursive
+	subfetch = submodule foreach "git checkout master; git pull"
+	fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
+	pull-dry-run = !"git fetch origin; B=$(git rev-parse --abbrev-ref HEAD); git diff --stat --summary ${B}..origin/${B}"
+	pr = "!f() { git fetch -fu origin refs/pull/$1/head:pr/$1; } ; f"
+	pru = "!f() { git fetch -fu upstream refs/pull/$1/head:pr/$1; } ; f"
+	pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+	l =  log --pretty=format:\"%h %ad (%an): %s\" --date=short -20
+	slog = log --pretty=format:\"%h %ad (%an): %s\" --date=short -20
+	mlog = log --oneline --abbrev-commit --merge
+	glog = log --graph --date=short --pretty='%C(yellow)%h%Creset %C(cyan bold)%d%Creset %s %Cgreen[%cd]%Creset' --decorate
+	dlog = log -p
+	logst = log --name-status
+	pager = '!$HOME/local/bin/git-pager'
+	info = '!$HOME/local/bin/git-info'
