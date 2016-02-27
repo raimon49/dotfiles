@@ -18,6 +18,7 @@
 [color]
 	ui = auto
 [alias]
+	alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
 	rclone = clone --recursive
 	sclone = clone --recursive --depth 5
 	ss = stash save
