@@ -288,6 +288,8 @@ onoremap gc :<C-u>normal gc<CR>
 
 vnoremap < <gv
 vnoremap > >gv
+vnoremap <C-a> <C-a>gv
+vnoremap <C-x> <C-x>gv
 " quick continuous paste
 vnoremap <silent> <C-p> "0p<CR>
 " require Python 2.6+
