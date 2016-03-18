@@ -217,6 +217,9 @@ set backspace=indent,eol,start
 set scrolloff=5
 set virtualedit=block
 
+set noequalalways
+set winheight=8
+
 set pumheight=10
 
 set nrformats=alpha,octal,hex
