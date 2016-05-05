@@ -34,6 +34,7 @@ brew install pgcli
 brew install spark
 brew install tig
 brew install tree
+brew install swiftlint
 brew install vim --with-lua --HEAD
 brew install w3m
 brew install webp
