@@ -16,6 +16,10 @@ elif [ -x "`which less 2> /dev/null`" ]; then
     export LESSCHARSET=utf-8
     alias lv="less"
 fi
+
+# See also: https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
+test -x /usr/local/bin/brew && export HOMEBREW_NO_ANALYTICS=1
+
 man() {
     env \
         LESS_TERMCAP_mb=$(printf "\e[1;36m") \
