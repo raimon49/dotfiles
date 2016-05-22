@@ -620,6 +620,8 @@ augroup MyAutoCmd
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
     " automated open quickfix-window
     autocmd QuickFixCmdPost *grep* cwindow
+    " turn off paste mode when leaving insert
+    autocmd InsertLeave * setlocal nopaste
     " switch smartchr
     autocmd FileType c,cpp,cs,glsl,java,javascript,php,python,ruby,coffee,vim call <SID>enable_smartchr_basic()
     autocmd FileType php,javascript call <SID>enable_smartchr_extend_comparison()
