@@ -58,6 +58,7 @@ endif
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/unite-outline'
+NeoBundle 'kmnk/vim-unite-giti'
 let g:make = 'gmake'
 if system('uname -o') =~ '^GNU/'
     let g:make = 'make'
