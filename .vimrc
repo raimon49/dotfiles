@@ -160,6 +160,7 @@ NeoBundleLazy 'evanmiller/nginx-vim-syntax', {
     \ 'autoload': {'filetypes': 'nginx'}
 \ }
 NeoBundle 'Glench/Vim-Jinja2-Syntax'
+NeoBundle 'smerrill/vcl-vim-plugin'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
