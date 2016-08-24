@@ -161,6 +161,7 @@ NeoBundleLazy 'evanmiller/nginx-vim-syntax', {
 \ }
 NeoBundle 'Glench/Vim-Jinja2-Syntax'
 NeoBundle 'smerrill/vcl-vim-plugin'
+NeoBundle 'pearofducks/ansible-vim'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
