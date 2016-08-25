@@ -162,6 +162,7 @@ NeoBundleLazy 'evanmiller/nginx-vim-syntax', {
 NeoBundle 'Glench/Vim-Jinja2-Syntax'
 NeoBundle 'smerrill/vcl-vim-plugin'
 NeoBundle 'pearofducks/ansible-vim'
+NeoBundle 'fatih/vim-go'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
@@ -490,7 +491,8 @@ augroup END
 let g:syntastic_auto_jump = 1
 let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': [],
-                           \ 'passive_filetypes': [] }
+                           \ 'passive_filetypes': ['go'] }
+let g:syntastic_go_checkers = ['golint', 'gotype', 'govet', 'go']
 
 " github-complete.vim
 let g:github_complete_emoji_japanese_workaround = 1
@@ -570,6 +572,16 @@ xmap <Space>M <Plug>(quickhl-manual-reset)
 
 " vim-json
 let g:vim_json_syntax_conceal = 0
+
+" vim-go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_term_enabled = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+let g:go_fmt_fail_silently = 1
 
 " cursor style
 function! s:highlight_cursor()

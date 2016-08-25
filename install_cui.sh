@@ -3,6 +3,7 @@ cd $(dirname $0)
 
 [ ! -d ~/local/bin ] && mkdir -p ~/local/bin
 [ ! -d ~/.zsh/cache ] && mkdir -p ~/.zsh/cache
+[ ! -d ~/go ] && mkdir -p ~/go
 [ ! -f ~/.z ] && touch ~/.z
 [ ! -d .vim/bundle/neobundle.vim ] && git clone https://github.com/Shougo/neobundle.vim.git .vim/bundle/neobundle.vim
 [ ! -d .antigen ] && git clone https://github.com/zsh-users/antigen.git .antigen

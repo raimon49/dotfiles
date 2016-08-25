@@ -7,11 +7,18 @@ if [ -x /usr/libexec/path_helper ]; then
     eval `/usr/libexec/path_helper -s`
 fi
 
+
 export PATH="${HOME}/local/bin:${PATH}"
 export MANPATH="${HOME}/local/share/man:${MANPATH}"
 
+# for Golang
+test -d ~/go && export GOROOT="${HOME}/go" \
+             && export PATH="${GOROOT}/bin:${PATH}" \
+             && export GOPATH="${HOME}/works/go" \
+             && export PATH="${GOPATH}/bin:${PATH}"
+
 # for Heroku Toolbelt
-test -d /usr/local/heroku && export PATH="/usr/local/heroku/bin:$PATH"
+test -d /usr/local/heroku && export PATH="/usr/local/heroku/bin:${PATH}"
 
 # for VVM
 test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
