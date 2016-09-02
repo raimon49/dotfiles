@@ -49,6 +49,7 @@
 	rept = "!sh -c 'git tag -d pt; git tag pt'"
 	out = log origin..HEAD
 	rmv = remote -v
+	iftag = "!git tag --points-at `git rev-parse HEAD`"
 	su = submodule update --recursive
 	sui = submodule update --init --recursive
 	subfetch = submodule foreach "git checkout master; git pull"
