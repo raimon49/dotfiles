@@ -28,6 +28,7 @@ test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
 test -f ~/.nodebrew/nodebrew && export PATH="${HOME}/.nodebrew/current/bin:${PATH}"
 
 # for Python
+export PIP_CONFIG_FILE="${HOME}/pip.conf"
 export PYENV_ROOT="${HOME}/.pyenv"
 if [ -d "${PYENV_ROOT}" ]; then
     export PATH="${PYENV_ROOT}/bin:${PATH}"
