@@ -1,7 +1,12 @@
-" Setup NeoBundle
+" Setup dein.vim
 filetype off
 if has('vim_starting')
-    set nocompatible
+    if &compatible
+        set nocompatible
+    endif
+
+    let s:dein_dir      = expand('~/.vim/dein')
+    let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
     if has('win32') || has('win64')
         set shellslash
         let $DOTVIM = expand('~/vimfiles')
@@ -9,7 +14,12 @@ if has('vim_starting')
         let $DOTVIM = expand('~/.vim')
     endif
 
-    set rtp+=$DOTVIM/bundle/neobundle.vim
+    if &runtimepath !~# '/dein.vim'
+        if !isdirectory(s:dein_repo_dir)
+            call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
+        endif
+        execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+    endif
 endif
 
 function! s:has_cjk_spelllang()
@@ -42,146 +52,35 @@ function! s:toggle_setting_spell()
     setlocal spell!
 endfunction
 
-function! s:meet_neocomplete_requirements()
-    return has('lua') && (v:version > 703 || (v:version == 703 && has('patch885')))
-endfunction
-
-call neobundle#begin(expand('$DOTVIM/bundle'))
-
-" Plugins on GitHub
-NeoBundleFetch 'Shougo/neobundle.vim'
-if s:meet_neocomplete_requirements()
-NeoBundle 'Shougo/neocomplete'
-else
-NeoBundle 'Shougo/neocomplcache'
-endif
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/unite-outline'
-NeoBundle 'kmnk/vim-unite-giti'
 let g:make = 'gmake'
 if system('uname -o') =~ '^GNU/'
     let g:make = 'make'
 endif
-NeoBundle 'Shougo/vimproc', {
-    \'build' : {
-    \   'windows': 'tools\\update-dll-mingw',
-    \   'cygwin' : 'make -f make_cygwin.mak',
-    \   'mac'    : 'make',
-    \   'linux'  : g:make,
-    \   'unix'   : g:make,
-    \ },
-\ }
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'mattn/sonictemplate-vim'
-NeoBundleLazy 'mattn/emmet-vim', {
-    \   'autoload': { 'filetypes': [ 'html' ] },
-\ }
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/excitetranslate-vim'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundleLazy 'derekwyatt/vim-scala', {
-    \   'autoload': { 'filetypes': [ 'scala' ] },
-\ }
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'thinca/vim-unite-history'
-NeoBundle 'thinca/vim-prettyprint'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-abolish'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'moll/vim-node'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'mxw/vim-jsx'
-NeoBundleLazy 'jelera/vim-javascript-syntax', {
-    \   'autoload': { 'filename_patterns': [ '.*\.js' ] },
-\ }
-NeoBundle 'othree/html5.vim'
-NeoBundle 'vim-jp/vimdoc-ja'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'kana/vim-altr'
-NeoBundle 'kana/vim-smartchr'
-NeoBundle 'kana/vim-smartinput'
-NeoBundle 'kana/vim-gf-user'
-NeoBundle 'kana/vim-gf-diff'
-NeoBundle 'cohama/vim-smartinput-endwise'
-NeoBundle 'osyo-manga/vim-anzu'
-NeoBundle 'haya14busa/incsearch.vim'
-NeoBundle 'haya14busa/vim-asterisk'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'taku-o/vim-vis'
-NeoBundle 'csexton/trailertrash.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'pasela/unite-webcolorname'
-if has('python')
-NeoBundleLazy 'tokorom/clang_complete', {
-    \   'autoload': { 'filetypes': [ 'c', 'cpp', 'objc', 'objcpp' ] },
-\ }
-NeoBundleLazy 'tokorom/cocoa.vim', 'syntax-only', {
-    \   'autoload': { 'filetypes': [ 'objc', 'objcpp' ] },
-\ }
-if has('macunix') || has('gui_macvim') || system('uname') =~? '^darwin'
-NeoBundleLazy 'tokorom/clang_complete-getopts-ios', {
-    \   'autoload': { 'filetypes': [ 'objc', 'objcpp' ] },
-\ }
-endif
-endif
-NeoBundle 'h1mesuke/vim-alignta'
-NeoBundle 'mbbill/undotree'
-NeoBundle 'tikhomirov/vim-glsl'
-NeoBundle 'rainux/vim-desert-warm-256'
-NeoBundleLazy 'heavenshell/vim-jsdoc', {
-    \   'autoload': { 'filename_patterns': [ '.*\.js' ] },
-\ }
-NeoBundle 'koron/codic-vim'
-NeoBundle 'rhysd/unite-codic.vim'
-NeoBundle 'rhysd/committia.vim'
-NeoBundle 'rhysd/clever-f.vim'
-NeoBundle 'rhysd/github-complete.vim'
-NeoBundle 't9md/vim-quickhl'
-NeoBundle 'LeafCage/yankround.vim'
-NeoBundle 'AndrewRadev/splitjoin.vim'
-NeoBundleLazy 'hynek/vim-python-pep8-indent', {
-    \ "autoload": {"insert": 1, "filetypes": ["python", "python3", "djangohtml"]}
-\ }
-NeoBundle 'raimon49/requirements.txt.vim'
-NeoBundle 'gnperdue/vim-asciidoc'
-NeoBundle 'keith/swift.vim'
-NeoBundle 'udalov/kotlin-vim'
-NeoBundle 'mrk21/yaml-vim', {
-    \   'autoload': { 'filetypes': [ 'yaml' ] },
-\ }
-NeoBundle 'elzr/vim-json'
-NeoBundle 'mattn/jscomplete-vim'
-NeoBundle 'myhere/vim-nodejs-complete'
-NeoBundle 'ekalinin/Dockerfile.vim'
-NeoBundle 'rust-lang/rust.vim'
-NeoBundleLazy 'evanmiller/nginx-vim-syntax', {
-    \ 'autoload': {'filetypes': 'nginx'}
-\ }
-NeoBundle 'Glench/Vim-Jinja2-Syntax'
-NeoBundle 'smerrill/vcl-vim-plugin'
-NeoBundle 'pearofducks/ansible-vim'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'cespare/vim-toml'
 
-" Plugins on vim-scripts
-NeoBundle 'desert256.vim'
-NeoBundle 'sudo.vim'
-NeoBundle 'svn-diff.vim'
-NeoBundle 'surround.vim'
-NeoBundle 'php-doc-upgrade'
-NeoBundle 'confluencewiki.vim'
-NeoBundle 'digitaltoad/vim-jade'
+call dein#begin(expand('$DOTVIM/dein'))
+if dein#load_state(s:dein_dir)
+    call dein#begin(s:dein_dir)
 
-call neobundle#end()
+    let s:toml = expand('~/.vim/dein.toml')
+    let s:lazy_toml = expand('~/.vim/dein_lazy.toml')
+
+    call dein#load_toml(s:toml, { 'lazy': 0 })
+    call dein#load_toml(s:lazy_toml, { 'lazy': 1 })
+
+    call dein#end()
+    call dein#save_state()
+endif
+
+let g:dein#types#git#clone_depth = 1
+if has('vim_starting') && dein#check_install(['vimproc'])
+    call dein#install(['vimproc'])
+endif
+if has('vim_starting') && dein#check_install()
+    call dein#install()
+endif
 
 syntax enable
 filetype plugin indent on
-
-if !has('gui_running')
-NeoBundleCheck
-endif
 
 set number
 set ruler
@@ -310,279 +209,121 @@ command! Utf8      edit ++enc=utf-8<CR>
 command! Jis       Iso2022jp
 command! Sjis      Cp932
 
-" neocomplcache
-set completeopt=menuone
-if s:meet_neocomplete_requirements()
+if dein#tap('neocomplete.vim')
+    set completeopt=menuone
     let g:neocomplete#enable_at_startup = 1
     let g:neocomplete#enable_smart_case = 1
     let g:neocomplete#enable_underbar_completion = 1
     let g:neocomplete#sources#syntax#min_keyword_length = 3
     let g:neocomplete#min_keyword_length = 3
-else
-    let g:neocomplcache_enable_at_startup = 1
-    let g:neocomplcache_enable_smart_case = 1
-    let g:neocomplcache_enable_underbar_completion = 1
-    let g:neocomplcache_min_syntax_length = 3
-    let g:neocomplcache_min_keyword_length = 3
 endif
 
-" clang_complete
-let s:hooks = neobundle#get_hooks("clang_complete")
-function! s:hooks.on_source(bundle)
-
-if s:meet_neocomplete_requirements()
-    let g:neocomplete#force_overwrite_completefunc = 1
-    if !exists('g:neocomplete#force_omni_input_patterns')
-        let g:neocomplete#force_omni_input_patterns = {}
+if dein#tap('lightline.vim')
+    set laststatus=2
+    if has('unix') && !has('gui_running')
+        inoremap <silent> <Esc> <Esc>
+        inoremap <silent> <C-[> <Esc>
     endif
-    let g:neocomplete#force_omni_input_patterns.c =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)'
-    let g:neocomplete#force_omni_input_patterns.cpp =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-    let g:neocomplete#force_omni_input_patterns.objc =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)'
-    let g:neocomplete#force_omni_input_patterns.objcpp =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-    let g:neocomplete#force_omni_input_patterns.javascript =
-      \ '[^. \t]\.\w*'
-else
-    let g:neocomplcache_force_overwrite_completefunc = 1
-    if !exists('g:neocomplcache_force_omni_patterns')
-        let g:neocomplcache_force_omni_patterns = {}
-    endif
-    let g:neocomplcache_force_omni_patterns.c =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)'
-    let g:neocomplcache_force_omni_patterns.cpp =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-    let g:neocomplcache_force_omni_patterns.objc =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)'
-    let g:neocomplcache_force_omni_patterns.objcpp =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-    let g:neocomplcache_force_omni_patterns.javascript =
-      \ '[^. \t]\.\w*'
-endif
-let g:clang_complete_auto = 0
-let g:clang_auto_select = 0
-let s:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
-if isdirectory(s:clang_library_path)
-    let g:clang_library_path=s:clang_library_path
+    let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \   'active': {
+      \     'left': [
+      \       [ 'mode', 'paste', ],
+      \       [ 'fugitive', 'readonly', 'filename', 'anzu', ],
+      \     ]
+      \   },
+      \   'component_function': {
+      \     'fugitive': 'MyFugitive',
+      \     'filename': 'MyFilename',
+      \     'anzu': 'anzu#search_status',
+      \   },
+      \ }
+
+    function! MyFugitive()
+        return exists('*fugitive#head') && strlen(fugitive#head()) ? fugitive#head() : ''
+    endfunction
+
+    function! MyFilename()
+        return ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+                    \ ('' != MyModified() ? ' ' . MyModified() : '')
+    endfunction
+
+    function! MyModified()
+        return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+    endfunction
 endif
 
-endfunction
+if dein#tap('vim-smartchr')
+    function! s:enable_smartchr_basic()
+        inoremap <buffer><expr> + smartchr#one_of(' + ', '+', '++')
+        inoremap <buffer><expr> - smartchr#one_of(' - ', ' -- ', '-')
+        inoremap <buffer><expr> & smartchr#one_of(' & ', ' && ', '&')
+        inoremap <buffer><expr> / smartchr#one_of('/', '// ', '/')
+        inoremap <buffer><expr> , smartchr#one_of(', ', ',')
+        inoremap <buffer><expr> : smartchr#one_of(': ', ':')
+        inoremap <buffer><expr> % smartchr#one_of(' % ', '%')
+        inoremap <buffer><expr> <Bar> smartchr#one_of('<Bar>', ' <Bar><Bar> ', '<Bar>')
+        inoremap <buffer><expr> = search('\(&\<bar><bar>\<bar>+\<bar>-\<bar>/\<bar>>\<bar><\) \%#', 'bcn')? '<bs>= ' : search('\(\*\<bar>!\)\%#')? '= ' : smartchr#one_of(' = ', ' == ', '=')
+    endfunction
 
-" clang_complete-getopts-ios
-let s:hooks = neobundle#get_hooks("clang_complete-getopts-ios")
-function! s:hooks.on_source(bundle)
+    function! s:enable_smartchr_extend_comparison()
+        inoremap <buffer><expr> = search('\(&\<bar><bar>\<bar>+\<bar>-\<bar>/\<bar>>\<bar><\) \%#', 'bcn')? '<bs>= ' : search('\(\*\<bar>!\)\%#')? '= ' : smartchr#one_of(' = ', ' == ', ' === ', '=')
+    endfunction
 
-let s:ios_sdk_path = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk'
-if isdirectory(s:ios_sdk_path)
-    let g:clang_complete_getopts_ios_sdk_directory = s:ios_sdk_path
-    let g:clang_complete_getopts_ios_ignore_directories = ["^\.git", "\.xcodeproj"]
+    function! s:disable_smartchr()
+        inoremap <buffer> + +
+        inoremap <buffer> - -
+        inoremap <buffer> & &
+        inoremap <buffer> / /
+        inoremap <buffer> , ,
+        inoremap <buffer> : :
+        inoremap <buffer> % %
+        inoremap <buffer> <Bar> <Bar>
+        inoremap <buffer> = =
+    endfunction
 endif
 
-endfunction
-
-" sonictemplate-vim
-let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
-
-" emmet-vim
-let g:user_emmet_settings = {
-  \'indentation': '  ',
-  \}
-
-" lightline
-set laststatus=2
-if has('unix') && !has('gui_running')
-    inoremap <silent> <Esc> <Esc>
-    inoremap <silent> <C-[> <Esc>
+if dein#tap('vim-smartinput')
+    call smartinput#define_rule({
+    \   'at': '\s\+\%#',
+    \   'char': '<CR>',
+    \   'input': "<C-o>:call setline('.', substitute(getline('.'), '\\s\\+$', '', ''))<CR><CR>",
+    \   })
 endif
-let g:lightline = {
-  \ 'colorscheme': 'wombat',
-  \   'active': {
-  \     'left': [
-  \       [ 'mode', 'paste', ],
-  \       [ 'fugitive', 'readonly', 'filename', 'anzu', ],
-  \     ]
-  \   },
-  \   'component_function': {
-  \     'fugitive': 'MyFugitive',
-  \     'filename': 'MyFilename',
-  \     'anzu': 'anzu#search_status',
-  \   },
-  \ }
 
-function! MyFugitive()
-    return exists('*fugitive#head') && strlen(fugitive#head()) ? fugitive#head() : ''
-endfunction
+if dein#tap('vim-smartinput-endwise')
+    call smartinput_endwise#define_default_rules()
+endif
 
-function! MyFilename()
-    return ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
-                \ ('' != MyModified() ? ' ' . MyModified() : '')
-endfunction
+if dein#tap('vim-ref')
+    let g:ref_source_webdict_sites = {
+        \ 'alc': {
+        \    'url': 'http://eow.alc.co.jp/%s/UTF-8/'
+        \   }
+        \ }
+    function! g:ref_source_webdict_sites.alc.filter(output)
+        return join(split(a:output, "\n")[31 :], "\n")
+    endfunction
+    nnoremap ,alc :<C-u>Ref webdict alc<Space>
+endif
 
-function! MyModified()
-    return &ft =~ 'help' ? '' : &modified ? '+' : &modifiable ? '' : '-'
-endfunction
+if dein#tap('committia.vim')
+    let g:committia_hooks = {}
+    function! g:committia_hooks.edit_open(info)
+        " Additional settings
+        call s:setlocal_spelllang()
 
-" vim-smartchr
-function! s:enable_smartchr_basic()
-    inoremap <buffer><expr> + smartchr#one_of(' + ', '+', '++')
-    inoremap <buffer><expr> - smartchr#one_of(' - ', ' -- ', '-')
-    inoremap <buffer><expr> & smartchr#one_of(' & ', ' && ', '&')
-    inoremap <buffer><expr> / smartchr#one_of('/', '// ', '/')
-    inoremap <buffer><expr> , smartchr#one_of(', ', ',')
-    inoremap <buffer><expr> : smartchr#one_of(': ', ':')
-    inoremap <buffer><expr> % smartchr#one_of(' % ', '%')
-    inoremap <buffer><expr> <Bar> smartchr#one_of('<Bar>', ' <Bar><Bar> ', '<Bar>')
-    inoremap <buffer><expr> = search('\(&\<bar><bar>\<bar>+\<bar>-\<bar>/\<bar>>\<bar><\) \%#', 'bcn')? '<bs>= ' : search('\(\*\<bar>!\)\%#')? '= ' : smartchr#one_of(' = ', ' == ', '=')
-endfunction
+        " If no commit message, start with insert mode
+        if a:info.vcs ==# 'git' && getline(1) ==# ''
+            startinsert
+        end
 
-function! s:enable_smartchr_extend_comparison()
-    inoremap <buffer><expr> = search('\(&\<bar><bar>\<bar>+\<bar>-\<bar>/\<bar>>\<bar><\) \%#', 'bcn')? '<bs>= ' : search('\(\*\<bar>!\)\%#')? '= ' : smartchr#one_of(' = ', ' == ', ' === ', '=')
-endfunction
-
-function! s:disable_smartchr()
-    inoremap <buffer> + +
-    inoremap <buffer> - -
-    inoremap <buffer> & &
-    inoremap <buffer> / /
-    inoremap <buffer> , ,
-    inoremap <buffer> : :
-    inoremap <buffer> % %
-    inoremap <buffer> <Bar> <Bar>
-    inoremap <buffer> = =
-endfunction
-
-" vim-smartinput
-call smartinput#define_rule({
-\   'at': '\s\+\%#',
-\   'char': '<CR>',
-\   'input': "<C-o>:call setline('.', substitute(getline('.'), '\\s\\+$', '', ''))<CR><CR>",
-\   })
-
-" vim-smartinput-endwise
-call smartinput_endwise#define_default_rules()
-
-" incsearch.vim
-let g:incsearch#auto_nohlsearch = 1
-let g:incsearch#emacs_like_keymap = 1
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
-map #  <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
-map g* <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
-map g# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
-" default escape for search. naked input: <C-v>/, <C-v>?
-noremap <silent><expr> / incsearch#go({'command':'/','keymap':{'/':{'key':'\/','noremap':1}}})
-noremap <silent><expr> ? incsearch#go({'command':'?','keymap':{'?':{'key':'\?','noremap':1}}})
-
-" vim-anzu
-set updatetime=800
-nmap n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)zz
-nmap N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)zz
-augroup vim-anzu
-    autocmd!
-    autocmd CursorHold,CursorHoldI,WinLeave,TabLeave * call anzu#clear_search_status()
-augroup END
-
-" syntastic
-let g:syntastic_auto_jump = 1
-let g:syntastic_mode_map = { 'mode': 'passive',
-                           \ 'active_filetypes': [],
-                           \ 'passive_filetypes': ['go'] }
-let g:syntastic_go_checkers = ['golint', 'gotype', 'govet', 'go']
-
-" github-complete.vim
-let g:github_complete_emoji_japanese_workaround = 1
-
-" yankround.vim
-nmap p <Plug>(yankround-p)
-nmap P <Plug>(yankround-P)
-nmap <C-p> <Plug>(yankround-prev)
-nmap <C-n> <Plug>(yankround-next)
-
-" unite.vim
-let g:unite_enable_start_insert = 1
-nnoremap <silent> ss :<C-u>UniteWithBufferDir -buffer-name=files buffer file_rec file file_mru<CR>
-let g:unite_source_menu_menus = {
-\   "shortcut" : {
-\       "description" : "shortcuts",
-\       "command_candidates" : [
-\           ["unite-outline", "Unite outline"],
-\           ["unite-codic", "Unite codic"],
-\           ["unite-file_mru", "Unite file_mru"],
-\           ["unite-history/command", "Unite history/command"],
-\           ["unite-history/search",  "Unite history/search"],
-\           ["unite-yankround",    "Unite yankround"],
-\           ["edit vimrc", "edit $MYVIMRC"],
-\           ["unite-webcolorname", "Unite webcolorname"],
-\       ],
-\   },
-\}
-
-" vim-ref
-let g:ref_source_webdict_sites = {
-    \ 'alc': {
-    \    'url': 'http://eow.alc.co.jp/%s/UTF-8/'
-    \   }
-    \ }
-function! g:ref_source_webdict_sites.alc.filter(output)
-    return join(split(a:output, "\n")[31 :], "\n")
-endfunction
-nnoremap ,alc :<C-u>Ref webdict alc<Space>
-
-" committia.vim
-let g:committia_hooks = {}
-function! g:committia_hooks.edit_open(info)
-    " Additional settings
-    call s:setlocal_spelllang()
-
-    " If no commit message, start with insert mode
-    if a:info.vcs ==# 'git' && getline(1) ==# ''
-        startinsert
-    end
-
-    " Scroll the diff window from insert mode
-    " Map <C-d> and <C-u>
-    imap <buffer><C-d> <Plug>(committia-scroll-diff-down-half)
-    imap <buffer><C-u> <Plug>(committia-scroll-diff-up-half)
-endfunction
-
-" clever-f.vim
-let g:clever_f_ignore_case = 1
-let g:clever_f_smart_case = 1
-
-" vim-indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_color_change_percent = 30
-let g:indent_guides_guide_size = 1
-let g:indent_guides_auto_colors = 0
-
-" vim-alignta
-xnoremap <silent> L :Alignta << =<CR>
-xnoremap <silent> R :Alignta >> =<CR>
-
-" vim-quickhl
-nmap <Space>m <Plug>(quickhl-manual-this)
-xmap <Space>m <Plug>(quickhl-manual-this)
-nmap <Space>M <Plug>(quickhl-manual-reset)
-xmap <Space>M <Plug>(quickhl-manual-reset)
-
-" vim-json
-let g:vim_json_syntax_conceal = 0
-
-" vim-go
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_term_enabled = 1
-let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
+        " Scroll the diff window from insert mode
+        " Map <C-d> and <C-u>
+        imap <buffer><C-d> <Plug>(committia-scroll-diff-down-half)
+        imap <buffer><C-u> <Plug>(committia-scroll-diff-up-half)
+    endfunction
+endif
 
 " cursor style
 function! s:highlight_cursor()
