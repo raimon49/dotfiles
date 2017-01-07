@@ -163,6 +163,7 @@ NeoBundle 'Glench/Vim-Jinja2-Syntax'
 NeoBundle 'smerrill/vcl-vim-plugin'
 NeoBundle 'pearofducks/ansible-vim'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'cespare/vim-toml'
 
 " Plugins on vim-scripts
 NeoBundle 'desert256.vim'
