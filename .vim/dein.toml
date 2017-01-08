@@ -29,22 +29,10 @@ repo = 'osyo-manga/vim-precious'
 depends = ['context_filetype.vim']
 
 [[plugins]]
-repo = 'mattn/sonictemplate-vim'
-hook_add = '''
-    let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
-'''
-
-[[plugins]]
 repo = 'mattn/webapi-vim'
 
 [[plugins]]
 repo = 'mattn/excitetranslate-vim'
-
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-
-[[plugins]]
-repo = 'thinca/vim-prettyprint'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'

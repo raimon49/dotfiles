@@ -59,6 +59,13 @@ repo = 'rhysd/unite-codic.vim'
 on_source = [ 'unite.vim' ]
 
 [[plugins]]
+repo = 'mattn/sonictemplate-vim'
+on_cmd = [ 'Template']
+hook_add = '''
+    let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
+'''
+
+[[plugins]]
 repo = 'mattn/emmet-vim'
 on_ft = [ 'html' ]
 hook_source = '''
@@ -68,8 +75,16 @@ hook_source = '''
 '''
 
 [[plugins]]
+repo = 'thinca/vim-quickrun'
+on_cmd = [ 'QuickRun' ]
+
+[[plugins]]
 repo = 'thinca/vim-ref'
-on_cmd = 'Ref'
+on_cmd = [ 'Ref' ]
+
+[[plugins]]
+repo = 'thinca/vim-prettyprint'
+on_cmd = [ 'PP' ]
 
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'
