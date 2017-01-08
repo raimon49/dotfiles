@@ -1,0 +1,157 @@
+# Plugins on GitHub
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/vimshell'
+
+[[plugins]]
+repo = 'Shougo/vimproc'
+hook_post_update = '''
+    if dein#util#_is_windows()
+        let cmd = 'tools\\update-dll-mingw'
+    elseif dein#util#_is_cygwin()
+        let cmd = 'make -f make_cygwin.mak'
+    else
+        let cmd = 'make'
+    endif
+    let g:dein#plugin.build = cmd
+'''
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = [ 'context_filetype.vim' ]
+
+[[plugins]]
+repo = 'mattn/webapi-vim'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'tpope/vim-abolish'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'kana/vim-altr'
+on_i = 1
+
+[[plugins]]
+repo = 'kana/vim-smartchr'
+on_i = 1
+
+[[plugins]]
+repo = 'kana/vim-smartinput'
+on_i = 1
+
+[[plugins]]
+repo = 'cohama/vim-smartinput-endwise'
+depends = [ 'vim-smartinput' ]
+on_i = 1
+
+[[plugins]]
+repo = 'kana/vim-gf-user'
+
+[[plugins]]
+repo = 'kana/vim-gf-diff'
+
+[[plugins]]
+repo = 'osyo-manga/vim-anzu'
+
+[[plugins]]
+repo = 'haya14busa/incsearch.vim'
+depends = [ 'vim-asterisk' ]
+hook_add = '''
+    let g:incsearch#auto_nohlsearch = 1
+    let g:incsearch#emacs_like_keymap = 1
+    map /  <Plug>(incsearch-forward)
+    map ?  <Plug>(incsearch-backward)
+    map g/ <Plug>(incsearch-stay)
+    map n  <Plug>(incsearch-nohl-n)
+    map N  <Plug>(incsearch-nohl-N)
+    map *  <Plug>(incsearch-nohl0)<Plug>(asterisk-z*)
+    map #  <Plug>(incsearch-nohl0)<Plug>(asterisk-gz*)
+    map g* <Plug>(incsearch-nohl0)<Plug>(asterisk-z#)
+    map g# <Plug>(incsearch-nohl0)<Plug>(asterisk-gz#)
+    noremap <silent><expr> / incsearch#go({'command':'/','keymap':{'/':{'key':'\/','noremap':1}}})
+    noremap <silent><expr> ? incsearch#go({'command':'?','keymap':{'?':{'key':'\?','noremap':1}}})
+'''
+
+[[plugins]]
+repo = 'haya14busa/vim-asterisk'
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+hook_add = '''
+    let g:syntastic_auto_jump = 1
+    let g:syntastic_mode_map = { 'mode': 'passive',
+                               \ 'active_filetypes': [],
+                               \ 'passive_filetypes': ['go'] }
+    let g:syntastic_go_checkers = ['golint', 'gotype', 'govet', 'go']
+'''
+
+[[plugins]]
+repo = 'taku-o/vim-vis'
+
+[[plugins]]
+repo = 'csexton/trailertrash.vim'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+    let g:indent_guides_enable_on_vim_startup = 1
+    let g:indent_guides_color_change_percent = 30
+    let g:indent_guides_guide_size = 1
+    let g:indent_guides_auto_colors = 0
+'''
+
+[[plugins]]
+repo = 'mbbill/undotree'
+
+[[plugins]]
+repo ='rainux/vim-desert-warm-256'
+
+[[plugins]]
+repo = 'koron/codic-vim'
+
+[[plugins]]
+repo = 'rhysd/committia.vim'
+
+[[plugins]]
+repo = 'rhysd/clever-f.vim'
+hook_add = '''
+    let g:clever_f_ignore_case = 1
+    let g:clever_f_smart_case = 1
+'''
+[[plugins]]
+repo = 't9md/vim-quickhl'
+hook_add = '''
+    nmap <Space>m <Plug>(quickhl-manual-this)
+    xmap <Space>m <Plug>(quickhl-manual-this)
+    nmap <Space>M <Plug>(quickhl-manual-reset)
+    xmap <Space>M <Plug>(quickhl-manual-reset)
+'''
+
+[[plugins]]
+repo = 'AndrewRadev/splitjoin.vim'
+
+# Plugins on vim-scripts
+[[plugins]]
+repo = 'desert256.vim'
+
+[[plugins]]
+repo = 'sudo.vim'
+
+[[plugins]]
+repo = 'svn-diff.vim'
+
+[[plugins]]
+repo = 'surround.vim'

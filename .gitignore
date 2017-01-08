@@ -1,4 +1,4 @@
-.vim/bundle
+.vim/dein
 .vim/.netrwhist
 .antigen
 .DS_Store

@@ -1,0 +1,252 @@
+# Plugins on GitHub
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+on_i = 1
+if = 'has("lua")'
+
+[[plugins]]
+repo = 'osyo-manga/vim-marching'
+depends = [ 'neocomplete.vim' ]
+on_ft = [ 'c', 'cpp', 'objc', 'objcpp' ]
+if = '''!has('win32')'''
+hook_source = '''
+    let g:marching_enable_neocomplete = 1
+'''
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+on_cmd = 'Unite'
+hook_add = '''
+    nnoremap <silent> ss :<C-u>UniteWithBufferDir -buffer-name=files buffer file_rec file file_mru<CR>
+'''
+hook_source = '''
+    let g:unite_enable_start_insert = 1
+    let g:unite_source_menu_menus = {
+    \   "shortcut" : {
+    \       "description" : "shortcuts",
+    \       "command_candidates" : [
+    \           ["unite-outline", "Unite outline"],
+    \           ["unite-codic", "Unite codic"],
+    \           ["unite-file_mru", "Unite file_mru"],
+    \           ["unite-history/command", "Unite history/command"],
+    \           ["unite-history/search",  "Unite history/search"],
+    \           ["unite-yankround",    "Unite yankround"],
+    \           ["edit vimrc", "edit $MYVIMRC"],
+    \           ["unite-webcolorname", "Unite webcolorname"],
+    \       ],
+    \   },
+    \}
+'''
+
+[[plugins]]
+repo = 'Shougo/unite-outline'
+on_source = [ 'unite.vim' ]
+
+[[plugins]]
+repo = 'kmnk/vim-unite-giti'
+on_source = [ 'unite.vim' ]
+
+[[plugins]]
+repo = 'thinca/vim-unite-history'
+on_source = [ 'unite.vim' ]
+
+[[plugins]]
+repo = 'pasela/unite-webcolorname'
+on_source = [ 'unite.vim' ]
+
+[[plugins]]
+repo = 'rhysd/unite-codic.vim'
+on_source = [ 'unite.vim' ]
+
+[[plugins]]
+repo = 'mattn/sonictemplate-vim'
+on_cmd = [ 'Template']
+hook_add = '''
+    let g:sonictemplate_vim_template_dir = '$HOME/.vim/template'
+'''
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_ft = [ 'html' ]
+hook_source = '''
+    let g:user_emmet_settings = {
+      \'indentation': '  ',
+      \}
+'''
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+on_cmd = [ 'QuickRun' ]
+
+[[plugins]]
+repo = 'thinca/vim-ref'
+on_cmd = [ 'Ref' ]
+
+[[plugins]]
+repo = 'thinca/vim-prettyprint'
+on_cmd = [ 'PP' ]
+
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+on_ft = [ 'coffee' ]
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+on_ft = [ 'css' ]
+
+[[plugins]]
+repo = 'moll/vim-node'
+on_ft = [ 'javascript' ]
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = [ 'javascript' ]
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = [ 'javascript.jsx' ]
+
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+on_ft = [ 'javascript' ]
+
+[[plugins]]
+repo = 'heavenshell/vim-jsdoc'
+on_ft = [ 'javascript' ]
+
+[[plugins]]
+repo = 'othree/html5.vim'
+on_ft = [ 'html' ]
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+on_ft = [ 'help' ]
+hook_add = '''
+    set helplang=ja,en
+'''
+
+[[plugins]]
+repo = 'h1mesuke/vim-alignta'
+on_cmd = 'Alignta'
+hook_add = '''
+    xnoremap <silent> L :Alignta << =<CR>
+    xnoremap <silent> R :Alignta >> =<CR>
+'''
+
+[[plugins]]
+repo = 'tikhomirov/vim-glsl'
+on_ft = [ 'glsl' ]
+
+[[plugins]]
+repo = 'rhysd/github-complete.vim'
+on_ft = [ 'markdown' ]
+hook_source = '''
+    let g:github_complete_emoji_japanese_workaround = 1
+'''
+
+[[plugins]]
+repo = 'LeafCage/yankround.vim'
+on_map = '<Plug>'
+hook_add = '''
+    nmap p <Plug>(yankround-p)
+    nmap P <Plug>(yankround-P)
+    nmap <C-p> <Plug>(yankround-prev)
+    nmap <C-n> <Plug>(yankround-next)
+'''
+
+[[plugins]]
+repo = 'hynek/vim-python-pep8-indent'
+on_i = 1
+on_ft = [ 'python', 'python3', 'djangohtml' ]
+
+[[plugins]]
+repo = 'raimon49/requirements.txt.vim'
+on_ft = [ 'requirements' ]
+
+[[plugins]]
+repo = 'gnperdue/vim-asciidoc'
+on_ft = [ 'requirements' ]
+
+[[plugins]]
+repo = 'keith/swift.vim'
+on_ft = [ 'swift' ]
+
+[[plugins]]
+repo = 'udalov/kotlin-vim'
+on_ft = [ 'kotlin' ]
+
+[[plugins]]
+repo = 'mrk21/yaml-vim'
+on_ft = [ 'yaml' ]
+
+[[plugins]]
+repo = 'elzr/vim-json'
+on_ft = [ 'json' ]
+hook_source = '''
+    let g:vim_json_syntax_conceal = 0
+'''
+
+[[plugins]]
+repo =  'mattn/jscomplete-vim'
+on_i = 1
+on_ft = [ 'javascript' ]
+
+[[plugins]]
+repo = 'myhere/vim-nodejs-complete'
+on_i = 1
+on_ft = [ 'javascript' ]
+
+[[plugins]]
+repo = 'ekalinin/Dockerfile.vim'
+on_ft = [ 'Dockerfile' ]
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = [ 'rust' ]
+
+[[plugins]]
+repo = 'evanmiller/nginx-vim-syntax'
+on_ft = [ 'nginx' ]
+
+[[plugins]]
+repo = 'Glench/Vim-Jinja2-Syntax'
+on_ft = [ 'jinja' ]
+
+[[plugins]]
+repo = 'smerrill/vcl-vim-plugin'
+on_ft = [ 'vcl' ]
+
+[[plugins]]
+repo = 'pearofducks/ansible-vim'
+on_ft = [ 'ansible' ]
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = [ 'toml' ]
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = [ 'go' ]
+hook_source = '''
+    let g:go_highlight_functions = 1
+    let g:go_highlight_methods = 1
+    let g:go_highlight_structs = 1
+    let g:go_highlight_operators = 1
+    let g:go_term_enabled = 1
+    let g:go_highlight_build_constraints = 1
+    let g:go_fmt_command = "goimports"
+    let g:go_fmt_fail_silently = 1
+'''
+
+[[plugins]]
+repo = 'digitaltoad/vim-jade'
+on_ft = [ 'jade' ]
+
+# Plugins on vim-scripts
+[[plugins]]
+repo = 'php-doc-upgrade'
+on_func = [ 'PhpDocSingle', 'PhpDocRange' ]
+
+[[plugins]]
+repo = 'confluencewiki.vim'
+on_ft = [ 'confluencewiki' ]
