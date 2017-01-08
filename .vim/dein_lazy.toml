@@ -241,3 +241,12 @@ hook_source = '''
 [[plugins]]
 repo = 'digitaltoad/vim-jade'
 on_ft = [ 'jade' ]
+
+# Plugins on vim-scripts
+[[plugins]]
+repo = 'php-doc-upgrade'
+on_func = [ 'PhpDocSingle', 'PhpDocRange' ]
+
+[[plugins]]
+repo = 'confluencewiki.vim'
+on_ft = [ 'confluencewiki' ]

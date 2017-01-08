@@ -26,13 +26,10 @@ repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
-depends = ['context_filetype.vim']
+depends = [ 'context_filetype.vim' ]
 
 [[plugins]]
 repo = 'mattn/webapi-vim'
-
-[[plugins]]
-repo = 'mattn/excitetranslate-vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
@@ -45,15 +42,20 @@ repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'kana/vim-altr'
+on_i = 1
 
 [[plugins]]
 repo = 'kana/vim-smartchr'
+on_i = 1
 
 [[plugins]]
 repo = 'kana/vim-smartinput'
+on_i = 1
 
 [[plugins]]
 repo = 'cohama/vim-smartinput-endwise'
+depends = [ 'vim-smartinput' ]
+on_i = 1
 
 [[plugins]]
 repo = 'kana/vim-gf-user'
@@ -66,6 +68,7 @@ repo = 'osyo-manga/vim-anzu'
 
 [[plugins]]
 repo = 'haya14busa/incsearch.vim'
+depends = [ 'vim-asterisk' ]
 hook_add = '''
     let g:incsearch#auto_nohlsearch = 1
     let g:incsearch#emacs_like_keymap = 1
@@ -152,9 +155,3 @@ repo = 'svn-diff.vim'
 
 [[plugins]]
 repo = 'surround.vim'
-
-[[plugins]]
-repo = 'php-doc-upgrade'
-
-[[plugins]]
-repo = 'confluencewiki.vim'
