@@ -400,31 +400,6 @@ augroup MyAutoCmd
     autocmd FileType javascript setlocal omnifunc=nodejscomplete#CompleteJS
 augroup END
 
-" markdown highlighting
-let g:markdown_fenced_languages = [
-    \   'bash=sh',
-    \   'c',
-    \   'coffee',
-    \   'cpp',
-    \   'cs',
-    \   'css',
-    \   'diff',
-    \   'html',
-    \   'java',
-    \   'javascript',
-    \   'json',
-    \   'make',
-    \   'objc',
-    \   'python',
-    \   'ruby',
-    \   'sass',
-    \   'sh',
-    \   'swift',
-    \   'vim',
-    \   'xml',
-    \   'zsh',
-    \ ]
-
 " colorscheme setting
 set t_Co=256
 try
