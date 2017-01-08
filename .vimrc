@@ -262,6 +262,16 @@ if dein#tap('lightline.vim')
     endfunction
 endif
 
+if dein#tap('vim-anzu')
+    set updatetime=800
+    nmap n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)zz
+    nmap N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)zz
+    augroup vim-anzu
+        autocmd!
+        autocmd CursorHold,CursorHoldI,WinLeave,TabLeave * call anzu#clear_search_status()
+    augroup END
+endif
+
 if dein#tap('vim-smartchr')
     function! s:enable_smartchr_basic()
         inoremap <buffer><expr> + smartchr#one_of(' + ', '+', '++')
