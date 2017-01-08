@@ -216,6 +216,15 @@ if dein#tap('neocomplete.vim')
     let g:neocomplete#enable_underbar_completion = 1
     let g:neocomplete#sources#syntax#min_keyword_length = 3
     let g:neocomplete#min_keyword_length = 3
+    let g:neocomplete#force_overwrite_completefunc = 1
+    if !exists('g:neocomplete#force_omni_input_patterns')
+        let g:neocomplete#force_omni_input_patterns = {}
+    endif
+    let g:neocomplete#force_omni_input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+    let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+    let g:neocomplete#force_omni_input_patterns.objc = '[^.[:digit:] *\t]\%(\.\|->\)'
+    let g:neocomplete#force_omni_input_patterns.objcpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+    let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\w*'
 endif
 
 if dein#tap('lightline.vim')
