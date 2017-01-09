@@ -227,6 +227,24 @@ if dein#tap('neocomplete.vim')
     let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\w*'
 endif
 
+if dein#tap('deoplete.nvim')
+    set completeopt=menuone
+    let g:deoplete#enable_at_startup = 1
+    let g:deoplete#enable_smart_case = 1
+    let g:deoplete#enable_underbar_completion = 1
+    let g:deoplete#sources#syntax#min_keyword_length = 3
+    let g:deoplete#min_keyword_length = 3
+    let g:deoplete#force_overwrite_completefunc = 1
+    if !exists('g:deoplete#omni#input_patterns')
+        let g:deoplete#omni#input_patterns={}
+    endif
+    let g:deoplete#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+    let g:deoplete#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+    let g:deoplete#omni#input_patterns.objc = '[^.[:digit:] *\t]\%(\.\|->\)'
+    let g:deoplete#omni#input_patterns.objcpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+    let g:deoplete#omni#input_patterns.javascript = '[^. \t]\.\w*'
+endif
+
 if dein#tap('lightline.vim')
     set laststatus=2
     if has('unix') && !has('gui_running')

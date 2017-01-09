@@ -2,13 +2,19 @@
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'
 on_i = 1
-if = 'has("lua")'
+if = '''!has('nvim') && has('lua')'''
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+lazy = 1
+on_i = 1
+if = '''has('nvim') && has('python3')'''
 
 [[plugins]]
 repo = 'osyo-manga/vim-marching'
 depends = [ 'neocomplete.vim' ]
 on_ft = [ 'c', 'cpp', 'objc', 'objcpp' ]
-if = '''!has('win32')'''
+if = '''!has('win32') && !has('nvim')'''
 hook_source = '''
     let g:marching_enable_neocomplete = 1
 '''

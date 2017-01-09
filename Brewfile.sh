@@ -1,11 +1,17 @@
 #!/bin/sh
+# Tap user repository
+brew tap neovim/neovim
+
 # Make sure using latest Homebrew
 brew update
 
 # Update already-installed formula
 brew upgrade
 
-# Packages
+# User packages
+brew install neovim/neovim/neovim
+
+# Official packages
 if [ -x /usr/local/bin/vim ]; then
     brew uninstall vim
 fi
@@ -31,6 +37,7 @@ brew install openssl
 brew install peco
 brew install pcre
 brew install pgcli
+brew install python3
 brew install spark
 brew install tig
 brew install tree

@@ -9,6 +9,7 @@ fi
 
 export PATH="${HOME}/local/bin:${PATH}"
 export MANPATH="${HOME}/local/share/man:${MANPATH}"
+export XDG_CONFIG_HOME="${HOME}/.config"
 
 # for Golang
 export GOROOT="${HOME}/go"

@@ -1,4 +1,5 @@
 .vim/dein
+.vim/init.vim
 .vim/.netrwhist
 .antigen
 .DS_Store

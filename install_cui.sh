@@ -3,6 +3,7 @@ cd $(dirname $0)
 
 [ ! -d ~/local/bin ] && mkdir -p ~/local/bin
 [ ! -d ~/.zsh/cache ] && mkdir -p ~/.zsh/cache
+[ ! -d ~/.config ] && mkdir ~/.config
 [ ! -d ~/go ] && mkdir -p ~/go
 [ ! -f ~/.z ] && touch ~/.z
 [ ! -d .antigen ] && git clone https://github.com/zsh-users/antigen.git .antigen
