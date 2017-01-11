@@ -41,6 +41,7 @@ endfunction
 
 function! s:toggle_setting_spell()
     if !has('spell') || !has('syntax')
+        echo 'has no spell and syntax'
         return
     endif
 
@@ -50,6 +51,19 @@ function! s:toggle_setting_spell()
     endif
 
     setlocal spell!
+endfunction
+
+function! s:toggle_setting_mouse()
+    if !has('mouse')
+        echo 'has no mouse'
+        return
+    endif
+
+    if &mouse == ''
+        setlocal mouse=a
+    else
+        setlocal mouse=
+    endif
 endfunction
 
 let g:make = 'gmake'
@@ -170,6 +184,9 @@ nnoremap th :<C-u>tab help<Space>
 set keywordprg=:help " Open Vim internal help by K command
 " toggle <sp>ell
 noremap <silent> <Space>sp :<C-u>call <SID>toggle_setting_spell()<CR>
+" toggle <mo>use
+set mouse=
+noremap <silent> <Space>mo :<C-u>call <SID>toggle_setting_mouse()<CR>
 " toggle header file(vim-altr)
 nmap <Space>a <Plug>(altr-forward)
 
