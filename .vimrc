@@ -85,6 +85,10 @@ if dein#load_state(s:dein_dir)
     call dein#save_state()
 endif
 
+if filereadable(expand('$VIMRUNTIME/macros/matchit.vim'))
+    source $VIMRUNTIME/macros/matchit.vim
+endif
+
 let g:dein#types#git#clone_depth = 1
 if has('vim_starting') && dein#check_install(['vimproc'])
     call dein#install(['vimproc'])
