@@ -15,7 +15,10 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 export GOROOT="${HOME}/go"
 if [ -d ${GOROOT} ]; then
     export PATH="${GOROOT}/bin:${PATH}"
-    export GOPATH="${HOME}/works/golang"
+fi
+
+export GOPATH="${HOME}/works/golang"
+if [ -d ${GOPATH} ]; then
     export PATH="${GOPATH}/bin:${PATH}"
 fi
 
