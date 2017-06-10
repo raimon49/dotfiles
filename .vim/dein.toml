@@ -145,13 +145,13 @@ repo = 'AndrewRadev/splitjoin.vim'
 
 # Plugins on vim-scripts
 [[plugins]]
-repo = 'desert256.vim'
+repo = 'vim-scripts/desert256.vim'
 
 [[plugins]]
-repo = 'sudo.vim'
+repo = 'vim-scripts/sudo.vim'
 
 [[plugins]]
-repo = 'svn-diff.vim'
+repo = 'vim-scripts/svn-diff.vim'
 
 [[plugins]]
-repo = 'surround.vim'
+repo = 'vim-scripts/surround.vim'

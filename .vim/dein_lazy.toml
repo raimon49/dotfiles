@@ -250,9 +250,9 @@ on_ft = [ 'jade' ]
 
 # Plugins on vim-scripts
 [[plugins]]
-repo = 'php-doc-upgrade'
+repo = 'vim-scripts/php-doc-upgrade'
 on_func = [ 'PhpDocSingle', 'PhpDocRange' ]
 
 [[plugins]]
-repo = 'confluencewiki.vim'
+repo = 'vim-scripts/confluencewiki.vim'
 on_ft = [ 'confluencewiki' ]
