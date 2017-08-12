@@ -8,9 +8,6 @@ brew update
 # Update already-installed formula
 brew upgrade
 
-# User packages
-brew install neovim/neovim/neovim
-
 # Official packages
 if [ -x /usr/local/bin/vim ]; then
     brew uninstall vim
@@ -32,6 +29,7 @@ brew install lua
 brew install lv
 brew install mercurial
 brew install mycli
+brew install neovim
 brew install nkf
 brew install openssl
 brew install peco
