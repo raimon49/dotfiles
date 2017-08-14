@@ -45,3 +45,10 @@ if [ -d ${RBENV_ROOT} ]; then
     export PATH="${RBENV_ROOT}/bin:${PATH}"
     eval "$(rbenv init -)"
 fi
+
+# for Swift
+export SWIFTENV_ROOT="$HOME/.swiftenv"
+if [ -d "${SWIFTENV_ROOT}" ]; then
+    export PATH="${SWIFTENV_ROOT}/bin:${PATH}"
+    eval "$(swiftenv init -)"
+fi

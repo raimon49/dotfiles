@@ -11,3 +11,7 @@
 # rbenv
 [ ! -d ~/.rbenv ] && \
     curl https://raw.githubusercontent.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
+
+# swiftenv
+[ ! -d ~/.swiftenv ] && \
+    git clone https://github.com/kylef/swiftenv.git ~/.swiftenv
