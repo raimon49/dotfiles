@@ -5,8 +5,6 @@ if has('vim_starting')
         set nocompatible
     endif
 
-    let s:dein_dir      = expand('~/.vim/dein')
-    let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
     if has('win32') || has('win64')
         set shellslash
         let $DOTVIM = expand('~/vimfiles')
@@ -14,6 +12,8 @@ if has('vim_starting')
         let $DOTVIM = expand('~/.vim')
     endif
 
+    let s:dein_dir      = expand('$DOTVIM/dein')
+    let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
     if &runtimepath !~# '/dein.vim'
         if !isdirectory(s:dein_repo_dir)
             call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
@@ -75,8 +75,8 @@ call dein#begin(expand('$DOTVIM/dein'))
 if dein#load_state(s:dein_dir)
     call dein#begin(s:dein_dir)
 
-    let s:toml = expand('~/.vim/dein.toml')
-    let s:lazy_toml = expand('~/.vim/dein_lazy.toml')
+    let s:toml = expand('$DOTVIM/dein.toml')
+    let s:lazy_toml = expand('$DOTVIM/dein_lazy.toml')
 
     call dein#load_toml(s:toml, { 'lazy': 0 })
     call dein#load_toml(s:lazy_toml, { 'lazy': 1 })
