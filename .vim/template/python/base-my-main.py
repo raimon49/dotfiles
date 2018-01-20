@@ -5,6 +5,15 @@ from __future__ import (division, print_function,
                         absolute_import, unicode_literals)
 import sys
 import argparse
+try:
+    import configparser as ConfigParser
+except:
+    import ConfigParser
+try:
+    from urllib.request import urlopen, Request
+    from urllib.error import HTTPError
+except:
+    from urllib2 import urlopen, Request, HTTPError
 
 
 def parse_args():
