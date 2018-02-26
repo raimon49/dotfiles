@@ -117,6 +117,10 @@ repo = 'jelera/vim-javascript-syntax'
 on_ft = [ 'javascript' ]
 
 [[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = [ 'typescript' ]
+
+[[plugins]]
 repo = 'heavenshell/vim-jsdoc'
 on_ft = [ 'javascript' ]
 
