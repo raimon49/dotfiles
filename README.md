@@ -1,6 +1,8 @@
 dotfiles
 ========
 
+[![Build Status](https://travis-ci.org/raimon49/dotfiles.svg?branch=master)](https://travis-ci.org/raimon49/dotfiles)
+
 my dotfiles
 
 Installation
