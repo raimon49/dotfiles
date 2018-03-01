@@ -1,0 +1,9 @@
+language: sh
+addons:
+  apt:
+    packages:
+    - git
+    - zsh
+script:
+- ./bootstrap.sh
+- zsh -l -c env
