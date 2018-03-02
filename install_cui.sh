@@ -24,7 +24,7 @@ ln -Fis ~/works/git/dotfiles/git-ls-branches/git-ls-branches ~/local/bin
 
 for dotfile in .?*; do
     case $dotfile in
-        .. | .git | .gitmodules )
+        .. | .git | .gitmodules | .travis.yml )
             # ignore
             continue;;
         *)
