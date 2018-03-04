@@ -4,6 +4,7 @@ case "${OSTYPE}" in
     freebsd*|darwin*)
     alias ls="ls -G -w"
     alias llc="CLICOLOR_FORCE=1 ls -laF"
+    alias tac="tail -r"
     ;;
     linux*|cygwin*)
     alias ls="ls --color=auto"
