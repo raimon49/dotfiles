@@ -28,27 +28,12 @@ test -d /usr/local/heroku && export PATH="/usr/local/heroku/bin:${PATH}"
 # for VVM
 test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
 
-# for Node
-test -f ~/.nodebrew/nodebrew && export PATH="${HOME}/.nodebrew/current/bin:${PATH}"
+# for anyenv
+export ANYENV_ROOT="${HOME}/.anyenv"
+if [ -d "${ANYENV_ROOT}" ]; then
+    export PATH="${HOME}/.anyenv/bin:${PATH}"
+    eval "$(anyenv init -)"
+fi
 
 # for Python
 export PIP_CONFIG_FILE="${HOME}/.pip.conf"
-export PYENV_ROOT="${HOME}/.pyenv"
-if [ -d "${PYENV_ROOT}" ]; then
-    export PATH="${PYENV_ROOT}/bin:${PATH}"
-    eval "$(pyenv init -)"
-fi
-
-# for Ruby
-export RBENV_ROOT="${HOME}/.rbenv"
-if [ -d ${RBENV_ROOT} ]; then
-    export PATH="${RBENV_ROOT}/bin:${PATH}"
-    eval "$(rbenv init -)"
-fi
-
-# for Swift
-export SWIFTENV_ROOT="$HOME/.swiftenv"
-if [ -d "${SWIFTENV_ROOT}" ]; then
-    export PATH="${SWIFTENV_ROOT}/bin:${PATH}"
-    eval "$(swiftenv init -)"
-fi
