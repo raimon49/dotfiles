@@ -1,4 +1,6 @@
 set number
+set visualbell t_vb=
+set incsearch
 set ignorecase
 set smartcase
 set hlsearch
