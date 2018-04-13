@@ -1,4 +1,5 @@
 set number
+set showmode
 set visualbell t_vb=
 set incsearch
 set ignorecase
