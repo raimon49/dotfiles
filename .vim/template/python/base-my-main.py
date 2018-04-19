@@ -7,12 +7,12 @@ import sys
 import argparse
 try:
     import configparser as ConfigParser
-except:
+except ImportError:
     import ConfigParser
 try:
     from urllib.request import urlopen, Request
     from urllib.error import HTTPError
-except:
+except ImportError:
     from urllib2 import urlopen, Request, HTTPError
 
 
