@@ -33,6 +33,8 @@
 	reci = commit --amend
 	readdci = commit --amend --no-edit -a
 	br = branch
+	brs = branch --sort=authordate
+	tags = tag --sort=taggerdate
 	lsbr = ls-branches --no-pager --color
 	prebr = checkout -
 	unstage = reset
