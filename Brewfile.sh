@@ -18,6 +18,7 @@ brew install automake
 brew install bdw-gc
 brew install carthage
 brew install chisel
+brew install cocoapods
 brew install fish
 brew install gdbm
 brew install git
