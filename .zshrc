@@ -206,10 +206,6 @@ compdef _ws ws
 if [ -e ~/.z.sh/z.sh ]; then
     _Z_CMD=j
     source ~/.z.sh/z.sh
-    function precmd_z() {
-        _z --add "$(pwd -P)"
-    }
-    precmd_functions=($precmd_functions precmd_z)
 fi
 
 # 単語区切り設定
