@@ -12,9 +12,10 @@ export MANPATH="${HOME}/local/share/man:${MANPATH}"
 export XDG_CONFIG_HOME="${HOME}/.config"
 
 # for Golang
-export GOROOT="${HOME}/go"
-if [ -d ${GOROOT} ]; then
-    export PATH="${GOROOT}/bin:${PATH}"
+export GOENV_ROOT="$HOME/.goenv"
+if [ -d ${GOENV_ROOT} ]; then
+    export PATH="${GOENV_ROOT}/bin:${PATH}"
+    eval "$(goenv init -)"
 fi
 
 export GOPATH="${HOME}/works/golang"
