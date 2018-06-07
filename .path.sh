@@ -11,8 +11,14 @@ export PATH="${HOME}/local/bin:${PATH}"
 export MANPATH="${HOME}/local/share/man:${MANPATH}"
 export XDG_CONFIG_HOME="${HOME}/.config"
 
+# for Android Studio
+export ANDROID_HOME="${HOME}/Library/Android/sdk"
+if [ -d ${ANDROID_HOME} ]; then
+    export PATH="${ANDROID_HOME}/bin:${PATH}"
+fi
+
 # for Golang
-export GOENV_ROOT="$HOME/.goenv"
+export GOENV_ROOT="${HOME}/.goenv"
 if [ -d ${GOENV_ROOT} ]; then
     export PATH="${GOENV_ROOT}/bin:${PATH}"
     eval "$(goenv init -)"
