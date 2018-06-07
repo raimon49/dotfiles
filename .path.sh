@@ -14,7 +14,7 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 # for Android Studio
 export ANDROID_HOME="${HOME}/Library/Android/sdk"
 if [ -d ${ANDROID_HOME} ]; then
-    export PATH="${ANDROID_HOME}/bin:${PATH}"
+    export PATH="${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${PATH}"
 fi
 
 # for Golang
