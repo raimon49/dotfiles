@@ -16,7 +16,7 @@ export ANDROID_HOME="${HOME}/Library/Android/sdk"
 if [ -d ${ANDROID_HOME} ]; then
     export PATH="${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${PATH}"
 fi
-export MY_ANDROID_BUNDLE_JAVA="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/"
+MY_ANDROID_BUNDLE_JAVA="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
 if [ -d ${MY_ANDROID_BUNDLE_JAVA} ]; then
     export JAVA_HOME="${MY_ANDROID_BUNDLE_JAVA}"
     export PATH="${JAVA_HOME}/bin:${PATH}"
