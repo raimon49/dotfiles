@@ -13,24 +13,24 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 
 # for Android Studio
 export ANDROID_HOME="${HOME}/Library/Android/sdk"
-if [ -d ${ANDROID_HOME} ]; then
+if [ -d "${ANDROID_HOME}" ]; then
     export PATH="${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${PATH}"
 fi
 MY_ANDROID_BUNDLE_JAVA="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
-if [ -d ${MY_ANDROID_BUNDLE_JAVA} ]; then
+if [ -d "${MY_ANDROID_BUNDLE_JAVA}" ]; then
     export JAVA_HOME="${MY_ANDROID_BUNDLE_JAVA}"
     export PATH="${JAVA_HOME}/bin:${PATH}"
 fi
 
 # for Golang
 export GOENV_ROOT="${HOME}/.goenv"
-if [ -d ${GOENV_ROOT} ]; then
+if [ -d "${GOENV_ROOT}" ]; then
     export PATH="${GOENV_ROOT}/bin:${PATH}"
     eval "$(goenv init -)"
 fi
 
 export GOPATH="${HOME}/works/golang"
-if [ -d ${GOPATH} ]; then
+if [ -d "${GOPATH}" ]; then
     export PATH="${GOPATH}/bin:${PATH}"
 fi
 
