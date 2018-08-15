@@ -3,7 +3,7 @@ cd $(dirname $0)
 
 [ ! -d ~/local/bin ] && mkdir -p ~/local/bin
 [ ! -d ~/.zsh/cache ] && mkdir -p ~/.zsh/cache
-[ ! -d ~/.config/nvim ] && mkdir ~/.config/nvim
+[ ! -d ~/.config/nvim ] && mkdir -p ~/.config/nvim
 [ ! -d ~/go ] && mkdir -p ~/go
 [ ! -f ~/.z ] && touch ~/.z
 [ ! -d .antigen ] && git clone https://github.com/zsh-users/antigen.git .antigen
