@@ -3,7 +3,7 @@ cd $(dirname $0)
 
 [ ! -d ~/local/bin ] && mkdir -p ~/local/bin
 [ ! -d ~/.zsh/cache ] && mkdir -p ~/.zsh/cache
-[ ! -d ~/.config ] && mkdir ~/.config
+[ ! -d ~/.config/nvim ] && mkdir ~/.config/nvim
 [ ! -d ~/go ] && mkdir -p ~/go
 [ ! -f ~/.z ] && touch ~/.z
 [ ! -d .antigen ] && git clone https://github.com/zsh-users/antigen.git .antigen
@@ -21,6 +21,8 @@ ln -Fis ~/works/git/dotfiles/git-info/git-pager ~/local/bin
 ln -Fis ~/works/git/dotfiles/git-info/git-info ~/local/bin
 ln -Fis ~/works/git/dotfiles/tovim ~/local/bin
 ln -Fis ~/works/git/dotfiles/git-ls-branches/git-ls-branches ~/local/bin
+ln -Fis ~/works/git/dotfiles/.vim ~/.config/nvim
+ln -Fis ~/works/git/dotfiles/.vimrc ~/.config/nvim/init.vim
 
 for dotfile in .?*; do
     case $dotfile in
