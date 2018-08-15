@@ -6,4 +6,4 @@ addons:
     - zsh
 script:
 - ./bootstrap.sh
-- zsh -l -c env
+- zsh -l -c env | egrep -v "^TRAVIS"
