@@ -1,5 +1,6 @@
 #!/bin/sh
 cd $(dirname $0)
+GIT_CONTRIB_URL="https://raw.githubusercontent.com/git/git/master/contrib/completion"
 
 [ ! -d ~/local/bin ] && mkdir -p ~/local/bin
 [ ! -d ~/.zsh/cache ] && mkdir -p ~/.zsh/cache
@@ -10,11 +11,11 @@ cd $(dirname $0)
 
 # for Git on Bash
 if [ -x "$(which wget 2> /dev/null)" ]; then
-    wget 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash' --no-check-certificate -q -O ~/local/bin/git-completion.bash
-    wget 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh' --no-check-certificate -q -O ~/local/bin/git-prompt.sh
+    wget "${GIT_CONTRIB_URL}/git-completion.bash" --no-check-certificate -q -O ~/local/bin/git-completion.bash
+    wget "${GIT_CONTRIB_URL}/git-prompt.sh" --no-check-certificate -q -O ~/local/bin/git-prompt.sh
 elif [ -x "$(which curl 2> /dev/null)" ]; then
-    curl 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash' -L -s -o ~/local/bin/git-completion.bash
-    curl 'https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh' -L -s -o ~/local/bin/git-prompt.sh
+    curl "${GIT_CONTRIB_URL}/git-completion.bash" -L -s -o ~/local/bin/git-completion.bash
+    curl "${GIT_CONTRIB_URL}/git-prompt.sh" -L -s -o ~/local/bin/git-prompt.sh
 fi
 
 ln -Fis ~/works/git/dotfiles/git-info/git-pager ~/local/bin
@@ -25,13 +26,13 @@ ln -Fis ~/works/git/dotfiles/.vim ~/.config/nvim
 ln -Fis ~/works/git/dotfiles/.vimrc ~/.config/nvim/init.vim
 
 for dotfile in .?*; do
-    case $dotfile in
+    case "${dotfile}" in
         .. | .git | .gitmodules | .travis.yml )
             # ignore
             continue;;
         *)
             # symlink
-            ln -Fis "$PWD/$dotfile" ~
+            ln -Fis "${PWD}/${dotfile}" ~
             ;;
     esac
 done
