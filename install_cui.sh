@@ -1,5 +1,6 @@
 #!/bin/sh
 cd $(dirname $0)
+DOTFILES_REPO="~/works/git/dotfiles"
 GIT_CONTRIB_URL="https://raw.githubusercontent.com/git/git/master/contrib/completion"
 
 [ ! -d ~/local/bin ] && mkdir -p ~/local/bin
@@ -18,12 +19,12 @@ elif [ -x "$(which curl 2> /dev/null)" ]; then
     curl "${GIT_CONTRIB_URL}/git-prompt.sh" -L -s -o ~/local/bin/git-prompt.sh
 fi
 
-ln -Fis ~/works/git/dotfiles/git-info/git-pager ~/local/bin
-ln -Fis ~/works/git/dotfiles/git-info/git-info ~/local/bin
-ln -Fis ~/works/git/dotfiles/tovim ~/local/bin
-ln -Fis ~/works/git/dotfiles/git-ls-branches/git-ls-branches ~/local/bin
-ln -Fis ~/works/git/dotfiles/.vim ~/.config/nvim
-ln -Fis ~/works/git/dotfiles/.vimrc ~/.config/nvim/init.vim
+ln -Fis "${DOTFILES_REPO}/git-info/git-pager" ~/local/bin
+ln -Fis "${DOTFILES_REPO}/git-info/git-info" ~/local/bin
+ln -Fis "${DOTFILES_REPO}/tovim" ~/local/bin
+ln -Fis "${DOTFILES_REPO}/git-ls-branches/git-ls-branches" ~/local/bin
+ln -Fis "${DOTFILES_REPO}/.vim" ~/.config/nvim
+ln -Fis "${DOTFILES_REPO}/.vimrc" ~/.config/nvim/init.vim
 
 for dotfile in .?*; do
     case "${dotfile}" in
