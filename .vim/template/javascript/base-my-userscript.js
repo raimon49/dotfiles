@@ -8,6 +8,6 @@
 // @author      raimon
 // @version     1.0.0
 // ==/UserScript==
-(function() {
+(() => {
     {{_cursor_}}
 })();
