@@ -11,13 +11,17 @@ export PATH="${HOME}/local/bin:${PATH}"
 export MANPATH="${HOME}/local/share/man:${MANPATH}"
 export XDG_CONFIG_HOME="${HOME}/.config"
 
-# for Android Studio
+# for Android and Java
 export ANDROID_HOME="${HOME}/Library/Android/sdk"
 if [ -d "${ANDROID_HOME}" ]; then
     export PATH="${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${PATH}"
 fi
 MY_ANDROID_BUNDLE_JAVA="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
-if [ -d "${MY_ANDROID_BUNDLE_JAVA}" ]; then
+MACOS_JAVA="`/usr/libexec/java_home 2> /dev/null`"
+if [ -d "${MACOS_JAVA}" ]; then
+    export JAVA_HOME="${MACOS_JAVA}"
+    export PATH="${JAVA_HOME}/bin:${PATH}"
+elif [ -d "${MY_ANDROID_BUNDLE_JAVA}" ]; then
     export JAVA_HOME="${MY_ANDROID_BUNDLE_JAVA}"
     export PATH="${JAVA_HOME}/bin:${PATH}"
 fi
