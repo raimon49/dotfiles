@@ -25,6 +25,7 @@ brew install git
 brew install heroku-toolbelt
 brew install icdiff
 brew install jq
+brew install kubernetes-cli
 brew install libtool
 brew install lua
 brew install lv
@@ -38,6 +39,7 @@ brew install pcre
 brew install pgcli
 brew install python3
 brew install spark
+brew install stern
 brew install tig
 brew install tree
 brew install swiftlint
