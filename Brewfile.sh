@@ -19,6 +19,7 @@ brew install bdw-gc
 brew install carthage
 brew install chisel
 brew install cocoapods
+brew install csshx
 brew install fish
 brew install gdbm
 brew install git
