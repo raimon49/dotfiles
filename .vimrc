@@ -447,6 +447,8 @@ augroup MyAutoCmd
     autocmd FileType svn,gitcommit,gitrebase call s:setlocal_spelllang()
     " for javascript completion
     autocmd FileType javascript setlocal omnifunc=nodejscomplete#CompleteJS
+    " auto completion for HTML/XML
+    autocmd Filetype html,xml inoremap <buffer> </ </<C-x><C-o>
 augroup END
 
 " colorscheme setting
