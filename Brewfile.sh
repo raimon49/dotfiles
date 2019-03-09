@@ -49,6 +49,3 @@ brew install w3m
 brew install webp
 brew install wget
 brew install --without-etcdir zsh
-
-# Remove outdated versions
-brew cleanup

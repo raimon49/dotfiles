@@ -19,6 +19,7 @@ fi
 
 # See also: https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
 test -x /usr/local/bin/brew && export HOMEBREW_NO_ANALYTICS="1"
+test -x /usr/local/bin/brew && export HOMEBREW_INSTALL_CLEANUP="1"
 
 man() {
     env \
