@@ -18,7 +18,7 @@ brew install csshx
 brew install fish
 brew install gdbm
 brew install git
-brew install heroku-toolbelt
+brew tap heroku/brew && brew install heroku
 brew install icdiff
 brew install jq
 brew install kubernetes-cli
