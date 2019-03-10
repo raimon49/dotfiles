@@ -8,11 +8,6 @@ brew update
 # Update already-installed formula
 brew upgrade
 
-# Official packages
-if [ -x /usr/local/bin/vim ]; then
-    brew uninstall vim
-fi
-
 brew install autoconf
 brew install automake
 brew install bdw-gc
@@ -44,8 +39,8 @@ brew install stern
 brew install tig
 brew install tree
 brew install swiftlint
-brew install vim --with-lua --HEAD
+brew install vim
 brew install w3m
 brew install webp
 brew install wget
-brew install --without-etcdir zsh
+brew install zsh
