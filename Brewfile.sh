@@ -12,6 +12,7 @@ brew install autoconf
 brew install automake
 brew install bdw-gc
 brew install carthage
+brew tap cloudfoundry/tap && brew install cf-cli
 brew install chisel
 brew install cocoapods
 brew install csshx
