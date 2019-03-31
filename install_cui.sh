@@ -6,6 +6,7 @@ GIT_CONTRIB_URL="https://raw.githubusercontent.com/git/git/master/contrib/comple
 [ ! -d ~/local/bin ] && mkdir -p ~/local/bin
 [ ! -d ~/.zsh/cache ] && mkdir -p ~/.zsh/cache
 [ ! -d ~/.config/nvim ] && mkdir -p ~/.config/nvim
+[ ! -d ~/.config/git ] && mkdir -p ~/.config/git
 [ ! -d ~/go ] && mkdir -p ~/go
 [ ! -f ~/.z ] && touch ~/.z
 [ ! -d .antigen ] && git clone https://github.com/zsh-users/antigen.git .antigen
@@ -24,6 +25,7 @@ ln -Fis "${DOTFILES_REPO}/git-info/git-info" ~/local/bin
 ln -Fis "${DOTFILES_REPO}/tovim" ~/local/bin
 ln -Fis "${DOTFILES_REPO}/git-ls-branches/git-ls-branches" ~/local/bin
 ln -Fis "${DOTFILES_REPO}/.vim" ~/.config/nvim
+ln -Fis "${DOTFILES_REPO}/.config/git/ignore" ~/.config/git
 ln -Fis "${DOTFILES_REPO}/.vimrc" ~/.config/nvim/init.vim
 
 for dotfile in .?*; do
