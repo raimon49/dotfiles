@@ -71,7 +71,6 @@ if system('uname -o') =~ '^GNU/'
     let g:make = 'make'
 endif
 
-call dein#begin(expand('$DOTVIM/dein'))
 if dein#load_state(s:dein_dir)
     call dein#begin(s:dein_dir)
 
