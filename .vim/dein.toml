@@ -120,6 +120,14 @@ repo = 'mbbill/undotree'
 repo ='rainux/vim-desert-warm-256'
 
 [[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+hook_add = '''
+    if executable('editorconfig')
+        let g:EditorConfig_core_mode='external_command'
+    endif
+'''
+
+[[plugins]]
 repo = 'koron/codic-vim'
 
 [[plugins]]
