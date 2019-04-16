@@ -151,6 +151,9 @@ hook_add = '''
 [[plugins]]
 repo = 'AndrewRadev/splitjoin.vim'
 
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
 # Plugins on vim-scripts
 [[plugins]]
 repo = 'vim-scripts/desert256.vim'
