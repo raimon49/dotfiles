@@ -27,12 +27,6 @@ elif [ -d "${MY_ANDROID_BUNDLE_JAVA}" ]; then
 fi
 
 # for Golang
-export GOENV_ROOT="${HOME}/.goenv"
-if [ -d "${GOENV_ROOT}" ]; then
-    export PATH="${GOENV_ROOT}/bin:${PATH}"
-    eval "$(goenv init -)"
-fi
-
 export GOPATH="${HOME}/works/golang"
 if [ -d "${GOPATH}" ]; then
     export PATH="${GOPATH}/bin:${PATH}"
@@ -43,13 +37,6 @@ test -d /usr/local/heroku && export PATH="/usr/local/heroku/bin:${PATH}"
 
 # for VVM
 test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
-
-# for anyenv
-export ANYENV_ROOT="${HOME}/.anyenv"
-if [ -d "${ANYENV_ROOT}" ]; then
-    export PATH="${HOME}/.anyenv/bin:${PATH}"
-    eval "$(anyenv init -)"
-fi
 
 # for Python
 export PIP_CONFIG_FILE="${HOME}/.pip.conf"

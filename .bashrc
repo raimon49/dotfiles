@@ -1,17 +1,5 @@
 ## .bashrc
 
-# zsh
-for zsh_command in ~/local/bin/zsh /usr/local/bin/zsh /usr/bin/zsh /bin/zsh; do
-    if [ -x "${zsh_command}" ]; then
-        if [ -n "${PS1}" ]; then
-            SHELL="${zsh_command}"
-            exec ${zsh_command} -l
-            return
-        fi
-        :
-    fi
-done
-
 # PATH
 if [ -e ~/.path.sh ]; then
     source ~/.path.sh
