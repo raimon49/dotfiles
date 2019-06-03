@@ -25,6 +25,8 @@
 	st = status -s
 	ls = ls-files
 	lsc = ls-files --unmerged
+	merged = branch --merged
+	unmerged = branch --no-merged
 	stat = status
 	rawci = commit
 	ci = commit -v
