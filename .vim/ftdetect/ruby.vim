@@ -1,5 +1,4 @@
 au BufNewFile,BufRead Berksfile setf ruby
-au BufNewFile,BufRead Cartfile setf ruby
 au BufNewFile,BufRead Dangerfile setf ruby
 au BufNewFile,BufRead Fastfile setf ruby
 au BufNewFile,BufRead Flavorfile setf ruby

@@ -252,6 +252,10 @@ hook_source = '''
 repo = 'digitaltoad/vim-jade'
 on_ft = [ 'jade' ]
 
+[[plugins]]
+repo = 'cfdrake/vim-carthage'
+on_ft = [ 'carthage' ]
+
 # Plugins on vim-scripts
 [[plugins]]
 repo = 'vim-scripts/php-doc-upgrade'
