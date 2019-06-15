@@ -1,0 +1,11 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "t p",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "t n",
+        "command": "workbench.action.nextEditor"
+    }
+]
