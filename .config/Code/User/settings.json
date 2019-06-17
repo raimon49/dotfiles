@@ -29,4 +29,7 @@
     "vim.useSystemClipboard": true,
     "vim.visualstar": true,
     "vim.whichwrap": "h,l,<,>,[,]",
+    "workbench.editor.showTabs": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.statusBar.visible": true
 }
