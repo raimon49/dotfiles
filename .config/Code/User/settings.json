@@ -1,5 +1,7 @@
 {
+    "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",
+    "editor.wordWrap": "on",
     "files.trimTrailingWhitespace": true,
     "vim.useSystemClipboard": true,
     "vim.normalModeKeyBindingsNonRecursive": [
