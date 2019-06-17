@@ -7,7 +7,7 @@
     "files.autoGuessEncoding": true,
     "files.eol": "\n",
     "files.trimTrailingWhitespace": true,
-    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -16,7 +16,17 @@
             "commands": [
                 "editor.action.insertLineAfter"
             ]
+        },
+        {
+            "before": [
+                "<C-[>"
+            ],
+            "commands": [
+                ":nohlsearch"
+            ]
         }
     ],
-    "vim.whichwrap": "h,l,<,>,[,]"
+    "vim.useSystemClipboard": true,
+    "vim.visualstar": true,
+    "vim.whichwrap": "h,l,<,>,[,]",
 }
