@@ -24,6 +24,38 @@
             "commands": [
                 ":nohlsearch"
             ]
+        },
+        {
+            "before": [
+                "n"
+            ],
+            "after": [
+                "n","z","z"
+            ]
+        },
+        {
+            "before": [
+                "N"
+            ],
+            "after": [
+                "N","z","z"
+            ]
+        },
+        {
+            "before": [
+                "*"
+            ],
+            "after": [
+                "*","z","z"
+            ]
+        },
+        {
+            "before": [
+                "#"
+            ],
+            "after": [
+                "#","z","z"
+            ]
         }
     ],
     "vim.useSystemClipboard": true,
