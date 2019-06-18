@@ -58,6 +58,7 @@
             ]
         }
     ],
+    "vim.useCtrlKeys": true,
     "vim.useSystemClipboard": true,
     "vim.visualstar": true,
     "vim.whichwrap": "h,l,<,>,[,]",
