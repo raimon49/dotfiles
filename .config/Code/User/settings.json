@@ -7,6 +7,8 @@
     "files.autoGuessEncoding": true,
     "files.eol": "\n",
     "files.trimTrailingWhitespace": true,
+    "scrolloff.alwaysCenter": false,
+    "scrolloff.scrolloff": 5,
     "vim.hlsearch": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
