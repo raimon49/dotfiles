@@ -20,3 +20,6 @@ defaults write -g AppleShowAllExtensions -bool YES
 
 # Disable shadow effect at screen capture
 defaults write com.apple.screencapture disable-shadow -boolean YES
+
+# Disable repeat inputting for VS Code
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
