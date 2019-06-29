@@ -13,6 +13,10 @@ Tools
     * Bash
 * Editor
     * Vim/Neovim
+* IDE
+    * IntelliJ IDEA
+    * Visual Studio Code
+    * Xcode
 
 Supported platforms
 -------------------
