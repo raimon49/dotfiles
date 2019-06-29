@@ -5,6 +5,26 @@ dotfiles
 
 my dotfiles
 
+Tools
+-----
+
+* Shell
+    * Zsh
+    * Bash
+* Editor
+    * Vim/Neovim
+
+Supported platforms
+-------------------
+
+* BSD
+    * macOS
+    * FreeBSD
+* Linux
+    * CentOS
+    * RHEL
+    * Ubuntu
+
 Installation
 ------------
 
