@@ -17,6 +17,9 @@ Tools
     * IntelliJ IDEA
     * Visual Studio Code
     * Xcode
+* Package Manager
+    * Homebrew(macOS)
+    * anyenv
 
 Supported platforms
 -------------------
