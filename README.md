@@ -20,6 +20,10 @@ Tools
 * Package Manager
     * Homebrew(macOS)
     * anyenv
+* Version Control System
+    * Git
+    * Mercurial
+    * Subversion
 
 Supported platforms
 -------------------
