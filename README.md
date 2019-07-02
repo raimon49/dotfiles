@@ -20,6 +20,8 @@ Tools
 * Package Manager
     * Homebrew(macOS)
     * anyenv
+* Terminal Multiplexer
+    * GNU Screen:
 * Version Control System
     * Git
     * Mercurial
