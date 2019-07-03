@@ -21,7 +21,7 @@ Tools
     * Homebrew(macOS)
     * anyenv
 * Terminal Multiplexer
-    * GNU Screen:
+    * GNU Screen
 * Version Control System
     * Git
     * Mercurial
