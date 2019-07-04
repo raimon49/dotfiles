@@ -20,6 +20,9 @@ Tools
 * Package Manager
     * Homebrew(macOS)
     * anyenv
+* Python
+    * pip
+    * PyPI/TestPyPI
 * Terminal Multiplexer
     * GNU Screen
 * Version Control System
