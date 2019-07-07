@@ -44,6 +44,8 @@ Supported platforms
 Installation
 ------------
 
+One-liner or manual installation is provided.
+
 ### Use curl
 
 ```bash
