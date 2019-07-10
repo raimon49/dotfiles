@@ -14,6 +14,7 @@ Tools
 * Editor
     * Vim/Neovim
 * IDE
+    * Eclipse
     * IntelliJ IDEA
     * Visual Studio Code
     * Xcode
