@@ -9,6 +9,14 @@
     "files.trimTrailingWhitespace": true,
     "scrolloff.alwaysCenter": false,
     "scrolloff.scrolloff": 5,
+    "todohighlight.isEnable": true,
+    "todohighlight.isCaseSensitive": true,
+    "todohighlight.keywords": [
+        "TODO:",
+        "FIXME:",
+        "XXX:",
+        "NOTE:"
+    ],
     "vim.hlsearch": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
