@@ -24,6 +24,8 @@ Tools
 * Python
     * pip
     * PyPI/TestPyPI
+* RDBMS
+    * MySQL
 * Terminal Multiplexer
     * GNU Screen
 * Version Control System
