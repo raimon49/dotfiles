@@ -43,6 +43,7 @@
 	co = checkout
 	di = diff
 	dic = diff --cached
+	die = diff --exit-code
 	fp = push --force-with-lease
 	pf = pull --ff
 	up = pull --rebase
