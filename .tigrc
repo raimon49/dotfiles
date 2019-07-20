@@ -5,7 +5,7 @@ bind generic G move-last-line
 # set variables
 set main-view = line-number:yes,interval=5 \
                 id:yes \
-                date:local \
+                date:local=yes \
                 author:full \
                 commit-title:yes,graph,refs,overflow=no
 set diff-options = -m --first-parent
