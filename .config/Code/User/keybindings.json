@@ -2,11 +2,11 @@
     {
         "key": "t p",
         "command": "workbench.action.previousEditor",
-        "when": "editorFocus && vim.mode == 'Normal'"
+        "when": "editorTextFocus && vim.mode == 'Normal'"
     },
     {
         "key": "t n",
         "command": "workbench.action.nextEditor",
-        "when": "editorFocus && vim.mode == 'Normal'"
+        "when": "editorTextFocus && vim.mode == 'Normal'"
     }
 ]
