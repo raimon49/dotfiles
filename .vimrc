@@ -179,17 +179,18 @@ nnoremap tn :<C-u>tabn<CR>
 nnoremap tp :<C-u>tabp<CR>
 nnoremap <CR> o<Esc>
 " quick edit $MYVIMRC
-nnoremap <silent> <Space>.  :<C-u>edit $MYVIMRC<CR>
-nnoremap <silent> <Space>s. :<C-u>source $MYVIMRC<CR>
+let mapleader = "\<Space>"
+nnoremap <silent> <Leader>.  :<C-u>edit $MYVIMRC<CR>
+nnoremap <silent> <Leader>s. :<C-u>source $MYVIMRC<CR>
 " quick help
 nnoremap H  :<C-u>help<Space>
 nnoremap th :<C-u>tab help<Space>
 set keywordprg=:help " Open Vim internal help by K command
 " toggle <sp>ell
-noremap <silent> <Space>sp :<C-u>call <SID>toggle_setting_spell()<CR>
+noremap <silent> <Leader>sp :<C-u>call <SID>toggle_setting_spell()<CR>
 " toggle <mo>use
 set mouse=
-noremap <silent> <Space>mo :<C-u>call <SID>toggle_setting_mouse()<CR>
+noremap <silent> <Leader>mo :<C-u>call <SID>toggle_setting_mouse()<CR>
 " toggle header file(vim-altr)
 nmap <Space>a <Plug>(altr-forward)
 
