@@ -79,6 +79,19 @@ for peco_command in ~/local/bin/peco /usr/local/bin/peco; do
     fi
 done
 
+# Ctrl-z復帰
+fancy-ctrl-z () {
+    if [[ $#BUFFER -eq 0 ]]; then
+        BUFFER="fg"
+        zle accept-line
+    else
+        zle push-input
+        zle clear-screen
+    fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
 # 補完
 autoload -Uz colors
 autoload -Uz compinit
