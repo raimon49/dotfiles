@@ -15,7 +15,7 @@ Tools
     * Vim/Neovim
 * IDE
     * Eclipse with Vrapper
-    * IntelliJ IDEA
+    * IntelliJ IDEA with IdeaVim
     * Visual Studio Code
     * Xcode
 * Package Manager
