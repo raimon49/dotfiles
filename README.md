@@ -17,7 +17,7 @@ Tools
     * Eclipse with Vrapper
     * IntelliJ IDEA with IdeaVim
     * Visual Studio Code with VSCodeVim
-    * Xcode
+    * Xcode with XVim2
 * Package Manager
     * Homebrew(macOS)
     * anyenv
