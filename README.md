@@ -20,7 +20,9 @@ Tools
     * Xcode with XVim2
 * Package Manager
     * Homebrew(macOS)
+    * antigen
     * anyenv
+    * dein.vim
 * Python
     * pip
     * PyPI/TestPyPI
