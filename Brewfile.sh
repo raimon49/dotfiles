@@ -27,6 +27,7 @@ brew install kubernetes-cli
 brew install libtool
 brew install lua
 brew install lv
+brew install m-cli
 brew install mercurial
 brew install mycli
 brew install neovim
