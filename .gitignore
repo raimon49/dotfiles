@@ -1,11 +1,5 @@
 .vim/dein
 .vim/init.vim
-.vim/.netrwhist
 .vim/pack
 .antigen
-.DS_Store
-*.swp
-*.pyc
 .python-version
-.hg
-.svn
