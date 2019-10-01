@@ -16,7 +16,6 @@ brew tap cloudfoundry/tap && brew install cf-cli
 brew install chisel
 brew install cocoapods
 brew install csshx
-brew install editorconfig
 brew install fish
 brew install gdbm
 brew install git
