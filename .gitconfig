@@ -44,6 +44,7 @@
 	di = diff
 	dic = diff --cached
 	die = diff --exit-code
+	wdi = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
 	fp = push --force-with-lease
 	pf = pull --ff
 	up = pull --rebase
