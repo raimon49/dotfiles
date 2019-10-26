@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # gibo
-[ ! -f ~/local/bin/gibo ] && \
+GIBO_PATH="${HOME}/local/bin/gibo"
+[ ! -f "${GIBO_PATH}" ] && \
     curl -L https://raw.github.com/simonwhitaker/gibo/master/gibo \
-        -o ~/local/bin/gibo && chmod +x ~/local/bin/gibo && gibo -u
+        -o "${GIBO_PATH}" && chmod +x "${GIBO_PATH}" && gibo -u
