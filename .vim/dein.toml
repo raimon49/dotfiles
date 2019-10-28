@@ -6,9 +6,6 @@ repo = 'Shougo/dein.vim'
 repo = 'Shougo/neomru.vim'
 
 [[plugins]]
-repo = 'Shougo/vimshell'
-
-[[plugins]]
 repo = 'Shougo/vimproc'
 hook_post_update = '''
     if dein#util#_is_windows()
