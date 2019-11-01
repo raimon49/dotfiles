@@ -9,5 +9,5 @@ script:
 - ./install_utility.sh
 - ./install_version_manager.sh
 - '[ -d "${HOME}/local/bin" ] && [ -d "${HOME}/.zsh/cache" ] && [ -d "${HOME}/.config/nvim" ] && [ -d "${HOME}/.config/git" ] && [ -d "${HOME}/.config/Code/User" ] && echo "OK: directory"'
-- '[ -f "${HOME}/.z" ] && echo "OK file"'
+- '[ -f "${HOME}/.z" ] && [ -f "${HOME}/local/bin/git-completion.bash" ] && [ -f "${HOME}/local/bin/git-prompt.sh" ] echo "OK file"'
 - zsh -l -c env | egrep -v "^TRAVIS"
