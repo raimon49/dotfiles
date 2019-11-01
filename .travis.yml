@@ -6,4 +6,7 @@ addons:
     - zsh
 script:
 - ./bootstrap.sh
+- ./install_utility.sh
+- ./install_version_manager.sh
+- [ -d "${HOME}/local/bin" ] && [ -d "${HOME}/.zsh/cache" ] && [ -d "${HOME}/.config/nvim" ] && echo "OK"
 - zsh -l -c env | egrep -v "^TRAVIS"
