@@ -8,5 +8,6 @@ script:
 - ./bootstrap.sh
 - ./install_utility.sh
 - ./install_version_manager.sh
-- '[ -d "${HOME}/local/bin" ] && [ -d "${HOME}/.zsh/cache" ] && [ -d "${HOME}/.config/nvim" ] && echo "OK: directory"'
+- '[ -d "${HOME}/local/bin" ] && [ -d "${HOME}/.zsh/cache" ] && [ -d "${HOME}/.config/nvim" ] && [ -d "${HOME}/.config/git" ] && [ -d "${HOME}/.config/Code/User" ] && echo "OK: directory"'
+- '[ -f "${HOME}/.z" ] && echo "OK file"'
 - zsh -l -c env | egrep -v "^TRAVIS"
