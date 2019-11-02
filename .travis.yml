@@ -10,5 +10,6 @@ script:
 - ./install_version_manager.sh
 - '[ -d "${HOME}/local/bin" ] && [ -d "${HOME}/.zsh/cache" ] && [ -d "${HOME}/.config/nvim" ] && [ -d "${HOME}/.config/git" ] && [ -d "${HOME}/.config/Code/User" ] && echo "OK: directory"'
 - '[ -f "${HOME}/.z" ] && [ -f "${HOME}/local/bin/git-completion.bash" ] && [ -f "${HOME}/local/bin/git-prompt.sh" ] && echo "OK: file"'
-- '[ -L "${HOME}/.config/nvim" ] && [ -L "${HOME}/.config/nvim/init.vim" ] && [ -L "${HOME}/.config/git/ignore" ] && [ -L "${HOME}/.config/Code/User/settings.json" ] && [ -L "${HOME}/.config/Code/User/keybindings.json" ] && echo "OK: XDG Base Directory"'
+- '[ -e "${HOME}/.config/nvim" ] && [ -e "${HOME}/.config/nvim/init.vim" ] && [ -e "${HOME}/.config/git/ignore" ] && [ -e "${HOME}/.config/Code/User/settings.json" ] && [ -e "${HOME}/.config/Code/User/keybindings.json" ] && echo "OK: XDG Base Directory"'
+- '[ ! -e "${HOME}/.git" ] && [ ! -e "${HOME}/.gitmodules" ] && [ ! -e "${HOME}/.travis.yml" ] && echo "OK: ignore dot file"'
 - zsh -l -c env | egrep -v "^TRAVIS"
