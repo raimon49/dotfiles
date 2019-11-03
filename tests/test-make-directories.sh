@@ -4,4 +4,4 @@
 [ -d "${HOME}/.config/nvim" ] && \
 [ -d "${HOME}/.config/git" ] && \
 [ -d "${HOME}/.config/Code/User" ] && \
-echo "OK: directory"
+echo "OK: make directories"

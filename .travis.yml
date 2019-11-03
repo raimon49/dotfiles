@@ -9,7 +9,7 @@ script:
 - ./install_utility.sh
 - ./install_version_manager.sh
 - ./tests/test-make-directories.sh
-- '[ -f "${HOME}/.z" ] && [ -f "${HOME}/local/bin/git-completion.bash" ] && [ -f "${HOME}/local/bin/git-prompt.sh" ] && echo "OK: file"'
+- ./tests/test-make-files.sh
 - '[ -e "${HOME}/.config/nvim" ] && [ -e "${HOME}/.config/nvim/init.vim" ] && [ -e "${HOME}/.config/git/ignore" ] && [ -e "${HOME}/.config/Code/User/settings.json" ] && [ -e "${HOME}/.config/Code/User/keybindings.json" ] && echo "OK: XDG Base Directory"'
 - '[ ! -e "${HOME}/.git" ] && [ ! -e "${HOME}/.gitmodules" ] && [ ! -e "${HOME}/.travis.yml" ] && echo "OK: ignore dot file"'
 - zsh -l -c env | egrep -v "^TRAVIS"
