@@ -10,6 +10,6 @@ script:
 - ./install_version_manager.sh
 - ./tests/test-make-directories.sh
 - ./tests/test-make-files.sh
-- '[ -e "${HOME}/.config/nvim" ] && [ -e "${HOME}/.config/nvim/init.vim" ] && [ -e "${HOME}/.config/git/ignore" ] && [ -e "${HOME}/.config/Code/User/settings.json" ] && [ -e "${HOME}/.config/Code/User/keybindings.json" ] && echo "OK: XDG Base Directory"'
+- ./tests/test-xdg-base-directory.sh
 - '[ ! -e "${HOME}/.git" ] && [ ! -e "${HOME}/.gitmodules" ] && [ ! -e "${HOME}/.travis.yml" ] && echo "OK: ignore dot file"'
 - zsh -l -c env | egrep -v "^TRAVIS"
