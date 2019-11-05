@@ -11,5 +11,5 @@ script:
 - ./tests/test-make-directories.sh
 - ./tests/test-make-files.sh
 - ./tests/test-xdg-base-directory.sh
-- '[ ! -e "${HOME}/.git" ] && [ ! -e "${HOME}/.gitmodules" ] && [ ! -e "${HOME}/.travis.yml" ] && echo "OK: ignore dot file"'
+- ./tests/test-ignore-dot-files.sh
 - zsh -l -c env | egrep -v "^TRAVIS"
