@@ -11,5 +11,5 @@ script:
 - ./tests/test-make-directories.sh
 - ./tests/test-make-files.sh
 - ./tests/test-xdg-base-directory.sh
-- ./tests/test-ignore-dot-files.sh
+- ./tests/test-ignore-dot-symlinks.sh
 - zsh -l -c env | egrep -v "^TRAVIS"
