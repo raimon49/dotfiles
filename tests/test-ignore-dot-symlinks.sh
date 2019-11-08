@@ -2,4 +2,4 @@
 [ ! -e "${HOME}/.git" ] && \
 [ ! -e "${HOME}/.gitmodules" ] && \
 [ ! -e "${HOME}/.travis.yml" ] && \
-echo "OK: ignore dot files"
+echo "OK: ignore dot symlinks"
