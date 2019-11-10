@@ -4,4 +4,7 @@ grep "name = raimon" "${HOME}/.gitconfig" && \
 [ -e "${HOME}/.bash_profile" ] && \
 [ -e "${HOME}/.bashrc" ] && \
 grep "HISTFILESIZE=1000000" "${HOME}/.bashrc" && \
+[ -e "${HOME}/.zshenv" ] && \
+[ -e "${HOME}/.zshrc" ] && \
+grep "SAVEHIST=1000000" "${HOME}/.zshrc" && \
 echo "OK: dot symlinks"
