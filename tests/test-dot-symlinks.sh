@@ -7,6 +7,8 @@ grep "HISTFILESIZE=1000000" "${HOME}/.bashrc" && \
 [ -e "${HOME}/.zshenv" ] && \
 [ -e "${HOME}/.zshrc" ] && \
 grep "SAVEHIST=1000000" "${HOME}/.zshrc" && \
+[ -e "${HOME}/.alias.sh" ] && \
+grep "alias rawvim" "${HOME}/.alias.sh" && \
 [ -e "${HOME}/.path.sh" ] && \
 echo "${PATH}" | sed -e "s/:/\n/g" | grep "${HOME}/local/bin"
 echo "OK: dot symlinks"
