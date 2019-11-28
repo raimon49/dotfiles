@@ -316,7 +316,7 @@ if [ -e ~/.alias.sh ]; then
     source ~/.alias.sh
 fi
 
-# launch anyenv only once(NOT zshenv)
+# launch anyenv only once(NOT .zshenv)
 export ANYENV_ROOT="${HOME}/.anyenv"
 if [ -d "${ANYENV_ROOT}" ]; then
     export PATH="${HOME}/.anyenv/bin:${PATH}"

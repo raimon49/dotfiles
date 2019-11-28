@@ -36,7 +36,10 @@ fi
 test -d /usr/local/heroku && export PATH="/usr/local/heroku/bin:${PATH}"
 
 # for VVM
-test -f ~/.vvm/etc/login && source ~/.vvm/etc/login
+test -f "${HOME}/.vvm/etc/login" && source "${HOME}/.vvm/etc/login"
 
 # for Python
 export PIP_CONFIG_FILE="${HOME}/.pip.conf"
+
+# for Linuxbrew
+test -d "${HOME}/.linuxbrew" && eval $(${HOME}/.linuxbrew/bin/brew shellenv)

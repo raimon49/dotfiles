@@ -17,9 +17,14 @@ elif [ -x "`which less 2> /dev/null`" ]; then
     alias lv="less"
 fi
 
-# See also: https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
-test -x /usr/local/bin/brew && export HOMEBREW_NO_ANALYTICS="1"
-test -x /usr/local/bin/brew && export HOMEBREW_INSTALL_CLEANUP="1"
+# See also: https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
+if which brew >/dev/null 2>&1 ; then
+    export HOMEBREW_NO_ANALYTICS="1"
+    export HOMEBREW_INSTALL_CLEANUP="1"
+    if [ -d "${HOME}/.linuxbrew" ]; then
+        export HOMEBREW_NO_EMOJI=1
+    fi
+fi
 
 man() {
     env \
