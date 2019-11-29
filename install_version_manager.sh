@@ -8,7 +8,7 @@ install_linuxbrew_in_local() {
 }
 
 # anyenv
-ANYENV_PATH="${HOME}/anyenv"
+ANYENV_PATH="${HOME}/.anyenv"
 [ ! -d "${ANYENV_PATH}" ] && \
     git clone https://github.com/riywo/anyenv ~/.anyenv
     mkdir "${ANYENV_PATH}/plugins"
