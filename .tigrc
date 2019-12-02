@@ -9,6 +9,7 @@ set main-view = line-number:yes,interval=5 \
                 author:full \
                 commit-title:yes,graph,refs,overflow=no
 set diff-options = -m --first-parent
+set diff-highlight = true
 set line-graphics = ascii
 set ignore-case = yes
 set tab-size = 4
