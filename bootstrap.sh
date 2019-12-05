@@ -7,7 +7,7 @@ fi
 DOTFILES="${HOME}/works/git"
 
 [ ! -d "${DOTFILES}" ] && mkdir -p "${DOTFILES}"
-cd "${DOTFILES}" && git clone --recursive https://github.com/raimon49/dotfiles.git && cd dotfiles && yes | ./install_cui.sh
+cd "${DOTFILES}" && git clone --recursive --depth 5 https://github.com/raimon49/dotfiles.git && cd dotfiles && yes | ./install_cui.sh
 
 printf "\nbootstrapped.\n"
 exit 0
