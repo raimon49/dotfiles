@@ -46,7 +46,7 @@
 	die = diff --exit-code
 	wdi = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
 	fp = push --force-with-lease
-	pf = pull --ff
+	pf = "!git pull --ff origin $(git symbolic-ref --short HEAD)"
 	up = pull --rebase
 	premerge = merge --no-commit --no-ff
 	onemerge = merge --squash
