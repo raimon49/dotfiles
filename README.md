@@ -19,7 +19,7 @@ Tools
     * Visual Studio Code with VSCodeVim
     * Xcode with XVim2
 * Package Manager
-    * Homebrew(macOS)
+    * Homebrew(macOS, Linux)
     * antigen
     * anyenv
     * dein.vim
