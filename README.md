@@ -12,7 +12,7 @@ Tools
     * Zsh
     * Bash
 * Editor
-    * Vim/Neovim
+    * Vim 8.x/Neovim
 * IDE
     * Eclipse with Vrapper
     * IntelliJ IDEA with IdeaVim
