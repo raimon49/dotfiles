@@ -37,6 +37,7 @@ brew install pcre
 brew install pgcli
 brew install python3
 brew install spark
+brew tap srcclr/srcclr && brew install srcclr
 brew install stern
 brew install tig
 brew install tree
