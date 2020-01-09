@@ -23,6 +23,7 @@
 	ss = stash save
 	sp = stash pop
 	st = status -s
+	sw = switch
 	ls = ls-files
 	lsc = ls-files --unmerged
 	lprune = "!git branch --merged | grep -vE '^\\*|master$|develop$' | xargs -I % git branch -d %"
