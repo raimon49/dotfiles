@@ -35,6 +35,7 @@
 	eci = commit --allow-empty
 	reci = commit --amend
 	readdci = commit --amend --no-edit -a
+	res = restore
 	br = branch
 	brs = branch --sort=authordate
 	tags = tag --sort=taggerdate
