@@ -117,6 +117,9 @@ repo = 'mbbill/undotree'
 repo ='rainux/vim-desert-warm-256'
 
 [[plugins]]
+repo ='ajh17/Spacegray.vim'
+
+[[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
