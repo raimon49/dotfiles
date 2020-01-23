@@ -1,0 +1,6 @@
+file:
+  ~/local/bin/goss:
+    exists: true
+    mode: "0775"
+    filetype: file
+    contains: []

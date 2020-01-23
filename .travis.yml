@@ -13,4 +13,5 @@ script:
 - ./tests/test-xdg-base-directory.sh
 - ./tests/test-ignore-dot-symlinks.sh
 - ./tests/test-dot-symlinks.sh
+- "${HOME}/local/bin/goss --gossfile tests/goss.yaml validate --format documentation"
 - zsh -l -c env | egrep -v "^TRAVIS"
