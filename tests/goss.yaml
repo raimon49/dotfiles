@@ -1,4 +1,25 @@
 file:
+  ~/local/bin:
+    exists: true
+    filetype: directory
+  ~/.zsh/cache:
+    exists: true
+    filetype: directory
+  ~/.config/nvim:
+    exists: true
+    filetype: symlink
+  ~/.config/git:
+    exists: true
+    filetype: directory
+  ~/.config/Code/User:
+    exists: true
+    filetype: directory
+  ~/go:
+    exists: true
+    filetype: directory
+  ~/.z:
+    exists: true
+    filetype: file
   ~/local/bin/goss:
     exists: true
     mode: "0775"
