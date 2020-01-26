@@ -8,6 +8,7 @@ file:
   ~/.config/nvim:
     exists: true
     filetype: symlink
+    contains: []
   ~/.config/git:
     exists: true
     filetype: directory
