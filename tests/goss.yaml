@@ -5,7 +5,7 @@ file:
   ~/.zsh/cache:
     exists: true
     filetype: directory
-  ~/.config/nvim:
+  ~/.config/nvim/init.vim:
     exists: true
     filetype: symlink
     contains: []
