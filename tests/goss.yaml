@@ -91,3 +91,9 @@ file:
     contains:
       - "export PATH=\"${HOME}/local/bin:${PATH}\""
   # ignore symlink dotfiles
+  ~/.git:
+    exists: false
+  ~/.gitmodules:
+    exists: false
+  ~/.travis.yml:
+    exists: false
