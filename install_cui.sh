@@ -5,7 +5,6 @@ GIT_CONTRIB_URL="https://raw.githubusercontent.com/git/git/master/contrib/comple
 
 [ ! -d "${HOME}/local/bin" ] && mkdir -p "${HOME}/local/bin"
 [ ! -d "${HOME}/.zsh/cache" ] && mkdir -p "${HOME}/.zsh/cache"
-[ ! -d "${HOME}/.config/nvim" ] && mkdir -p "${HOME}/.config/nvim"
 [ ! -d "${HOME}/.config/git" ] && mkdir -p "${HOME}/.config/git"
 [ ! -d "${HOME}/.config/Code/User" ] && mkdir -p "${HOME}/.config/Code/User"
 [ ! -d "${HOME}/go" ] && mkdir -p "${HOME}/go"
