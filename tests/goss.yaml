@@ -25,7 +25,24 @@ file:
   ~/local/bin/git-prompt.sh:
     exists: true
     filetype: file
+  # XGD directory
+  ~/.config/nvim:
+    exists: true
   ~/.config/nvim/init.vim:
     exists: true
     filetype: symlink
-    contains: []
+  ~/.config/git/ignore:
+    exists: true
+    filetype: symlink
+  ~/.config/Code/User/settings.json:
+    exists: true
+    filetype: symlink
+    contains:
+      - "vim.useCtrlKeys"
+      - "Zenburn (No Bold)"
+  ~/.config/Code/User/keybindings.json:
+    exists: true
+    filetype: symlink
+    contains:
+      - "t n"
+      - "t p"
