@@ -1,14 +1,11 @@
 file:
+  # directories
   ~/local/bin:
     exists: true
     filetype: directory
   ~/.zsh/cache:
     exists: true
     filetype: directory
-  ~/.config/nvim/init.vim:
-    exists: true
-    filetype: symlink
-    contains: []
   ~/.config/git:
     exists: true
     filetype: directory
@@ -18,11 +15,17 @@ file:
   ~/go:
     exists: true
     filetype: directory
+  # files
   ~/.z:
     exists: true
     filetype: file
-  ~/local/bin/goss:
+  ~/local/bin/git-completion.bash:
     exists: true
-    mode: "0775"
     filetype: file
+  ~/local/bin/git-prompt.sh:
+    exists: true
+    filetype: file
+  ~/.config/nvim/init.vim:
+    exists: true
+    filetype: symlink
     contains: []
