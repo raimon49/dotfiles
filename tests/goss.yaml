@@ -89,5 +89,5 @@ file:
     exists: true
     filetype: symlink
     contains:
-      - "/PATH.*~\/local\/bin/"
+      - "export PATH=\"${HOME}/local/bin:${PATH}\""
   # ignore symlink dotfiles
