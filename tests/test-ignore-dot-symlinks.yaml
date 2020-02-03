@@ -1,0 +1,7 @@
+file:
+  ~/.git:
+    exists: false
+  ~/.gitmodules:
+    exists: false
+  ~/.travis.yml:
+    exists: false

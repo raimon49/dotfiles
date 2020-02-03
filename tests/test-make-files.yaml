@@ -1,0 +1,10 @@
+file:
+  ~/.z:
+    exists: true
+    filetype: file
+  ~/local/bin/git-completion.bash:
+    exists: true
+    filetype: file
+  ~/local/bin/git-prompt.sh:
+    exists: true
+    filetype: file

@@ -1,0 +1,16 @@
+file:
+  ~/local/bin:
+    exists: true
+    filetype: directory
+  ~/.zsh/cache:
+    exists: true
+    filetype: directory
+  ~/.config/git:
+    exists: true
+    filetype: directory
+  ~/.config/Code/User:
+    exists: true
+    filetype: directory
+  ~/go:
+    exists: true
+    filetype: directory
