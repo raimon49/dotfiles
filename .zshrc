@@ -260,7 +260,7 @@ disable r
 # ユーティリティ
 function alc() {
     if [ -n "$1" ]; then
-        w3m -no-cookie "http://eow.alc.co.jp/search?q=${1}" | sed '1,30d' | ${PAGER}
+        w3m -no-cookie "http://eow.alc.co.jp/search?q=${1}" | sed '1,60d' | ${PAGER}
     else
         echo 'usage: alc word'
     fi
