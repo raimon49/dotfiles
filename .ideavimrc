@@ -1,6 +1,7 @@
 set number
 set showmode
 set visualbell t_vb=
+set listchars=tab:^\ ,trail:_
 set incsearch
 set ignorecase
 set smartcase
