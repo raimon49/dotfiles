@@ -74,5 +74,3 @@
 	glog = log --graph --date=short --pretty='%C(yellow)%h%Creset %C(cyan bold)%d%Creset %s %Cgreen[%cd]%Creset' --decorate
 	dlog = log -p
 	logst = log --name-status
-	pager = '!$HOME/local/bin/git-pager'
-	info = '!$HOME/local/bin/git-info'

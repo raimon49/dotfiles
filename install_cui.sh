@@ -20,8 +20,6 @@ elif [ -x "$(which curl 2> /dev/null)" ]; then
     curl "${GIT_CONTRIB_URL}/git-prompt.sh" -L -s -o "${HOME}/local/bin/git-prompt.sh"
 fi
 
-ln -Fis "${DOTFILES_REPO}/git-info/git-pager" "${HOME}/local/bin"
-ln -Fis "${DOTFILES_REPO}/git-info/git-info" "${HOME}/local/bin"
 ln -Fis "${DOTFILES_REPO}/tovim" "${HOME}/local/bin"
 ln -Fis "${DOTFILES_REPO}/git-ls-branches/git-ls-branches" "${HOME}/local/bin"
 ln -Fis "${DOTFILES_REPO}/.vim" "${HOME}/.config/nvim"
