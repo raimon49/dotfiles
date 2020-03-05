@@ -1,6 +1,3 @@
-[submodule "git-ls-branches"]
-	path = git-ls-branches
-	url = https://github.com/gitbits/git-ls-branches.git
 [submodule ".z.sh"]
 	path = .z.sh
 	url = https://github.com/rupa/z.git

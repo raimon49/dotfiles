@@ -21,7 +21,6 @@ elif [ -x "$(which curl 2> /dev/null)" ]; then
 fi
 
 ln -Fis "${DOTFILES_REPO}/tovim" "${HOME}/local/bin"
-ln -Fis "${DOTFILES_REPO}/git-ls-branches/git-ls-branches" "${HOME}/local/bin"
 ln -Fis "${DOTFILES_REPO}/.vim" "${HOME}/.config/nvim"
 ln -Fis "${DOTFILES_REPO}/.config/git/ignore" "${HOME}/.config/git"
 ln -Fis "${DOTFILES_REPO}/.config/Code/User/settings.json" "${HOME}/.config/Code/User"
