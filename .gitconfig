@@ -17,6 +17,7 @@
 [color]
 	ui = auto
 [pager]
+	branch = false
 	ls-files = true
 [alias]
 	alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
