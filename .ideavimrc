@@ -23,3 +23,7 @@ inoremap <C-e> <End>
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-d> <Del>
+
+nnoremap == :<C-u>action ReformatCode<CR>
+vnoremap == :<C-u>action ReformatCode<CR>
+nnoremap R :<C-u>action ChooseRunConfiguration<CR>
