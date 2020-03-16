@@ -181,7 +181,19 @@ unset VCS_PROMPT
 autoload -Uz zmv
 
 # 自動エスケープ
-echo ${^fpath}/url-quote-magic(N) | grep -q url-quote-magic && autoload -Uz url-quote-magic && zle -N self-insert url-quote-magic
+if [[ $ZSH_VERSION != 5.1.1 ]]; then
+    for d in $fpath; do
+        if [[ -e "$d/url-quote-magic" ]]; then
+            if is-at-least 5.1; then
+                autoload -Uz bracketed-paste-magic
+                zle -N bracketed-paste bracketed-paste-magic
+            fi
+            autoload -Uz url-quote-magic
+            zle -N self-insert url-quote-magic
+            break
+        fi
+    done
+fi
 
 # ディレクトリ移動
 setopt auto_cd
