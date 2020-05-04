@@ -148,6 +148,9 @@ repo = 'AndrewRadev/splitjoin.vim'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+hook_add = '''
+    let NERDTreeShowHidden = 1
+'''
 
 # Plugins on vim-scripts
 [[plugins]]
