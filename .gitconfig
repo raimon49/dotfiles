@@ -21,7 +21,8 @@
 	ls-files = true
 	tag = false
 [alias]
-	alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
+	alias = "!git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort"
+	authors = "!git log --format='%aN <%aE>' | sort -u"
 	rclone = clone --recursive
 	sclone = clone --recursive --depth 5
 	ss = stash save
