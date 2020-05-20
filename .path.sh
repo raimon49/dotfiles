@@ -32,9 +32,6 @@ if [ -d "${GOPATH}" ]; then
     export PATH="${GOPATH}/bin:${PATH}"
 fi
 
-# for Rust
-test -f "${HOME}/.cargo/env" && source "${HOME}/.cargo/env"
-
 # for Heroku Toolbelt
 test -d /usr/local/heroku && export PATH="/usr/local/heroku/bin:${PATH}"
 

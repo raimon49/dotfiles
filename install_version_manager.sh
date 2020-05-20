@@ -7,13 +7,14 @@ install_linuxbrew_in_local() {
     eval $(${HOME}/.linuxbrew/bin/brew shellenv)
 }
 
-# anyenv
-ANYENV_PATH="${HOME}/.anyenv"
-[ ! -d "${ANYENV_PATH}" ] && \
-    git clone https://github.com/riywo/anyenv ~/.anyenv
-    mkdir "${ANYENV_PATH}/plugins"
-    git clone https://github.com/znz/anyenv-git.git "${ANYENV_PATH}/plugins/anyenv-git"
-    git clone https://github.com/znz/anyenv-update.git "${ANYENV_PATH}/plugins/anyenv-update"
+# asdf
+ASDF_PATH="${HOME}/.asdf"
+[ ! -d "${ASDF_PATH}" ] && \
+    git clone https://github.com/asdf-vm/asdf.git "${ASDF_PATH}" && \
+    cd "${ASDF_PATH}" && \
+    git checkout "$(git describe --abbrev=0 --tags)" && \
+    cd ..
+
 
 # Linuxbrew
 if which apt-get >/dev/null 2>&1 ; then

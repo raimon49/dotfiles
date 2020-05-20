@@ -22,7 +22,6 @@ brew install git
 brew tap heroku/brew && brew install heroku
 brew install icdiff
 brew install jq
-brew install kubernetes-cli
 brew install libtool
 brew install lua
 brew install lv

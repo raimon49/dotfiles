@@ -15,6 +15,12 @@ if [ -e ~/.env.sh ]; then
     source ~/.env.sh
 fi
 
+# asdf
+if [ -e ~/.asdf/asdf.sh ]; then
+    source ~/.asdf/asdf.sh
+    source "${ASDF_DIR}/completions/asdf.bash"
+fi
+
 # 履歴
 HISTFILE=~/.bash_history
 HISTSIZE=1000000

@@ -21,7 +21,7 @@ Tools
 * Package Manager
     * Homebrew(macOS, Linux)
     * antigen
-    * anyenv
+    * asdf-vm
     * dein.vim
 * Python
     * pip

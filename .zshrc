@@ -12,6 +12,12 @@ if [ -e ~/.env.sh ]; then
     source ~/.env.sh
 fi
 
+# asdf
+if [ -e ~/.asdf/asdf.sh ]; then
+    source ~/.asdf/asdf.sh
+    fpath=(${ASDF_DIR}/completions $fpath)
+fi
+
 # 履歴
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
@@ -326,11 +332,4 @@ REPORTTIME=3
 # エイリアス
 if [ -e ~/.alias.sh ]; then
     source ~/.alias.sh
-fi
-
-# launch anyenv only once(NOT .zshenv)
-export ANYENV_ROOT="${HOME}/.anyenv"
-if [ -d "${ANYENV_ROOT}" ]; then
-    export PATH="${HOME}/.anyenv/bin:${PATH}"
-    eval "$(anyenv init -)"
 fi
