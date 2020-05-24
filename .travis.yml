@@ -4,11 +4,10 @@ addons:
     packages:
     - git
     - zsh
-before_script:
-- "curl -fsSL https://goss.rocks/install | GOSS_DST=${HOME}/local/bin sh"
 script:
 - ./bootstrap.sh
 - ./install_utility.sh
 - ./install_version_manager.sh
+- "curl -fsSL https://goss.rocks/install | GOSS_DST=${HOME}/local/bin sh"
 - "${HOME}/local/bin/goss --gossfile tests/goss.yaml validate --format documentation"
 - zsh -l -c env | egrep -v "^TRAVIS"
