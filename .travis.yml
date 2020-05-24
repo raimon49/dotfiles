@@ -4,6 +4,8 @@ addons:
     packages:
     - git
     - zsh
+before_script:
+- "curl -fsSL https://goss.rocks/install | GOSS_DST=${HOME}/local/bin sh"
 script:
 - ./bootstrap.sh
 - ./install_utility.sh
