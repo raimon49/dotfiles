@@ -124,7 +124,7 @@ if [ -x "`which hg 2> /dev/null`" ]; then
 fi
 
 VCS_PROMPT="${CYAN}${VCS_GIT_BR}${HG_BR}${RESET_COLOR}"
-PS1="${GREEN}[\u@\H]${RESET_COLOR}${VCS_PROMPT} ${YELLOW}\w${RESET_COLOR}\n$ "
+PS1="${GREEN}ret: \$(echo \$?) [\u@\H]${RESET_COLOR}${VCS_PROMPT} ${YELLOW}\w${RESET_COLOR}\n$ "
 
 # エイリアス
 if [ -e ~/.alias.sh ]; then
