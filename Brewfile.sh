@@ -15,10 +15,12 @@ brew install carthage
 brew tap cloudfoundry/tap && brew install cf-cli
 brew install chisel
 brew install cocoapods
+brew install coreutils
 brew install csshx
 brew install fish
 brew install gdbm
 brew install git
+brew install gpg
 brew tap heroku/brew && brew install heroku
 brew install icdiff
 brew install jq
