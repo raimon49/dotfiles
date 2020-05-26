@@ -81,11 +81,6 @@ function ws() {
     return 1
 }
 
-if [ -e ~/.z.sh/z.sh ]; then
-    _Z_CMD=j
-    source ~/.z.sh/z.sh
-fi
-
 # プロンプト
               ESC="$(echo -ne '\033')"
             BLACK="${ESC}[30m"

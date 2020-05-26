@@ -236,10 +236,6 @@ function _ws {
 compdef _wg wg
 compdef _wh wh
 compdef _ws ws
-if [ -e ~/.z.sh/z.sh ]; then
-    _Z_CMD=j
-    source ~/.z.sh/z.sh
-fi
 
 # 単語区切り設定
 autoload -Uz select-word-style
