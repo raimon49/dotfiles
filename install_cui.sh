@@ -8,7 +8,6 @@ GIT_CONTRIB_URL="https://raw.githubusercontent.com/git/git/master/contrib/comple
 [ ! -d "${HOME}/.config/git" ] && mkdir -p "${HOME}/.config/git"
 [ ! -d "${HOME}/.config/Code/User" ] && mkdir -p "${HOME}/.config/Code/User"
 [ ! -d "${HOME}/go" ] && mkdir -p "${HOME}/go"
-[ ! -f "${HOME}/.z" ] && touch "${HOME}/.z"
 [ ! -d .antigen ] && git clone https://github.com/zsh-users/antigen.git .antigen
 
 # for Git on Bash
