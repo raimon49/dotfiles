@@ -34,7 +34,6 @@ brew install mycli
 brew install neovim
 brew install nkf
 brew install openssl
-brew install peco
 brew install pcre
 brew install pgcli
 brew install python3

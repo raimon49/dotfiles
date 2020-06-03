@@ -61,7 +61,7 @@ EOBUNDLES
 fi
 
 # peco
-for peco_command in ~/local/bin/peco /usr/local/bin/peco; do
+for peco_command in ~/.asdf/shims/peco ~/local/bin/peco /usr/local/bin/peco; do
     if [[ -x ${peco_command} ]]; then
         # ディレクトリ履歴移動
         bindkey '^xb' anyframe-widget-cdr
