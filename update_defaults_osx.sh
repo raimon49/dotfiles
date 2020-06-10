@@ -24,4 +24,7 @@ defaults write com.apple.screencapture disable-shadow -boolean YES
 # Disable repeat inputting for VS Code
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool NO
 
+# Show percentage of battery
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
 exit 0
