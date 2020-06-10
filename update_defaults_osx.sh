@@ -27,4 +27,7 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool NO
 # Show percentage of battery
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
+# Re-affected for apps
+for app in Finder Dock SystemUIServer; do killall "${app}" >/dev/null 2>&1; done
+
 exit 0
