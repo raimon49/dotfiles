@@ -5,6 +5,16 @@ dotfiles
 
 my dotfiles
 
+Table of Contents
+-----------------
+
+* [Tools](#tools)
+* [Supported platforms](#supported-platforms)
+* [Installation](#installation)
+    * [Use curl](#use-curl)
+    * [Use wget](#use-wget)
+    * [Manually](#manually)
+
 Tools
 -----
 
