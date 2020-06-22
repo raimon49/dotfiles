@@ -2,7 +2,9 @@
 
 asdf plugin add cf
 asdf plugin add conftest
+asdf plugin add container-diff
 asdf plugin add golang
+asdf plugin add goss
 asdf plugin add k9s
 asdf plugin add kubectl
 asdf plugin add nodejs
