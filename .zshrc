@@ -38,6 +38,11 @@ fi
 function history-all {
     history -E 1
 }
+function switch-to-bash {
+    export FORCE_BASH="1"
+    export SHELL=$(which bash)
+    exec ${SHELL} -l
+}
 
 # 直近コマンドラインスタックの表示
 function show_buffer_stack() {
