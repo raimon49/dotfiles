@@ -59,6 +59,10 @@ fi
 
 shopt -s cdspell
 
+function switch-to-zsh() {
+    exec ${SHELL} -l
+}
+
 # XXX not use complete -F _fn fn...
 function wg() {
     [ -d ~/works/git ] && cd ~/works/git && return 0
