@@ -3,7 +3,7 @@
 install_linuxbrew_in_local() {
     git clone --depth 3 https://github.com/Homebrew/brew "${HOME}/.linuxbrew/Homebrew"
     mkdir "${HOME}/.linuxbrew/bin"
-    ln -s "${HOME}/.linuxbrew/Homebrew/bin/brew" "${HOME}/.linuxbrew/bin"
+    ln -sfni "${HOME}/.linuxbrew/Homebrew/bin/brew" "${HOME}/.linuxbrew/bin"
     eval $(${HOME}/.linuxbrew/bin/brew shellenv)
 }
 

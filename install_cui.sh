@@ -19,12 +19,12 @@ elif [ -x "$(which curl 2> /dev/null)" ]; then
     curl "${GIT_CONTRIB_URL}/git-prompt.sh" -L -s -o "${HOME}/local/bin/git-prompt.sh"
 fi
 
-ln -Fis "${DOTFILES_REPO}/tovim" "${HOME}/local/bin"
-ln -Fis "${DOTFILES_REPO}/.vim" "${HOME}/.config/nvim"
-ln -Fis "${DOTFILES_REPO}/.config/git/ignore" "${HOME}/.config/git"
-ln -Fis "${DOTFILES_REPO}/.config/Code/User/settings.json" "${HOME}/.config/Code/User"
-ln -Fis "${DOTFILES_REPO}/.config/Code/User/keybindings.json" "${HOME}/.config/Code/User"
-ln -Fis "${DOTFILES_REPO}/.vimrc" "${HOME}/.config/nvim/init.vim"
+ln -sfni "${DOTFILES_REPO}/tovim" "${HOME}/local/bin"
+ln -sfni "${DOTFILES_REPO}/.vim" "${HOME}/.config/nvim"
+ln -sfni "${DOTFILES_REPO}/.config/git/ignore" "${HOME}/.config/git"
+ln -sfni "${DOTFILES_REPO}/.config/Code/User/settings.json" "${HOME}/.config/Code/User"
+ln -sfni "${DOTFILES_REPO}/.config/Code/User/keybindings.json" "${HOME}/.config/Code/User"
+ln -sfni "${DOTFILES_REPO}/.vimrc" "${HOME}/.config/nvim/init.vim"
 
 for dotfile in .?*; do
     case "${dotfile}" in
@@ -33,7 +33,7 @@ for dotfile in .?*; do
             continue;;
         *)
             # symlink
-            ln -Fis "${PWD}/${dotfile}" "${HOME}"
+            ln -sfni "${PWD}/${dotfile}" "${HOME}"
             ;;
     esac
 done
