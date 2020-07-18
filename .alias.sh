@@ -39,6 +39,11 @@ alias scpqb="scp -C -c blowfish"
 alias rsyncqb="rsync -az -e 'ssh -c blowfish'"
 alias :q="exit"
 alias :qa="exit"
+
+if [ -n "${BASH_VERSION}" ]; then
+    alias rehash="hash -r"
+fi
+
 if [ -n "${ZSH_VERSION}" ]; then
     alias -g C=" | wc -l"
     alias -g H=" | head"
