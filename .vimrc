@@ -133,6 +133,7 @@ set smarttab
 set listchars=tab:^\ ,trail:_
 set list
 set wildmode=list:longest,full
+set nofixendofline
 
 set incsearch
 set ignorecase
