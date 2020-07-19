@@ -1,5 +1,11 @@
 " Setup dein.vim
 scriptencoding utf-8
+
+" Load default files(with Vim 7.4.2111+)
+if filereadable('$VIMRUNTIME/defaults.vim')
+    unlet! skip_defaults_vim
+    source $VIMRUNTIME/defaults.vim
+endif
 filetype off
 if has('vim_starting')
     if &compatible
