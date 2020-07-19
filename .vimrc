@@ -1,4 +1,5 @@
 " Setup dein.vim
+scriptencoding utf-8
 filetype off
 if has('vim_starting')
     if &compatible
