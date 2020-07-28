@@ -14,6 +14,8 @@
 	autostash = true
 [push]
 	default = nothing
+[pull]
+	rebase = false
 [color]
 	ui = auto
 [pager]
