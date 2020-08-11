@@ -17,7 +17,6 @@ brew install chisel
 brew install cocoapods
 brew install coreutils
 brew install csshx
-brew install ffmpeg
 brew install fish
 brew install gdbm
 brew install git
