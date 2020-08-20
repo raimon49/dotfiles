@@ -231,6 +231,12 @@ vnoremap <silent> <C-p> "0p<CR>
 " require Python 2.6+
 vnoremap _json !python -m json.tool<CR>
 
+" shortcut operator
+onoremap ) i)
+onoremap ( a(
+onoremap ' i'
+onoremap " i"
+
 command! Cp932     edit ++enc=cp932<CR>
 command! Eucjp     edit ++enc=euc-jp<CR>
 command! Iso2022jp edit ++enc=iso2022jp<CR>
