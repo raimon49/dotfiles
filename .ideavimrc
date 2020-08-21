@@ -24,6 +24,11 @@ inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-d> <Del>
 
+onoremap ) i)
+onoremap ( a(
+onoremap ' i'
+onoremap " i"
+
 inoremap <¥> \
 
 nnoremap == :<C-u>action ReformatCode<CR>
