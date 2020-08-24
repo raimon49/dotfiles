@@ -86,16 +86,6 @@
             ]
         }
     ],
-    "vim.operatorPendingModeKeyBindingsNonRecursive": [
-        {
-            "before": [")"],
-            "after": ["i("]
-        },
-        {
-            "before": ["("],
-            "after": ["a("]
-        }
-    ],
     "vim.useCtrlKeys": true,
     "vim.useSystemClipboard": true,
     "vim.visualstar": true,
