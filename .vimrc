@@ -201,6 +201,8 @@ set mouse=
 noremap <silent> <Leader>mo :<C-u>call <SID>toggle_setting_mouse()<CR>
 " toggle header file(vim-altr)
 nmap <Space>a <Plug>(altr-forward)
+" open Unite menu
+nnoremap <Leader>um :<C-U>Unite menu:shortcut -start-insert -ignorecase<CR>
 
 inoremap <expr> ,df strftime('%Y-%m-%dT%H:%M:%S')
 inoremap <expr> ,dd strftime('%Y-%m-%d')

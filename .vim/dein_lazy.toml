@@ -36,7 +36,7 @@ hook_source = '''
     \           ["unite-file_mru", "Unite file_mru"],
     \           ["unite-history/command", "Unite history/command"],
     \           ["unite-history/search",  "Unite history/search"],
-    \           ["unite-yankround",    "Unite yankround"],
+    \           ["unite-colorscheme",    "Unite -auto-preview colorscheme"],
     \           ["edit vimrc", "edit $MYVIMRC"],
     \           ["unite-webcolorname", "Unite webcolorname"],
     \       ],
