@@ -65,6 +65,10 @@ repo = 'rhysd/unite-codic.vim'
 on_source = [ 'unite.vim' ]
 
 [[plugins]]
+repo = 'ujihisa/unite-colorscheme'
+on_source = [ 'unite.vim' ]
+
+[[plugins]]
 repo = 'mattn/sonictemplate-vim'
 on_cmd = [ 'Template']
 hook_add = '''
