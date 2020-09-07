@@ -23,6 +23,7 @@ esac
 alias l="ls -CF"
 alias ll="ls -laF"
 alias cls="clear;ls"
+alias lsport="sudo lsof -i -n -P"
 alias mkdir="mkdir -p"
 alias sudo="sudo -E "
 alias view="vim -R"
