@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run installation script
+        run: |
+          ./bootstrap.sh
+          ./install_utility.sh
+          ./install_version_manager.sh
+      - name: Install checking tool
+        run: |
+          sudo apt-get update && sudo apt-get install zsh
+          curl -fsSL https://goss.rocks/install | GOSS_DST=${HOME}/local/bin sh
+          ${HOME}/local/bin/goss --gossfile tests/goss.yaml validate --format documentation
+          zsh -l -c env | egrep -v
