@@ -23,4 +23,4 @@ jobs:
           sudo apt-get update && sudo apt-get install zsh
           curl -fsSL https://goss.rocks/install | GOSS_DST=${HOME}/local/bin sh
           ${HOME}/local/bin/goss --gossfile tests/goss.yaml validate --format documentation
-          zsh -l -c env | egrep -v
+          zsh -l -c env
