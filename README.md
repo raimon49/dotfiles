@@ -1,8 +1,6 @@
 dotfiles
 ========
 
-https://img.shields.io/travis/raimon49/dotfiles?style=flat-square
-
 [![Build Status](https://github.com/raimon49/dotfiles/workflows/Acceptance%20test%20for%20my%20dotfiles/badge.svg)](https://github.com/raimon49/dotfiles/actions?query=workflow%3A%22Acceptance+test+for+my+dotfiles%22)
 
 my dotfiles
