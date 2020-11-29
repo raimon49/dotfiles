@@ -1,4 +1,4 @@
-name: Acceptance test for my dotfiles
+name: Acceptance test
 
 on:
   push:
