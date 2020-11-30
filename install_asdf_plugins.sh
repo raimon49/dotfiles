@@ -6,6 +6,7 @@ asdf plugin add container-diff
 asdf plugin add dive
 asdf plugin add golang
 asdf plugin add goss
+asdf plugin add hey
 asdf plugin add k9s
 asdf plugin add kubectl
 asdf plugin add nodejs
