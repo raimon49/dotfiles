@@ -21,6 +21,9 @@ $if Bash
     set expand-tilde off
 $endif
 
+# ビープ音抑止
+set bell-style none
+
 $if mysql
     “\C-xd”: “SHOW DATABASES;\n”
     “\C-xt”: “SHOW TABLES;\n”

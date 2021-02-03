@@ -12,7 +12,7 @@ if [ -x "`which lv 2> /dev/null`" ]; then
     export LV="-Ou8 -c -Sh1;36 -Su1;4;32 -Ss7;37;1;33"
 elif [ -x "`which less 2> /dev/null`" ]; then
     export PAGER="less"
-    export LESS="-R"
+    export LESS="-R -Q"
     export LESSCHARSET="utf-8"
     alias lv="less"
 fi
