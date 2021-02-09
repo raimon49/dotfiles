@@ -24,6 +24,9 @@ $endif
 # ビープ音抑止
 set bell-style none
 
+# Readline 8.1+ デフォルト値変更への対応
+set enable-bracketed-paste off
+
 $if mysql
     “\C-xd”: “SHOW DATABASES;\n”
     “\C-xt”: “SHOW TABLES;\n”
