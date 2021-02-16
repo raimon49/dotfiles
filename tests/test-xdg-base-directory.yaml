@@ -4,6 +4,9 @@ file:
   ~/.config/nvim/init.vim:
     exists: true
     filetype: symlink
+  ~/.config/bat/config:
+    exists: true
+    filetype: symlink
   ~/.config/git/ignore:
     exists: true
     filetype: symlink

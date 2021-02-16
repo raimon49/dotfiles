@@ -1,0 +1,4 @@
+# Dsable automatic paging
+--paging=never
+# Show line numbers (only)
+--number

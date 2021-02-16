@@ -5,6 +5,7 @@ GIT_CONTRIB_URL="https://raw.githubusercontent.com/git/git/master/contrib/comple
 
 [ ! -d "${HOME}/local/bin" ] && mkdir -p "${HOME}/local/bin"
 [ ! -d "${HOME}/.zsh/cache" ] && mkdir -p "${HOME}/.zsh/cache"
+[ ! -d "${HOME}/.config/bat" ] && mkdir -p "${HOME}/.config/bat"
 [ ! -d "${HOME}/.config/git" ] && mkdir -p "${HOME}/.config/git"
 [ ! -d "${HOME}/.config/Code/User" ] && mkdir -p "${HOME}/.config/Code/User"
 [ ! -d "${HOME}/go" ] && mkdir -p "${HOME}/go"
@@ -21,6 +22,7 @@ fi
 
 ln -sfni "${DOTFILES_REPO}/tovim" "${HOME}/local/bin"
 ln -sfni "${DOTFILES_REPO}/.vim" "${HOME}/.config/nvim"
+ln -sfni "${DOTFILES_REPO}/.config/bat/config" "${HOME}/.config/bat"
 ln -sfni "${DOTFILES_REPO}/.config/git/ignore" "${HOME}/.config/git"
 ln -sfni "${DOTFILES_REPO}/.config/Code/User/settings.json" "${HOME}/.config/Code/User"
 ln -sfni "${DOTFILES_REPO}/.config/Code/User/keybindings.json" "${HOME}/.config/Code/User"
