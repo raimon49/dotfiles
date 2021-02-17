@@ -1,4 +1,4 @@
 # Dsable automatic paging
 --paging=never
-# Show line numbers (only)
---number
+# Enable Git modifications (only)
+--style="changes"
