@@ -1,4 +1,4 @@
 # Dsable automatic paging
 --paging=never
 # Enable Git modifications (only)
---style="changes"
+--style="plain"
