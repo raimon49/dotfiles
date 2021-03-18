@@ -113,6 +113,14 @@ git_branch() {
     __git_ps1 '(git:%s)'
 }
 
+alc() {
+    if [ -n "$1" ]; then
+        w3m -no-cookie "https://eow.alc.co.jp/search?q=${1}" | sed '1,60d' | ${PAGER}
+    else
+        echo 'usage: alc word'
+    fi
+}
+
 VCS_GIT_BR=""
 if [ -n "${GIT_PS1_SHOWDIRTYSTATE}" ]; then
     VCS_GIT_BR="\$(git_branch)"
