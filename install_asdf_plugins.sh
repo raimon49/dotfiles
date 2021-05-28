@@ -9,6 +9,7 @@ asdf plugin add golang
 asdf plugin add goss
 asdf plugin add hey
 asdf plugin add k9s
+asdf plugin add kubectx
 asdf plugin add kubectl
 asdf plugin add nodejs
 asdf plugin add peco https://github.com/ryodocx/asdf-peco.git
