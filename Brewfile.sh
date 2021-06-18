@@ -36,6 +36,7 @@ brew install nkf
 brew install openssl
 brew install pcre
 brew install pgcli
+brew install pngquant
 brew install python3
 brew install spark
 brew tap srcclr/srcclr && brew install srcclr
