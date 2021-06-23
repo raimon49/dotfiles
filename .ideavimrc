@@ -12,6 +12,7 @@ nnoremap <C-[><C-[> :<C-u>nohlsearch<CR><Esc>
 
 nnoremap tn gt
 nnoremap tp gT
+nnoremap <CR> o<Esc>
 
 nnoremap <Space>r :action RunClass<CR>
 nnoremap <C-o> :action Back<CR>
