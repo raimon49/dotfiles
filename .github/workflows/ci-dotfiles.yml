@@ -32,8 +32,8 @@ jobs:
       - name: Install checking tool
         run: |
           sudo apt-get update && sudo apt-get install zsh
-          curl -fsSL https://goss.rocks/install | GOSS_DST=${HOME}/local/bin sh
+          curl -fsSL https://goss.rocks/install | GOSS_DST="${HOME}/local/bin" sh
       - name: Run acceptance test and print environment variables
         run: |
-          ${HOME}/local/bin/goss --gossfile tests/goss.yaml validate --format documentation
+          "${HOME}/local/bin/goss" --gossfile tests/goss.yaml validate --format documentation
           zsh -l -c env
