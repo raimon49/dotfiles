@@ -121,6 +121,10 @@ alc() {
     fi
 }
 
+print_path() {
+    echo "$PATH" | tr ':' '\n'
+}
+
 VCS_GIT_BR=""
 if [ -n "${GIT_PS1_SHOWDIRTYSTATE}" ]; then
     VCS_GIT_BR="\$(git_branch)"

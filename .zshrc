@@ -270,6 +270,10 @@ function alc() {
     fi
 }
 
+function print_path() {
+    echo "$PATH" | tr ':' '\n'
+}
+
 function corpus() {
     if [ -n "$1" ]; then
         w3m -no-cookie "http://suin.asia/xoops/modules/lingua/?keyword=${1}&search=%E6%A4%9C%E7%B4%A2&source=en&targets[en]=1&targets[ja]=1" | sed '1,14d' | sed -e '/Submenu/,$d' | ${PAGER}
