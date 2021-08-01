@@ -65,5 +65,8 @@ if [ -n "${ZSH_VERSION}" ]; then
     elif which putclip >/dev/null 2>&1 ; then
         # Cygwin
         alias -g P=' | putclip'
+    elif which pbcopy_win >/dev/null 2>&1 ; then
+        # WSL 2
+        alias -g P=' | pbcopy_win'
     fi
 fi
