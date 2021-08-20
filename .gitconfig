@@ -36,7 +36,7 @@
 	sw = switch
 	ls = ls-files
 	lsc = ls-files --unmerged
-	lprune = "!git branch --merged | grep -vE '^\\*|master$|develop$' | xargs -I % git branch -d %"
+	lprune = "!git branch --merged | grep -vE '^\\*|main$|dmaster$|develop$' | xargs -I % git branch -d %"
 	unmerged = branch --no-merged
 	stat = status
 	rawci = commit
