@@ -4,7 +4,7 @@ DOTFILES_REPO="${HOME}/works/git/dotfiles"
 GIT_CONTRIB_URL="https://raw.githubusercontent.com/git/git/master/contrib/completion"
 
 [ ! -d "${HOME}/local/bin" ] && mkdir -p "${HOME}/local/bin"
-[ ! -d "${HOME}.bookmarks" ] && mkdir -p "${HOME}.bookmarks"
+[ ! -d "${HOME}/.bookmarks" ] && mkdir -p "${HOME}/.bookmarks"
 [ ! -d "${HOME}/.zsh/cache" ] && mkdir -p "${HOME}/.zsh/cache"
 [ ! -d "${HOME}/.config/bat" ] && mkdir -p "${HOME}/.config/bat"
 [ ! -d "${HOME}/.config/git" ] && mkdir -p "${HOME}/.config/git"
