@@ -1,5 +1,11 @@
 ## .path.sh
 
+# bookmarks
+if [ -d "$HOME/.bookmarks" ]; then
+    export CDPATH=".:$HOME/.bookmarks:/"
+    alias goto="cd -P"
+fi
+
 # for Mac
 if [ -x /usr/libexec/path_helper ]; then
     PATH=""

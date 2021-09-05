@@ -2,6 +2,9 @@ file:
   ~/.asdf:
     exists: true
     filetype: directory
+  ~/.bookmarks:
+    exists: true
+    filetype: directory
   ~/local/bin:
     exists: true
     filetype: directory
