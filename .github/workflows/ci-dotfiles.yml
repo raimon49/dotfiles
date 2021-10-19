@@ -37,4 +37,4 @@ jobs:
         run: |
           "${HOME}/local/bin/goss" --gossfile tests/goss.yaml validate --format documentation
           zsh -l -c env
-          printf "Print PATH\n\n" && print_path
+          printf "Print PATH\n\n" && echo "$PATH" | tr ':' '\n'
