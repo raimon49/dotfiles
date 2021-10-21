@@ -16,7 +16,7 @@ fi
 export PATH="${HOME}/local/bin:${PATH}"
 export MANPATH="${HOME}/local/share/man:${MANPATH}"
 export XDG_CONFIG_HOME="${HOME}/.config"
-test -e "${HOME}/.local/bin" && export PATH="${HOME}/.local/bin:${PATH}"
+test -d "${HOME}/.local/bin" && export PATH="${HOME}/.local/bin:${PATH}"
 
 # for Android and Java
 export ANDROID_HOME="${HOME}/Library/Android/sdk"
