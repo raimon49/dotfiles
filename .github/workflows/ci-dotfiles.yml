@@ -36,5 +36,5 @@ jobs:
       - name: Run acceptance test and print environment variables
         run: |
           "${HOME}/local/bin/goss" --gossfile tests/goss.yaml validate --format documentation
-          zsh -l -c env
-          printf "Print PATH\n\n" && echo "$PATH" | tr ':' '\n'
+          printf "\nPrint Environment variables:\n" && zsh -l -c env
+          printf "\nPrint PATHs:\n" && echo "$PATH" | tr ':' '\n'
