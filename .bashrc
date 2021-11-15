@@ -115,7 +115,7 @@ git_branch() {
 
 alc() {
     if [ -n "$1" ]; then
-        w3m -no-cookie "https://eow.alc.co.jp/search?q=${1}" | sed '1,60d' | ${PAGER}
+        w3m -no-cookie "https://eow.alc.co.jp/search?q=${1}" | sed '1,95d' | ${PAGER}
     else
         echo 'usage: alc word'
     fi
