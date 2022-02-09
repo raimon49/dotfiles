@@ -209,6 +209,10 @@ hook_source = '''
 '''
 
 [[plugins]]
+repo = 'jjo/vim-cue'
+on_ft = [ 'cue' ]
+
+[[plugins]]
 repo =  'mattn/jscomplete-vim'
 on_i = 1
 on_ft = [ 'javascript' ]
