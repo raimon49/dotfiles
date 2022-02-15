@@ -190,6 +190,10 @@ repo = 'gnperdue/vim-asciidoc'
 on_ft = [ 'asciidoc' ]
 
 [[plugins]]
+repo = 'mracos/mermaid.vim'
+on_ft = [ 'mermaid' ]
+
+[[plugins]]
 repo = 'keith/swift.vim'
 on_ft = [ 'swift' ]
 
