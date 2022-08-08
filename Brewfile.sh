@@ -39,6 +39,7 @@ brew install pgcli
 brew install pngquant
 brew install python3
 brew install spark
+brew tap snyk/tap && brew install snyk
 brew tap srcclr/srcclr && brew install srcclr
 brew install stern
 brew install tig
