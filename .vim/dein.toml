@@ -1,6 +1,7 @@
 # Plugins on GitHub
 [[plugins]]
 repo = 'Shougo/dein.vim'
+rev  = '2.0' # Not following ftplugin v2.1 or later
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
