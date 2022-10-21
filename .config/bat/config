@@ -2,3 +2,5 @@
 --paging=never
 # Enable Git modifications (only)
 --style="plain"
+# Theme
+--theme="zenburn"
