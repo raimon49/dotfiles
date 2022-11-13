@@ -1,5 +1,6 @@
 #!/bin/sh
 
+asdf plugin add act
 asdf plugin add bat
 asdf plugin add cf
 asdf plugin add conftest
