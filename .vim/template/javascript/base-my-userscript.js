@@ -2,7 +2,7 @@
 // @name        {{_name_}}
 // @description
 // @namespace   http://sangoukan.xrea.jp/
-// @include
+// @match
 // @exclude
 // @grant       none
 // @author      raimon
