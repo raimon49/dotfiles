@@ -8,6 +8,9 @@
 	quotepath = false
 	preloadindex = true
 	fscache = true
+[filter "ignoresecrets"]
+	smudge = cat
+	clean = "sed -e 's/^password:.*/password:/'"
 [fetch]
 	prune = true
 [rebase]
