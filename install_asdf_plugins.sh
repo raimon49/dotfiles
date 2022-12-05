@@ -9,6 +9,7 @@ asdf plugin add dive
 asdf plugin add golang
 asdf plugin add goss
 asdf plugin add hey
+asdf plugin add hurl
 asdf plugin add jq
 asdf plugin add k9s
 asdf plugin add kubectx
