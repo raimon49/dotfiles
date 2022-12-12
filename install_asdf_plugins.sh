@@ -11,6 +11,7 @@ asdf plugin add goss
 asdf plugin add hey
 asdf plugin add hurl
 asdf plugin add jq
+asdf plugin add k6
 asdf plugin add k9s
 asdf plugin add kubectx
 asdf plugin add kubectl
