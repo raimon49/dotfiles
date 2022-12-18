@@ -17,6 +17,7 @@
 	autostash = true
 [push]
 	default = nothing
+	useForceIfIncludes = true
 [pull]
 	rebase = false
 [color]
