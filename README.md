@@ -22,7 +22,7 @@ Tools
     * Zsh
     * Bash
 * Editor
-    * Vim 8.x/Neovim
+    * Vim 8 or later/Neovim
 * IDE
     * Eclipse with Vrapper
     * IntelliJ IDEA with IdeaVim
