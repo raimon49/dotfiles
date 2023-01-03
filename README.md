@@ -54,6 +54,7 @@ Supported platforms
 * Linux
     * CentOS
     * RHEL
+    * Rocky Linux
     * Ubuntu
 
 Installation
