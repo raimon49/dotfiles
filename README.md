@@ -14,6 +14,7 @@ Table of Contents
     * [Use curl](#use-curl)
     * [Use wget](#use-wget)
     * [Manually](#manually)
+* [Acceptance test](#acceptance-test)
 
 Tools
 -----
@@ -82,4 +83,13 @@ $ cd ~/works/git
 $ git clone --recursive --depth 5 https://github.com/raimon49/dotfiles.git
 $ cd dotfiles
 $ ./install_cui.sh
+```
+
+Acceptance test
+---------------
+
+Tests are expressed in [goss](https://github.com/goss-org/goss).
+
+```bash
+$ goss --gossfile tests/goss.yaml validate --format documentation
 ```
