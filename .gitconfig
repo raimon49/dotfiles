@@ -28,6 +28,7 @@
 	tag = false
 [alias]
 	alias = "!git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort"
+	alias-master-as-main = "!git symbolic-ref refs/heads/main refs/heads/master && git symbolic-ref refs/remotes/origin/main refs/remotes/origin/master && git switch main"
 	authors = "!git log --format='%aN <%aE>' | sort -u"
 	rclone = clone --recursive
 	sclone = clone --recursive --depth 5
