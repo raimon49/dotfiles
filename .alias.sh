@@ -14,7 +14,7 @@ esac
 
 case "`uname`" in
     FreeBSD | OpenBSD | NetBSD | SunOS)
-    if [ -x "$(which gmake 2> /dev/null)" ]; then
+    if [ -x "$(command -v gmake)" ]; then
         alias make="gmake"
     fi
     ;;
