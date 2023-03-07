@@ -56,16 +56,16 @@ if [ -n "${ZSH_VERSION}" ]; then
     alias -g W=" | w3m -no-cookie -T text/html"
 
     # Copy stdin to clipboad
-    if which pbcopy >/dev/null 2>&1 ; then
+    if [ -x "$(command -v pbcopy)" ]; then
         # Mac
         alias -g P=' | pbcopy'
-    elif which xsel >/dev/null 2>&1 ; then
+    elif [ -x "$(command -v xsel)" ]; then
         # Linux
         alias -g P=' | xsel --input --clipboard'
-    elif which putclip >/dev/null 2>&1 ; then
+    elif [ -x "$(command -v putclip)" ]; then
         # Cygwin
         alias -g P=' | putclip'
-    elif which pbcopy_win >/dev/null 2>&1 ; then
+    elif [ -x "$(command -v pbcopy_win)" ]; then
         # WSL 2
         alias -g P=' | pbcopy_win'
     fi
