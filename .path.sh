@@ -52,3 +52,6 @@ test -d "${POETRY_HOME}/bin" && export PATH="${POETRY_HOME}/bin:${PATH}"
 
 # for Linuxbrew
 test -d "${HOME}/.linuxbrew" && eval $(${HOME}/.linuxbrew/bin/brew shellenv)
+
+# for Rancher Desktop
+test -d "${HOME}/.rd/bin" && export PATH="${HOME}/.rd/bin:${PATH}" && alias docker="nerdctl"
