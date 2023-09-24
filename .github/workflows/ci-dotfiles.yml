@@ -35,6 +35,7 @@ jobs:
           curl -fsSL https://goss.rocks/install | GOSS_DST="${HOME}/local/bin" sh
       - name: Run acceptance test and print environment variables
         run: |
+          "${HOME}/local/bin/goss" --version
           "${HOME}/local/bin/goss" --gossfile tests/goss.yaml validate --format documentation
           printf "\nPrint Environment variables:\n" && zsh -l -c env
           printf "\nPrint PATHs:\n" && echo "$PATH" | tr ':' '\n'
