@@ -2,43 +2,43 @@ file:
   ~/.gitconfig:
     exists: true
     filetype: symlink
-    contains:
+    contents:
       - "name = raimon"
   ~/.bash_profile:
     exists: true
     filetype: symlink
-    contains:
+    contents:
       - "exec ${zsh_command} -l"
   ~/.bashrc:
     exists: true
     filetype: symlink
-    contains:
+    contents:
       - "HISTFILESIZE=1000000"
   ~/.zshenv:
     exists: true
     filetype: symlink
-    contains:
+    contents:
       - "typeset -U path manpath"
   ~/.zshrc:
     exists: true
     filetype: symlink
-    contains:
+    contents:
       - "SAVEHIST=1000000"
       - "antigen apply"
   ~/.alias.sh:
     exists: true
     filetype: symlink
-    contains:
+    contents:
       - "alias rawvim"
       - "alias :q"
       - "alias -g"
   ~/.env.sh:
     exists: true
     filetype: symlink
-    contains:
+    contents:
       - "export EDITOR=\"vim\""
   ~/.path.sh:
     exists: true
     filetype: symlink
-    contains:
+    contents:
       - "export PATH=\"${HOME}/local/bin:${PATH}\""

@@ -13,12 +13,12 @@ file:
   ~/.config/Code/User/settings.json:
     exists: true
     filetype: symlink
-    contains:
+    contents:
       - "vim.useCtrlKeys"
       - "Zenburn (No Bold)"
   ~/.config/Code/User/keybindings.json:
     exists: true
     filetype: symlink
-    contains:
+    contents:
       - "t n"
       - "t p"
