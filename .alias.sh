@@ -34,7 +34,6 @@ alias ggrep="git grep --no-index --break --heading -I -i -n"
 alias cdu="cd-gitroot"
 alias zmv="noglob zmv -W"
 alias screen="screen -U"
-alias tree="tree --charset -"
 alias hostname="uname -n"
 alias scpqa="scp -C -c arcfour"
 alias rsyncqa="rsync -az -e 'ssh -c arcfour'"
@@ -45,6 +44,12 @@ alias :qa="exit"
 
 if [ -n "${BASH_VERSION}" ]; then
     alias rehash="hash -r"
+fi
+
+if [ -x "$(command -v tree)" ]; then
+    alias tree="tree --charset -"
+else
+    alias tree="pwd;find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/| /g'"
 fi
 
 if [ -n "${ZSH_VERSION}" ]; then
