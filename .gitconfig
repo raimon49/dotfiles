@@ -8,6 +8,14 @@
 	quotepath = false
 	preloadindex = true
 	fscache = true
+[diff]
+#	Difftastic By Default
+#	external = difft
+	tool = difftastic
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
 [filter "ignoresecrets"]
 	smudge = cat
 	clean = "sed -e 's/^password:.*/password:/'"
@@ -26,6 +34,7 @@
 	branch = false
 	ls-files = true
 	tag = false
+	difftool = true
 [alias]
 	alias = "!git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort"
 	alias-master-as-main = "!git symbolic-ref refs/heads/main refs/heads/master && git symbolic-ref refs/remotes/origin/main refs/remotes/origin/master && git switch main"
@@ -61,6 +70,7 @@
 	dic = diff --cached
 	die = diff --exit-code
 	wdi = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
+	dft = difftool
 	fp = push --force-with-lease
 	pf = "!git pull --ff --no-rebase origin $(git symbolic-ref --short HEAD)"
 	up = pull --rebase --autostash
