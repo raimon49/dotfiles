@@ -5,6 +5,7 @@ asdf plugin add bat
 asdf plugin add cf
 asdf plugin add conftest
 asdf plugin add container-diff
+asdf plugin add difftastic
 asdf plugin add dive
 asdf plugin add golang
 asdf plugin add goss
