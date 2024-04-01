@@ -11,6 +11,7 @@ asdf plugin add golang
 asdf plugin add goss
 asdf plugin add hey
 asdf plugin add hurl
+asdf plugin add jnv
 asdf plugin add jq
 asdf plugin add k6
 asdf plugin add k9s
