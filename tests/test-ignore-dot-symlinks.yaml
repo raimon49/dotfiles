@@ -3,5 +3,5 @@ file:
     exists: false
   ~/.gitmodules:
     exists: false
-  ~/.travis.yml:
+  ~/.github/workflows/ci-dotfiles.yml:
     exists: false
