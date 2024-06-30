@@ -3,6 +3,5 @@ file:
     exists: false
   ~/.gitmodules:
     exists: false
-  ~/.github/workflows:
+  ~/.github/workflows/ci-dotfiles.yml:
     exists: false
-    filetype: directory
