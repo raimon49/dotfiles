@@ -31,7 +31,7 @@ ln -sfni "${DOTFILES_REPO}/.vimrc" "${HOME}/.config/nvim/init.vim"
 
 for dotfile in .?*; do
     case "${dotfile}" in
-        .. | .git | .gitmodules | .travis.yml )
+        .. | .git | .gitmodules | .github )
             # ignore
             continue;;
         *)
