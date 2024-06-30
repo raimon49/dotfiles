@@ -3,5 +3,5 @@ file:
     exists: false
   ~/.gitmodules:
     exists: false
-  ~/.travis.yml:
+  ~/.github:
     exists: false
