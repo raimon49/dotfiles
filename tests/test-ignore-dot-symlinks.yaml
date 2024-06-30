@@ -3,5 +3,6 @@ file:
     exists: false
   ~/.gitmodules:
     exists: false
-  ~/.github:
+  ~/.github/workflows:
     exists: false
+    filetype: directory
