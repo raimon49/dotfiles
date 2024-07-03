@@ -32,7 +32,7 @@ jobs:
       - name: Install checking tool
         run: |
           sudo apt-get update && sudo apt-get install zsh
-          curl -fsSL https://goss.rocks/install | GOSS_VER=v0.4.4 GOSS_DST="${HOME}/local/bin" sh
+          curl -fsSL https://goss.rocks/install | GOSS_VER=v0.4.6 GOSS_DST="${HOME}/local/bin" sh
       - name: Run acceptance test and print environment variables
         run: |
           "${HOME}/local/bin/goss" --version
