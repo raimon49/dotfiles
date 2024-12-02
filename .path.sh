@@ -50,6 +50,9 @@ export PIP_CONFIG_FILE="${HOME}/.pip.conf"
 export POETRY_HOME="${HOME}/.poetry"
 test -d "${POETRY_HOME}/bin" && export PATH="${POETRY_HOME}/bin:${PATH}"
 
+# for Apple Silicon Mac
+test -d "/opt/homebrew/bin" && eval $(/opt/homebrew/bin/brew shellenv)
+
 # for Linuxbrew
 test -d "${HOME}/.linuxbrew" && eval $(${HOME}/.linuxbrew/bin/brew shellenv)
 
