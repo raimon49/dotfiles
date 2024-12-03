@@ -118,9 +118,6 @@ repo = 'mbbill/undotree'
 repo ='rainux/vim-desert-warm-256'
 
 [[plugins]]
-repo ='ajh17/Spacegray.vim'
-
-[[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
@@ -135,6 +132,7 @@ hook_add = '''
     let g:clever_f_ignore_case = 1
     let g:clever_f_smart_case = 1
 '''
+
 [[plugins]]
 repo = 't9md/vim-quickhl'
 hook_add = '''
@@ -165,3 +163,6 @@ repo = 'vim-scripts/svn-diff.vim'
 
 [[plugins]]
 repo = 'vim-scripts/surround.vim'
+
+[[plugins]]
+repo ='vim-scripts/Spacegray.vim'
