@@ -24,7 +24,6 @@ if [ -e ~/local/bin/asdf ]; then
     export PATH="${ASDF_DATA_DIR}/shims:${PATH}"
 fi
 
-
 # for Android and Java
 export ANDROID_HOME="${HOME}/Library/Android/sdk"
 if [ -d "${ANDROID_HOME}" ]; then

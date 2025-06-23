@@ -50,6 +50,9 @@ if [ -e ~/local/bin/git-prompt.sh ]; then
     source ~/local/bin/git-prompt.sh
     GIT_PS1_SHOWDIRTYSTATE="YES"
 fi
+if [ -e ~/local/bin/asdf ]; then
+    . <(asdf completion bash)
+fi
 
 shopt -s cdspell
 
