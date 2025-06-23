@@ -12,12 +12,6 @@ if [ -e ~/.env.sh ]; then
     source ~/.env.sh
 fi
 
-# asdf
-if [ -e ~/.asdf/asdf.sh ]; then
-    source ~/.asdf/asdf.sh
-    fpath=(${ASDF_DIR}/completions $fpath)
-fi
-
 # 履歴
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000

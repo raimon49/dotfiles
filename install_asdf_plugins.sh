@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Download the binary from the GitHub releases page
+# https://github.com/asdf-vm/asdf/releases
 asdf plugin add act
 asdf plugin add bat
 asdf plugin add cf

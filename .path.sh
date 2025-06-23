@@ -18,6 +18,13 @@ export MANPATH="${HOME}/local/share/man:${MANPATH}"
 export XDG_CONFIG_HOME="${HOME}/.config"
 test -d "${HOME}/.local/bin" && export PATH="${HOME}/.local/bin:${PATH}"
 
+# for asdf v0.16.0 or later
+if [ -e ~/local/bin/asdf ]; then
+    export ASDF_DATA_DIR="${HOME}/.asdf"
+    export PATH="${ASDF_DATA_DIR}/shims:${PATH}"
+fi
+
+
 # for Android and Java
 export ANDROID_HOME="${HOME}/Library/Android/sdk"
 if [ -d "${ANDROID_HOME}" ]; then
