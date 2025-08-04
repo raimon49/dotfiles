@@ -9,6 +9,7 @@ asdf plugin add conftest
 asdf plugin add container-diff
 asdf plugin add difftastic
 asdf plugin add dive
+asdf plugin add github-cli
 asdf plugin add golang
 asdf plugin add goss
 asdf plugin add hey
